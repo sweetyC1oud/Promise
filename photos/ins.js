@@ -116,8 +116,8 @@
         var data = res.list[j].arr;
         var liTmpl = "";
         for (var i = 0, len = data.link.length; i < len; i++) {
-          var minSrc = 'https://xp-git.github.io/Blog-Back-Up/min_photos/' + data.link[i];
-          var src = 'https://xp-git.github.io/Blog-Back-Up/photos/' + data.link[i];
+          var minSrc = 'https://sweetyc1oud.github.io/PromiseData/min_photos/' + data.link[i];
+          var src = 'https://sweetyc1oud.github.io/PromiseData/photos/' + data.link[i];
           var type = data.type[i];
           var target = src + (type === 'video' ? '.mp4' : '.jpg');
           src += '';
