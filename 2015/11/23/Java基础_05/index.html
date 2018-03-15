@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.misscloud.top">
-  <title>Category: Java | Promise&#39;s blog</title>
+  <title>Java基础_05 | Promise&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Promise&#39;s blog">
-<meta property="og:url" content="www.misscloud.top/categories/Java/index.html">
+  <meta name="description" content="Java基础###1. 写 clone() 方法时，通常都有一行代码，是什么？ 12答：	clone 有缺省行为，super.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。 2. 面向对象的特征有哪些方面？12答：1 封装：		封装是保证软件部件具有优良的模块性的基础，封装的目标就是要实现软件部件的“高内聚、低耦合”，防止程序相互依赖性而带来的变动影响。在面向对象的编程">
+<meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础_05">
+<meta property="og:url" content="www.misscloud.top/2015/11/23/Java基础_05/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
+<meta property="og:description" content="Java基础###1. 写 clone() 方法时，通常都有一行代码，是什么？ 12答：	clone 有缺省行为，super.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。 2. 面向对象的特征有哪些方面？12答：1 封装：		封装是保证软件部件具有优良的模块性的基础，封装的目标就是要实现软件部件的“高内聚、低耦合”，防止程序相互依赖性而带来的变动影响。在面向对象的编程">
+<meta property="og:updated_time" content="2018-03-15T12:39:13.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Promise&#39;s blog">
+<meta name="twitter:title" content="Java基础_05">
+<meta name="twitter:description" content="Java基础###1. 写 clone() 方法时，通常都有一行代码，是什么？ 12答：	clone 有缺省行为，super.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。 2. 面向对象的特征有哪些方面？12答：1 封装：		封装是保证软件部件具有优良的模块性的基础，封装的目标就是要实现软件部件的“高内聚、低耦合”，防止程序相互依赖性而带来的变动影响。在面向对象的编程">
   
     <link rel="alternative" href="/atom.xml" title="Promise&#39;s blog" type="application/atom+xml">
   
@@ -172,37 +176,121 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Java基础_05" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Java基础_05
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/Promise/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Promise/2015/11/23/Java基础_05/" class="archive-article-date">
+
+        
+        <a href="/Promise/2015/11/23/Java基础_05/" class="archive-article-date">
   	<time datetime="2015-11-23T00:40:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-23</time>
 </a>
-        </div>
-    	 
+        
+		
+				<span class="archive-article-date">
+					阅读量 <span id="busuanzi_value_page_pv"></span>
+				</span>
+		
+      </header>
+		
+    
+
+    <!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java基础"><span class="toc-number">1.</span> <span class="toc-text">Java基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-面向对象的特征有哪些方面？"><span class="toc-number">1.0.1.</span> <span class="toc-text">2. 面向对象的特征有哪些方面？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-java中实现多态的机制是什么？"><span class="toc-number">1.0.2.</span> <span class="toc-text">3. java中实现多态的机制是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-abstract-class-和-interface-有什么区别"><span class="toc-number">1.0.3.</span> <span class="toc-text">4. abstract class 和 interface 有什么区别?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-abstract-的-method-是否可同时是-static-是否可同时是-native-，是否可同时是-synchronized"><span class="toc-number">1.0.4.</span> <span class="toc-text">5. abstract 的 method 是否可同时是 static ,是否可同时是 native ，是否可同时是 synchronized?</span></a></li></ol></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+  function showToc(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:block");
+    show_toc_btn.setAttribute("style","display:none");
+    };
+  function showBtn(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:none");
+    show_toc_btn.setAttribute("style","display:block");
+    };
+   </script>
+         
+<!-- 目录内容结束 -->
+    
+   <div class="article-entry" itemprop="articleBody">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Promise/2015/11/23/Java基础_05/">Java基础_05</a>
-    </h1>
+    
+    
+      <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><p>###1. 写 clone() 方法时，通常都有一行代码，是什么？</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	<span class="keyword">clone</span> <span class="title">有缺省行为，super</span>.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。</span><br></pre></td></tr></table></figure>
+<h3 id="2-面向对象的特征有哪些方面？"><a href="#2-面向对象的特征有哪些方面？" class="headerlink" title="2. 面向对象的特征有哪些方面？"></a>2. 面向对象的特征有哪些方面？</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：<span class="number">1</span> 封装：</span><br><span class="line">		封装是保证软件部件具有优良的模块性的基础，封装的目标就是要实现软件部件的“高内聚、低耦合”，防止程序相互依赖性而带来的变动影响。在面向对象的编程语言中，对象是封装的最基本单位，面向对象的封装比传统语言的封装更为清晰、更为有力。面向对象的封装就是把描述一个对象的属性和行为的代码封装在一个“模块”中，也就是一个类中，属性用变量定义，行为用方法进行定义，方法可以直接访问同一个对象中的属性。通常情况下，只要记住让变量和访问这个变量的方法放在一起，将一个类中的成员变量全部定义成私有的，只有这个类自己的方法才可以访问到这些成员变量，这就基本上实现对象的封装，就很容易找出要分配到这个类上的方法了，就基本上算是会面向对象的编程了。把握一个原则：把对同一事物进行操作的方法和相关的方法放在同一个类中，把方法和它操作的数据放在同一个类中。</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：<span class="number">2</span> 继承：</span><br><span class="line">		在定义和实现一个类的时候，可以在一个已经存在的类的基础之上来进行，把这个已经存在的类所定义的内容作为自己的内容，并可以加入若干新的内容，或修改原来的方法使之更适合特殊的需要，这就是继承。继承是子类自动共享父类数据和方法的机制，这是类之间的一种关系，提高了软件的可重用性和可扩展性。</span><br></pre></td></tr></table></figure>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：<span class="number">3</span> 多态：</span><br><span class="line">		多态是指程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定，即一个引用变量倒底会指向哪个类的实例对象，该引用变量发出的方法调用到底是哪个类中实现的方法，必须在由程序运行期间才能决定。因为在程序运行时才确定具体的类，这样，不用修改源程序代码，就可以让引用变量绑定到各种不同的类实现上，从而导致该引用调用的具体方法随之改变，即不修改程序代码就可以改变程序运行时所绑定的具体代码，让程序可以选择多个运行状态，这就是多态性。多态性增强了软件的灵活性和扩展性。例如，下面代码中的 UserDao 是一个接口，它定义引用变量 <span class="keyword">user</span>Dao 指向的实例对象由 daofactory.getDao() 在执行的时候返回，有时候指向的是 UserJdbcDao 这个实现，有时候指向的是 UserHibernateDao 这个实现，这样，不用修改源代码，就可以改变 <span class="keyword">user</span>Dao 指向的具体类实现，从而导致 <span class="keyword">user</span>Dao.insertUser() 方法调用的具体代码也随之改变，即有时候调用的是 UserJdbcDao的insertUser 方法，有时候调用的是 UserHibernateDao 的 insertUser 方法： UserDao <span class="keyword">user</span>Dao = daofactory.getDao(); <span class="keyword">user</span>Dao.insertUser(<span class="keyword">user</span>)。</span><br></pre></td></tr></table></figure>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">答：<span class="number">4</span> 抽象：</span><br><span class="line">		抽象就是找出一些事物的相似和共性之处，然后将这些事物归为一个类，这个类只考虑这些事物的相似和共性之处，并且会忽略与当前主题和目标无关的那些方面，将注意力集中在与当前目标有关的方面。例如，看到一只蚂蚁和大象，你能够想象出它们的相同之处，那就是抽象。抽象包括行为抽象和状态抽象两个方面。</span><br><span class="line">		例如，定义一个Person类，如下： <span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123; <span class="built_in">String</span> name; <span class="built_in">int</span> age; &#125; 人本来是很复杂的事物，有很多方面，但因为当前系统只需要了解人的姓名和年龄，所以上面定义的类中只包含姓名和年龄这两个属性，这就是一种抽像，使用抽象可以避免考虑一些与目标无关的细节。我对抽象的理解就是不要用显微镜去看一个事物的所有方面，这样涉及的内容就太多了，而是要善于划分问题的边界，当前系统需要什么，就只考虑什么。</span><br></pre></td></tr></table></figure>
+<h3 id="3-java中实现多态的机制是什么？"><a href="#3-java中实现多态的机制是什么？" class="headerlink" title="3. java中实现多态的机制是什么？"></a>3. java中实现多态的机制是什么？</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	<span class="keyword">java </span>中实现多态的机制靠的是父类或者接口定义的引用变量可以指向子类或者具体的实现类的实例对象，而程序调的方法在运行期才动态绑定，就是引用变量所指向的具体实例对象的方法，也就是内存里正在运行的那个对象的方法，而不是引用变量的类型中定义的方法。</span><br></pre></td></tr></table></figure>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">解释：</span><br><span class="line">	父类A有一个方法<span class="function"><span class="keyword">function</span><span class="params">()</span></span>,子类B,C分别继承A并且重写<span class="function"><span class="keyword">function</span><span class="params">()</span></span>，当创建一个对象A b = new B(); b.<span class="keyword">function</span>()就调用B的funciotn,假如你new C(),那调用的就是C重写的<span class="function"><span class="keyword">function</span></span>。怎么判断使用那个类的<span class="function"><span class="keyword">function</span></span>就是动态绑定，这个现象就是多态</span><br></pre></td></tr></table></figure>
+<h3 id="4-abstract-class-和-interface-有什么区别"><a href="#4-abstract-class-和-interface-有什么区别" class="headerlink" title="4. abstract class 和 interface 有什么区别?"></a>4. abstract class 和 interface 有什么区别?</h3><figure class="highlight d"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">答：概念：</span><br><span class="line">		含有 <span class="keyword">abstract</span> 修饰符的 <span class="keyword">class</span> 即为抽象类，<span class="keyword">abstract</span> 类不能创建的实例对象。含有 <span class="keyword">abstract</span> 方法的类必须定义为 <span class="keyword">abstract</span> <span class="keyword">class</span> ，<span class="keyword">abstract</span> <span class="keyword">class</span> 类中的方法不必是抽象的。<span class="keyword">abstract</span> <span class="keyword">class</span> 类中定义抽象方法必须在具体(Concrete)子类中实现，所以，不能有抽象构造方法或抽象静态方法。如果的子类没有实现抽象父类中的所有抽象方法，那么子类也必须定义为 <span class="keyword">abstract</span> 类型。</span><br><span class="line">		接口（<span class="keyword">interface</span>）可以说成是抽象类的一种特例，接口中的所有方法都必须是抽象的。接口中的方法定义默认为 <span class="keyword">public</span> <span class="keyword">abstract</span> 类型，接口中的成员变量类型默认为 <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span>。</span><br></pre></td></tr></table></figure>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">答：语法区别：</span><br><span class="line">		<span class="number">1.</span>抽象类可以有构造方法（但不能有抽象的构造方法），接口中不能有构造方法。</span><br><span class="line">		<span class="number">2.</span>抽象类中可以有普通成员变量，接口中没有普通成员变量</span><br><span class="line">		<span class="number">3.</span>抽象类中可以包含非抽象的普通方法，接口中的所有方法必须都是抽象的，不能有非抽象的普通方法。</span><br><span class="line">		<span class="number">4.</span> 抽象类中的抽象方法的访问类型可以是 <span class="keyword">public</span>，<span class="keyword">protected</span> 和（默认类型,虽然 eclipse 下不报错，但应该也不行），但接口中的抽象方法只能是<span class="keyword">public</span>类型的，并且默认即为 <span class="keyword">public</span> <span class="keyword">abstract</span> 类型。</span><br><span class="line">		<span class="number">5.</span> 抽象类中可以包含静态方法，接口中不能包含静态方法</span><br><span class="line">		<span class="number">6.</span> 抽象类和接口中都可以包含静态成员变量，抽象类中的静态成员变量的访问类型可以任意，但接口中定义的变量只能是 <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> 类型，并且默认即为 <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> 类型。</span><br><span class="line">		<span class="number">7.</span> 一个类可以实现多个接口，但只能继承一个抽象类。</span><br></pre></td></tr></table></figure>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">答：应用区别：</span><br><span class="line">   		<span class="number">1.</span>接口更多的是在系统架构设计方法发挥作用，主要用于定义模块之间的通信契约。而抽象类在代码实现方面发挥作用，可以实现代码的重用。</span><br><span class="line">   		eg:模板方法设计模式是抽象类的一个典型应用，假设某个项目的所有 <span class="type">Servlet</span> 类都要用相同的方式进行权限判断、记录访问日志和处理异常，那么就可以定义一个抽象的基类，让所有的 <span class="type">Servlet</span> 都继承这个抽象基类，在抽象基类的 service 方法中完成权限判断、记录访问日志和处理异常的代码，在各个子类中只是完成各自的业务逻辑代码，伪代码如下：</span><br><span class="line">   		public <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span></span>&#123;</span><br><span class="line">		public <span class="keyword">final</span> void service(<span class="type">HttpServletRequest</span> request, <span class="type">HttpServletResponse</span> response) <span class="keyword">throws</span> <span class="type">IOExcetion</span>,<span class="type">ServletException</span>	&#123;</span><br><span class="line">				记录访问日志</span><br><span class="line">				进行权限判断</span><br><span class="line">				<span class="keyword">if</span>(具有权限)&#123;</span><br><span class="line">					<span class="keyword">try</span>&#123;</span><br><span class="line">							doService(request,response);</span><br><span class="line">					   &#125;</span><br><span class="line">					<span class="keyword">catch</span>(<span class="type">Excetpion</span> e)	&#123;</span><br><span class="line">							记录异常信息</span><br><span class="line">									   &#125;</span><br><span class="line">				&#125;</span><br><span class="line">		&#125; </span><br><span class="line">		<span class="keyword">protected</span> <span class="keyword">abstract</span> void doService(<span class="type">HttpServletRequest</span> request, <span class="type">HttpServletResponse</span> response) <span class="keyword">throws</span> <span class="type">IOExcetion</span>,<span class="type">ServletException</span>; </span><br><span class="line">&#125;</span><br><span class="line">		public <span class="class"><span class="keyword">class</span> <span class="title">MyServlet1</span> <span class="keyword">extends</span> <span class="title">BaseServlet</span></span>&#123;</span><br><span class="line">			<span class="keyword">protected</span> void doService(<span class="type">HttpServletRequest</span> request, <span class="type">HttpServletResponse</span> response)</span><br><span class="line"><span class="keyword">throws</span> <span class="type">IOExcetion</span>,<span class="type">ServletException</span></span><br><span class="line">		&#123;</span><br><span class="line">			本<span class="type">Servlet</span>只处理的具体业务逻辑代码</span><br><span class="line">		&#125; </span><br><span class="line">&#125;</span><br><span class="line">		父类方法中间的某段代码不确定，留给子类干，就用模板方法设计模式。</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">备注：</span><br><span class="line">	先从总体解释抽象类和接口的基本概念，然后再比较两者的语法细节，最后再说两者的应用区别。比较两者语法细节区别的条理是：先从一个类中的构造方法、普通成员变量和方法（包括抽象方法），静态变量和方法，继承性等<span class="number">6</span>个方面逐一去比较回答，接着从第三者继承的角度的回答，最后再用一个典型的例子来说明。</span><br></pre></td></tr></table></figure>
+<h3 id="5-abstract-的-method-是否可同时是-static-是否可同时是-native-，是否可同时是-synchronized"><a href="#5-abstract-的-method-是否可同时是-static-是否可同时是-native-，是否可同时是-synchronized" class="headerlink" title="5. abstract 的 method 是否可同时是 static ,是否可同时是 native ，是否可同时是 synchronized?"></a>5. abstract 的 method 是否可同时是 static ,是否可同时是 native ，是否可同时是 synchronized?</h3><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	<span class="keyword">abstract</span> 的 <span class="function"><span class="keyword">method</span> 不能是 <span class="title">static</span> . 因为 <span class="title">abstract</span> 是抽象的，指的是方法只有声明没有实现，它的实现要放入声明该类的子类中实现。<span class="title">static</span> 是静态的，是一种属于类而不属于对象的方法或属性。声明 <span class="title">static</span> 说明可以直接用类名调用该方法，声明 <span class="title">abstract</span> 说明说明需要子类重写该方法，如果同时声明 <span class="title">static</span> 和 <span class="title">abstract</span>,用类名调用一个抽象方法肯定是不行的。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	<span class="keyword">abstract</span> 的 <span class="function"><span class="keyword">method</span> 不能是 <span class="title">native</span> ,因为 <span class="title">abstract</span> 和 <span class="title">native</span> 都是方法的声明，<span class="title">abstract</span> 是把一个方法的实现移交给子类，而 <span class="title">native</span> 是把一个方法的实现交给本地操作系统。如果同时出现，就相当于即把方法的实现移交给子类，又把方法的实现移交给本地操作系统，这样就分不清方法到底由谁来实现。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">备注：</span><br><span class="line">	<span class="keyword">native</span>方法表示该方法要用另外一种依赖平台的编程语言实现的，不存在着被子类实现的问题，所以，它也不能是抽象的，不能与<span class="keyword">abstract</span>混用。</span><br></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	<span class="keyword">abstract</span> 的 <span class="function"><span class="keyword">method</span> 不能是 <span class="title">synchronized</span> ，因为 <span class="title">synchronized</span> 是同步，然而同步是需要具体操作才能同步的，如果像 <span class="title">abstract</span> 只有方法声明，那么同步一些东西就会成为一个问题，当然抽象方法在被子类继承以后，可以同步。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">备注：</span><br><span class="line">	<span class="keyword">synchronized</span> 应该是作用在一个具体的方法上才有意义。而且，方法上的 <span class="keyword">synchronized</span> 同步所使用的同步锁对象是 <span class="keyword">this</span>，而抽象方法上无法确定 <span class="keyword">this</span> 是什么。</span><br></pre></td></tr></table></figure>
+
+    
   
 
-        <div class="article-info info-on-right">
-          
-          
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://sweetyc1oud.github.io/PromiseData/image/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://sweetyc1oud.github.io/PromiseData/image/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -215,169 +303,136 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2015/11/23/Java基础_05/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Promise/2015/11/22/Java基础_04/" class="archive-article-date">
-  	<time datetime="2015-11-22T01:25:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-22</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/Promise/2017/03/06/剑指offer编程题_01/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          剑指offer编程题_01
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Promise/2015/11/22/Java基础_04/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java基础_04</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Promise/2015/11/22/Java基础_04/">Java基础_04</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java基础"><span class="toc-number">1.</span> <span class="toc-text">Java基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-面向对象的特征有哪些方面？"><span class="toc-number">1.0.1.</span> <span class="toc-text">2. 面向对象的特征有哪些方面？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-java中实现多态的机制是什么？"><span class="toc-number">1.0.2.</span> <span class="toc-text">3. java中实现多态的机制是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-abstract-class-和-interface-有什么区别"><span class="toc-number">1.0.3.</span> <span class="toc-text">4. abstract class 和 interface 有什么区别?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-abstract-的-method-是否可同时是-static-是否可同时是-native-，是否可同时是-synchronized"><span class="toc-number">1.0.4.</span> <span class="toc-text">5. abstract 的 method 是否可同时是 static ,是否可同时是 native ，是否可同时是 synchronized?</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Promise/2015/11/19/Java基础_03/" class="archive-article-date">
-  	<time datetime="2015-11-19T03:36:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Promise/2015/11/19/Java基础_03/">Java基础_03</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Promise/2015/11/18/Java基础_02/" class="archive-article-date">
-  	<time datetime="2015-11-18T05:18:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-18</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Promise/2015/11/18/Java基础_02/">Java基础_02</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Promise/2015/11/16/Java基础_01/" class="archive-article-date">
-  	<time datetime="2015-11-16T07:42:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Promise/2015/11/16/Java基础_01/">Java基础_01</a>
-    </h1>
+  <div id="SOHUCS" sid="Java基础_05" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cytvGDshU",
+        conf: "e28aac4272b532dc05a3e9bc658f7bc4"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -405,10 +460,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/Promise/",
