@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="www.misscloud.top">
   <title>Java基础_05 | Promise&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java基础###1. 写 clone() 方法时，通常都有一行代码，是什么？ 12答：	clone 有缺省行为，super.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。 2. 面向对象的特征有哪些方面？12答：1 封装：		封装是保证软件部件具有优良的模块性的基础，封装的目标就是要实现软件部件的“高内聚、低耦合”，防止程序相互依赖性而带来的变动影响。在面向对象的编程">
+  <meta name="description" content="Java基础1. 写 clone() 方法时，通常都有一行代码，是什么？12答：	clone 有缺省行为，super.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。 2. 面向对象的特征有哪些方面？12答：1 封装：		封装是保证软件部件具有优良的模块性的基础，封装的目标就是要实现软件部件的“高内聚、低耦合”，防止程序相互依赖性而带来的变动影响。在面向对象的编程语言中，">
 <meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java基础_05">
 <meta property="og:url" content="www.misscloud.top/2015/11/23/Java基础_05/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
-<meta property="og:description" content="Java基础###1. 写 clone() 方法时，通常都有一行代码，是什么？ 12答：	clone 有缺省行为，super.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。 2. 面向对象的特征有哪些方面？12答：1 封装：		封装是保证软件部件具有优良的模块性的基础，封装的目标就是要实现软件部件的“高内聚、低耦合”，防止程序相互依赖性而带来的变动影响。在面向对象的编程">
-<meta property="og:updated_time" content="2018-03-15T12:39:13.206Z">
+<meta property="og:description" content="Java基础1. 写 clone() 方法时，通常都有一行代码，是什么？12答：	clone 有缺省行为，super.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。 2. 面向对象的特征有哪些方面？12答：1 封装：		封装是保证软件部件具有优良的模块性的基础，封装的目标就是要实现软件部件的“高内聚、低耦合”，防止程序相互依赖性而带来的变动影响。在面向对象的编程语言中，">
+<meta property="og:updated_time" content="2018-03-26T14:05:51.215Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础_05">
-<meta name="twitter:description" content="Java基础###1. 写 clone() 方法时，通常都有一行代码，是什么？ 12答：	clone 有缺省行为，super.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。 2. 面向对象的特征有哪些方面？12答：1 封装：		封装是保证软件部件具有优良的模块性的基础，封装的目标就是要实现软件部件的“高内聚、低耦合”，防止程序相互依赖性而带来的变动影响。在面向对象的编程">
+<meta name="twitter:description" content="Java基础1. 写 clone() 方法时，通常都有一行代码，是什么？12答：	clone 有缺省行为，super.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。 2. 面向对象的特征有哪些方面？12答：1 封装：		封装是保证软件部件具有优良的模块性的基础，封装的目标就是要实现软件部件的“高内聚、低耦合”，防止程序相互依赖性而带来的变动影响。在面向对象的编程语言中，">
   
     <link rel="alternative" href="/atom.xml" title="Promise&#39;s blog" type="application/atom+xml">
   
@@ -210,7 +210,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     <strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java基础"><span class="toc-number">1.</span> <span class="toc-text">Java基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-面向对象的特征有哪些方面？"><span class="toc-number">1.0.1.</span> <span class="toc-text">2. 面向对象的特征有哪些方面？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-java中实现多态的机制是什么？"><span class="toc-number">1.0.2.</span> <span class="toc-text">3. java中实现多态的机制是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-abstract-class-和-interface-有什么区别"><span class="toc-number">1.0.3.</span> <span class="toc-text">4. abstract class 和 interface 有什么区别?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-abstract-的-method-是否可同时是-static-是否可同时是-native-，是否可同时是-synchronized"><span class="toc-number">1.0.4.</span> <span class="toc-text">5. abstract 的 method 是否可同时是 static ,是否可同时是 native ，是否可同时是 synchronized?</span></a></li></ol></li></ol></li></ol>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java基础"><span class="toc-number">1.</span> <span class="toc-text">Java基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-写-clone-方法时，通常都有一行代码，是什么？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 写 clone() 方法时，通常都有一行代码，是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-面向对象的特征有哪些方面？"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 面向对象的特征有哪些方面？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-java中实现多态的机制是什么？"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. java中实现多态的机制是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-abstract-class-和-interface-有什么区别"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. abstract class 和 interface 有什么区别?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-abstract-的-method-是否可同时是-static-是否可同时是-native-，是否可同时是-synchronized"><span class="toc-number">1.0.5.</span> <span class="toc-text">5. abstract 的 method 是否可同时是 static ,是否可同时是 native ，是否可同时是 synchronized?</span></a></li></ol></li></ol></li></ol>
          </div>
    <script type="text/javascript">
   function showToc(){
@@ -233,8 +233,7 @@
   
     
     
-      <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><p>###1. 写 clone() 方法时，通常都有一行代码，是什么？</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	<span class="keyword">clone</span> <span class="title">有缺省行为，super</span>.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。</span><br></pre></td></tr></table></figure>
+      <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h3 id="1-写-clone-方法时，通常都有一行代码，是什么？"><a href="#1-写-clone-方法时，通常都有一行代码，是什么？" class="headerlink" title="1. 写 clone() 方法时，通常都有一行代码，是什么？"></a>1. 写 clone() 方法时，通常都有一行代码，是什么？</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	<span class="keyword">clone</span> <span class="title">有缺省行为，super</span>.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。</span><br></pre></td></tr></table></figure>
 <h3 id="2-面向对象的特征有哪些方面？"><a href="#2-面向对象的特征有哪些方面？" class="headerlink" title="2. 面向对象的特征有哪些方面？"></a>2. 面向对象的特征有哪些方面？</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：<span class="number">1</span> 封装：</span><br><span class="line">		封装是保证软件部件具有优良的模块性的基础，封装的目标就是要实现软件部件的“高内聚、低耦合”，防止程序相互依赖性而带来的变动影响。在面向对象的编程语言中，对象是封装的最基本单位，面向对象的封装比传统语言的封装更为清晰、更为有力。面向对象的封装就是把描述一个对象的属性和行为的代码封装在一个“模块”中，也就是一个类中，属性用变量定义，行为用方法进行定义，方法可以直接访问同一个对象中的属性。通常情况下，只要记住让变量和访问这个变量的方法放在一起，将一个类中的成员变量全部定义成私有的，只有这个类自己的方法才可以访问到这些成员变量，这就基本上实现对象的封装，就很容易找出要分配到这个类上的方法了，就基本上算是会面向对象的编程了。把握一个原则：把对同一事物进行操作的方法和相关的方法放在同一个类中，把方法和它操作的数据放在同一个类中。</span><br></pre></td></tr></table></figure>
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：<span class="number">2</span> 继承：</span><br><span class="line">		在定义和实现一个类的时候，可以在一个已经存在的类的基础之上来进行，把这个已经存在的类所定义的内容作为自己的内容，并可以加入若干新的内容，或修改原来的方法使之更适合特殊的需要，这就是继承。继承是子类自动共享父类数据和方法的机制，这是类之间的一种关系，提高了软件的可重用性和可扩展性。</span><br></pre></td></tr></table></figure>
 <figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：<span class="number">3</span> 多态：</span><br><span class="line">		多态是指程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定，即一个引用变量倒底会指向哪个类的实例对象，该引用变量发出的方法调用到底是哪个类中实现的方法，必须在由程序运行期间才能决定。因为在程序运行时才确定具体的类，这样，不用修改源程序代码，就可以让引用变量绑定到各种不同的类实现上，从而导致该引用调用的具体方法随之改变，即不修改程序代码就可以改变程序运行时所绑定的具体代码，让程序可以选择多个运行状态，这就是多态性。多态性增强了软件的灵活性和扩展性。例如，下面代码中的 UserDao 是一个接口，它定义引用变量 <span class="keyword">user</span>Dao 指向的实例对象由 daofactory.getDao() 在执行的时候返回，有时候指向的是 UserJdbcDao 这个实现，有时候指向的是 UserHibernateDao 这个实现，这样，不用修改源代码，就可以改变 <span class="keyword">user</span>Dao 指向的具体类实现，从而导致 <span class="keyword">user</span>Dao.insertUser() 方法调用的具体代码也随之改变，即有时候调用的是 UserJdbcDao的insertUser 方法，有时候调用的是 UserHibernateDao 的 insertUser 方法： UserDao <span class="keyword">user</span>Dao = daofactory.getDao(); <span class="keyword">user</span>Dao.insertUser(<span class="keyword">user</span>)。</span><br></pre></td></tr></table></figure>
@@ -365,11 +364,11 @@
   
 <nav id="article-nav">
   
-    <a href="/Promise/2017/03/06/剑指offer编程题_01/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Promise/2015/11/23/Java基础_06/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          剑指offer编程题_01
+          Java基础_06
         
       </div>
     </a>
@@ -403,7 +402,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java基础"><span class="toc-number">1.</span> <span class="toc-text">Java基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-面向对象的特征有哪些方面？"><span class="toc-number">1.0.1.</span> <span class="toc-text">2. 面向对象的特征有哪些方面？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-java中实现多态的机制是什么？"><span class="toc-number">1.0.2.</span> <span class="toc-text">3. java中实现多态的机制是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-abstract-class-和-interface-有什么区别"><span class="toc-number">1.0.3.</span> <span class="toc-text">4. abstract class 和 interface 有什么区别?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-abstract-的-method-是否可同时是-static-是否可同时是-native-，是否可同时是-synchronized"><span class="toc-number">1.0.4.</span> <span class="toc-text">5. abstract 的 method 是否可同时是 static ,是否可同时是 native ，是否可同时是 synchronized?</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java基础"><span class="toc-number">1.</span> <span class="toc-text">Java基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-写-clone-方法时，通常都有一行代码，是什么？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 写 clone() 方法时，通常都有一行代码，是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-面向对象的特征有哪些方面？"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 面向对象的特征有哪些方面？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-java中实现多态的机制是什么？"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. java中实现多态的机制是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-abstract-class-和-interface-有什么区别"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. abstract class 和 interface 有什么区别?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-abstract-的-method-是否可同时是-static-是否可同时是-native-，是否可同时是-synchronized"><span class="toc-number">1.0.5.</span> <span class="toc-text">5. abstract 的 method 是否可同时是 static ,是否可同时是 native ，是否可同时是 synchronized?</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
