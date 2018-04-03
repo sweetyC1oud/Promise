@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.misscloud.top">
-  <title>返回结果的HTTP状态码 | Promise&#39;s blog</title>
+  <title>Git版本控制-简介 | Promise&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="返回结果的HTTP状态码一. 前言 ​    HTTP状态码负责表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常、通知出现的错误等工作。  二. 状态码告知从服务器端返回的请求结果 ​    状态码的职责：是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 ​    状态码：由以3位数字和原因短语组成。|     |">
+  <meta name="description" content="Git 版本控制-简介1. Git 的诞生 ​    Linus 在1991年创建了开源的 Linux ,  在2002年以前，世界各地的志愿者把源代码文件通过 diff 的方式发给 Linus，然后由 Linus 本人通过手工方式合并代码，到了2002年，代码库之大让 Linus 很难继续通过手工方式管理了，于是 Linus 选择了一个商业的版本控制系统 BitKeeper，BitKeeper">
 <meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="返回结果的HTTP状态码">
-<meta property="og:url" content="www.misscloud.top/2018/04/30/返回结果的HTTP状态码/index.html">
+<meta property="og:title" content="Git版本控制-简介">
+<meta property="og:url" content="www.misscloud.top/2018/03/30/Git版本控制-简介/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
-<meta property="og:description" content="返回结果的HTTP状态码一. 前言 ​    HTTP状态码负责表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常、通知出现的错误等工作。  二. 状态码告知从服务器端返回的请求结果 ​    状态码的职责：是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 ​    状态码：由以3位数字和原因短语组成。|     |">
-<meta property="og:updated_time" content="2018-04-02T14:50:17.079Z">
+<meta property="og:description" content="Git 版本控制-简介1. Git 的诞生 ​    Linus 在1991年创建了开源的 Linux ,  在2002年以前，世界各地的志愿者把源代码文件通过 diff 的方式发给 Linus，然后由 Linus 本人通过手工方式合并代码，到了2002年，代码库之大让 Linus 很难继续通过手工方式管理了，于是 Linus 选择了一个商业的版本控制系统 BitKeeper，BitKeeper">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E9%9B%86%E4%B8%AD%E5%BC%8F.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E5%88%86%E5%B8%83%E5%BC%8F.jpg">
+<meta property="og:updated_time" content="2018-04-02T23:48:07.702Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="返回结果的HTTP状态码">
-<meta name="twitter:description" content="返回结果的HTTP状态码一. 前言 ​    HTTP状态码负责表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常、通知出现的错误等工作。  二. 状态码告知从服务器端返回的请求结果 ​    状态码的职责：是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 ​    状态码：由以3位数字和原因短语组成。|     |">
+<meta name="twitter:title" content="Git版本控制-简介">
+<meta name="twitter:description" content="Git 版本控制-简介1. Git 的诞生 ​    Linus 在1991年创建了开源的 Linux ,  在2002年以前，世界各地的志愿者把源代码文件通过 diff 的方式发给 Linus，然后由 Linus 本人通过手工方式合并代码，到了2002年，代码库之大让 Linus 很难继续通过手工方式管理了，于是 Linus 选择了一个商业的版本控制系统 BitKeeper，BitKeeper">
+<meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E9%9B%86%E4%B8%AD%E5%BC%8F.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Promise&#39;s blog" type="application/atom+xml">
   
@@ -176,20 +179,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-返回结果的HTTP状态码" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Git版本控制-简介" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      返回结果的HTTP状态码
+      Git版本控制-简介
     </h1>
   
 
         
-        <a href="/Promise/2018/04/30/返回结果的HTTP状态码/" class="archive-article-date">
-  	<time datetime="2018-04-30T13:17:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-30</time>
+        <a href="/Promise/2018/03/30/Git版本控制-简介/" class="archive-article-date">
+  	<time datetime="2018-03-30T07:19:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-30</time>
 </a>
         
 		
@@ -210,7 +213,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     <strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#返回结果的HTTP状态码"><span class="toc-number">1.</span> <span class="toc-text">返回结果的HTTP状态码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-前言"><span class="toc-number">1.0.1.</span> <span class="toc-text">一. 前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-状态码告知从服务器端返回的请求结果"><span class="toc-number">1.0.2.</span> <span class="toc-text">二. 状态码告知从服务器端返回的请求结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-2××-成功"><span class="toc-number">1.0.3.</span> <span class="toc-text">三. 2×× 成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四-3××-重定向"><span class="toc-number">1.0.4.</span> <span class="toc-text">四. 3×× 重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五-4××-客户端错误"><span class="toc-number">1.0.5.</span> <span class="toc-text">五. 4×× 客户端错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六-5××-服务器错误"><span class="toc-number">1.0.6.</span> <span class="toc-text">六. 5×× 服务器错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七-注意"><span class="toc-number">1.0.7.</span> <span class="toc-text">七. 注意</span></a></li></ol></li></ol></li></ol>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-版本控制-简介"><span class="toc-number">1.</span> <span class="toc-text">Git 版本控制-简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git-的诞生"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. Git 的诞生</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-集中式-vs-分布式"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 集中式 vs 分布式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-创建版本库"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 创建版本库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-总结"><span class="toc-number">1.0.4.</span> <span class="toc-text">5. 总结</span></a></li></ol></li></ol></li></ol>
          </div>
    <script type="text/javascript">
   function showToc(){
@@ -233,27 +236,88 @@
   
     
     
-      <h1 id="返回结果的HTTP状态码"><a href="#返回结果的HTTP状态码" class="headerlink" title="返回结果的HTTP状态码"></a>返回结果的HTTP状态码</h1><h3 id="一-前言"><a href="#一-前言" class="headerlink" title="一. 前言"></a>一. 前言</h3><blockquote>
-<p>​    HTTP状态码负责表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常、通知出现的错误等工作。</p>
+      <h1 id="Git-版本控制-简介"><a href="#Git-版本控制-简介" class="headerlink" title="Git 版本控制-简介"></a>Git 版本控制-简介</h1><h3 id="1-Git-的诞生"><a href="#1-Git-的诞生" class="headerlink" title="1. Git 的诞生"></a>1. Git 的诞生</h3><blockquote>
+<p>​    Linus 在1991年创建了开源的 Linux ,  在2002年以前，世界各地的志愿者把源代码文件通过 diff 的方式发给 Linus，然后由 Linus 本人通过手工方式合并代码，到了2002年，代码库之大让 Linus 很难继续通过手工方式管理了，于是 Linus 选择了一个商业的版本控制系统 BitKeeper，BitKeeper 的东家 BitMover 公司出于人道主义精神，授权 Linux 社区免费使用这个版本控制系统。安定团结的大好局面在2005年就被打破了，原因是 Linux 社区牛人聚集，不免沾染了一些梁山好汉的江湖习气。开发 Samba 的 Andrew 试图破解BitKeeper 的协议（这么干的其实也不只他一个），被 BitMover 公司发现了，于是 BitMover 公司怒了，要收回 Linux 社区的免费使用权。于是 Linus 花了两周时间自己用 C 写了一个<strong>分布式版本控制系统</strong>，这就是<strong>Git</strong>！</p>
 </blockquote>
-<h3 id="二-状态码告知从服务器端返回的请求结果"><a href="#二-状态码告知从服务器端返回的请求结果" class="headerlink" title="二. 状态码告知从服务器端返回的请求结果"></a>二. 状态码告知从服务器端返回的请求结果</h3><blockquote>
-<p>​    <strong>状态码的职责</strong>：是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。</p>
-<p>​    <strong>状态码</strong>：由以3位数字和原因短语组成。<br>|     |  <strong>类别</strong>  | 原因短句 |<br>| :—–|:——| :——|<br>|  1××  |   Informational（ 信息性状态码 ）   |   接受的请求正在处理   |<br>| 2×× |   Success （ 成功状态码 ）   |   请求正常处理完毕   |<br>| 3×× |   Redirection （ 重定向状态码 ）   |   需要进行附加操作以完成请求   |<br>| 4×× |   Client Error （ 客户端错误状态码 ）   |   服务器无法处理请求   |<br>| 5×× |   Server Error（ 服务器错误状态码）   |   服务器处理请求出错   |</p>
+<h3 id="2-集中式-vs-分布式"><a href="#2-集中式-vs-分布式" class="headerlink" title="2. 集中式 vs 分布式"></a>2. 集中式 vs 分布式</h3><blockquote>
+<p>​    <strong>集中式版本控制</strong> ：版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中 央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比  是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。</p>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E9%9B%86%E4%B8%AD%E5%BC%8F.jpg" alt="集中式"></p>
 </blockquote>
-<h3 id="三-2××-成功"><a href="#三-2××-成功" class="headerlink" title="三. 2×× 成功"></a>三. 2×× 成功</h3><blockquote>
-<p><strong>2×× 的响应结果表明请求被正常处理了 。</strong><br>| 状态码 | 表示含义 |<br>| :—–|:——|<br>|  200 OK  |   表示从客户端发来的请求在服务器端被正常处理了   |<br>| 204 No Content |   表示服务器接收的请求已成功处理，但在返回的相应报文中不含实体的主体部分   |<br>| 206 Partial Content |   表示客户端进行了范围请求，而服务器成功执行了这部分的Get请求   |</p>
+<blockquote>
+<ul>
+<li><p>CVCS的版本库集中存放在中央服务器，而工作时都是用自己的电脑，所以要先从中央服务器取得最新的版本，然后工作完后再将自己的代码推送给中央服务器。</p>
+</li>
+<li><p>CVS：最早的、开源、免费。由于自身设计的问题，会造成提交文件不完整、版本库莫名其妙损坏的情况</p>
+</li>
+<li><p>SVN：开源、免费。修正了CVS的一些稳定性问题，是目前用得最多的集中式版本库控制系统</p>
+</li>
+<li><p>ClearCase：收费、安装比Windows还大、运行比蜗牛还慢。IBM 收购了原本制作的Rational公司</p>
+</li>
+<li><p>VSS：集成在Visual Studio中。</p>
+</li>
+</ul>
 </blockquote>
-<h3 id="四-3××-重定向"><a href="#四-3××-重定向" class="headerlink" title="四. 3×× 重定向"></a>四. 3×× 重定向</h3><blockquote>
-<p><strong>3×× 响应结果表明浏览器需要执行某些特殊的处理以正确处理请求。</strong><br>| 状态码 | 表示含义 |<br>| :—–|:——|<br>|  301 Moved Permanently  |   永久性重定向，表示请求的资源已被分配了新的URI，以后应使用资源现在所指的URI   |<br>| 302 Found |   临时性重定向，表示请求的资源已被分配了新的URI，希望用户(本次)能使用新的URI   |<br>| 303 See Other |   表示由于请求对应的资源存在着另一个URI，应使用 Get 方法定向获取请求的资源，303状态码 和 302 Found 状态码有着相同的功能，但303状态码明确要求客户端应当采用 Get 方法，这点与 302状态码 有区别   |<br>| 304 Not Modified |   表示客户端发送附带条件的请求时，服务器端允许请求访问资源，但因发成请求为满足条件的情况后，直接返回304 Not Modified   |<br>| 307 Temporary Redirect |   临时重定向，该状态码与 302 Found 有着相同的含义，尽管 302 标准禁止 Post 变换成 Get，但实际使用时大家并不遵守   |</p>
+<blockquote>
+<p>  <strong>缺点</strong> ：集中式版本控制系统最大的问题就是必须联网才能工作，受网络状况、带宽影响。</p>
 </blockquote>
-<h3 id="五-4××-客户端错误"><a href="#五-4××-客户端错误" class="headerlink" title="五. 4×× 客户端错误"></a>五. 4×× 客户端错误</h3><blockquote>
-<p><strong>4×× 的响应结果表明客户端是发生错误的原因所在。</strong><br>| 状态码 | 表示含义 |<br>| :—–|:——|<br>|  400 Bad Request  |   该状态码表示请求报文中存在语法错误，当错误发生时，需修改请求的内容后再次发送请求。另外，浏览器会像 200 OK 一样对待该状态码   |<br>| 401 Unauthorized |   表示发送的请求需要有通过 HTTP认证 的认证信息。另外若之前已经进行过1次请求，则表示用户认证失败   |<br>| 403 Forbidden |   表示队请求资源的访问被服务器拒绝了。未获得文件系统的访问授权，访问权限出现某些问题等列举的情况都可能是发生403的原因   |<br>| 404 Not Found |   表示服务器上无法找到请求的资源，除此之外，也可以在服务器端拒绝请求且不想说明理由时的使用   |</p>
+<hr>
+<blockquote>
+<p>​    <strong>分布式版本控制</strong> ：分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上。多人协作时，只需把各自的修改推送给对方，就可以互相看到对方的修改了。在实际使用分布式版本控制系统的时候，其实很少在两人之间的电脑上推送版本库的修改，因为可能你们俩不在一个局域网内，两台电脑互相访问不了，也可能今天你的同事病了，他的电脑压根没有开机。因此，分布式版本控制系统通常也有一台充当“中央服务器”的电脑，但这个服务器的作用仅仅是用来方便“交换”大家的修改，没有它大家也一样干活，只是交换修改不方便而已。</p>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E5%88%86%E5%B8%83%E5%BC%8F.jpg" alt="分布式"></p>
 </blockquote>
-<h3 id="六-5××-服务器错误"><a href="#六-5××-服务器错误" class="headerlink" title="六. 5×× 服务器错误"></a>六. 5×× 服务器错误</h3><blockquote>
-<p><strong>5×× 的响应结果表明服务器本身发生错误</strong><br>| 状态码 | 表示含义 |<br>| :—–|:——|<br>|  500 Internal Server Error  |   表示服务器端在执行请求时发生了错误，也有可能是 Web 应用存在的 bug 或某些临时的故障   |<br>| 503 Service Unavailable |   表示服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。   |</p>
+<blockquote>
+<ul>
+<li>Git</li>
+<li>BitKeeper(促使Git诞生)</li>
+<li>Mercurial</li>
+<li>Bazaar</li>
+</ul>
 </blockquote>
-<h3 id="七-注意"><a href="#七-注意" class="headerlink" title="七. 注意"></a>七. 注意</h3><blockquote>
-<p>​    <strong>不少返回的状态码响应都是错误的，但是用户可能察觉不到这点。比如 Web 应用程序内部发生错误，状态码依然返回 200 OK ,这种情况也经常遇到。</strong> </p>
+<hr>
+<blockquote>
+<p><strong>特点与比较</strong> ：</p>
+<p>​    <strong>集中式</strong>：</p>
+<p>​        ①通过与中心服务器的连接执行所有操作，必须联网。</p>
+<hr>
+<p>​    <strong>分布式</strong>：</p>
+<p>​        ①快速，本地客户机操作，不联网也不影响工作，离线工作，DVCS 比 Subversion 快大约3-10倍。</p>
+<p>​        ②可以实现非常灵活的工作流(传统的集中式工作流 + 特殊工作流 + 特殊工作流和集中式工作流的组合)            </p>
+<p>​        ③3、安全性更高，因为每个人电脑里都是完整的版本库，坏了复制一份即可，CVCS中央服务器出问题就GG 。</p>
+<p>​        ④两台电脑互相访问不了或某一台电脑未开机不能执行复制(交换修改)时，通常有一台电脑充当中央服务器。 </p>
+<p>​        ⑤分支管理。</p>
+</blockquote>
+<h3 id="3-创建版本库"><a href="#3-创建版本库" class="headerlink" title="3. 创建版本库"></a>3. 创建版本库</h3><blockquote>
+<p>①首先，选择一个合适的地方，创建一个空目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ mkdir learngit</span><br><span class="line">&gt;$ cd learngit</span><br><span class="line">&gt;$ pwd</span><br><span class="line">&gt;/Users/michael/learngit</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<figure class="highlight plain"><figcaption><span>命令用于显示当前目录。这个仓库位于```/Users/michael/learngit```。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt;</span><br><span class="line">&gt;***</span><br><span class="line">&gt;</span><br><span class="line">&gt;**注意：**</span><br><span class="line">&gt;如果你使用 Windows 系统，为了避免遇到各种莫名其妙的问题，请确保目录名（包括父目录）不包含中文。 </span><br><span class="line">&gt;</span><br><span class="line">&gt;***</span><br><span class="line">&gt;</span><br><span class="line">&gt;②通过```git init```命令把这个目录变成 Git 可以管理的仓库：</span><br><span class="line">&gt;</span><br><span class="line">&gt;```linux</span><br><span class="line">&gt;$ git init</span><br><span class="line">&gt;Initialized empty Git repository in /Users/michael/learngit/.git/</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>这样就把 Git 的仓库建好了，并且是一个空的仓库(empty Git repository) ，细心的读者课发现当前目录下多了一个<figure class="highlight plain"><figcaption><span>Git 来跟踪管理版本库的，没事千万不要手动修改这个目录里面的文件，不然改乱了，就把Git仓库给破坏了。如果没有看到```.git``` 目录，那是因为这个目录```.git```目录，那是因为这个目录默认是隐藏的，用```ls -ah```命令就可以看见。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 4. 把文件添加到版本库</span><br><span class="line"></span><br><span class="line">&gt;我们在```learngit``` 目录下(子目录也行)编写一个```readme.txt```文件，内容如下：</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>Git is a version control system.<br>Git is free software.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">然后把一个文件放到 Git 仓库只需要两步。</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">**①**第一步，用命令```git add```告诉 Git ，把文件添加到仓库：</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">```linux</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">$ git add readme.txt</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p><strong>②</strong>第二步，用命令<code>git commit</code>告诉Git，把文件提交到仓库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ git commit -m &quot;wrote a readme file&quot;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<hr>
+<p><strong>注意：</strong><code>git commit</code>命令，<code>-m</code>后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，能够见名知意，这样你就能从历史记录里方便地找到改动记录。</p>
+<hr>
+<p><code>git commit</code>命令执行成功后会告诉你，1个文件被改动（我们新添加的readme.txt文件），插入了两行内容（readme.txt有两行内容）。为什么Git添加文件需要<code>add</code>，<code>commit</code>一共两步呢？因为<code>commit</code>可以一次提交很多文件，所以你可以多次<code>add</code>不同的文件，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ git add file1.txt</span><br><span class="line">&gt;$ git add file2.txt file3.txt</span><br><span class="line">&gt;$ git commit -m &quot;add 3 files.&quot;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h3><blockquote>
+<ul>
+<li><p>初始化一个Git仓库，使用<code>git init</code>命令。</p>
+</li>
+<li><p>添加文件到Git仓库，分两步：</p>
+<p>​                    ①第一步，使用命令<code>git add &lt;file&gt;</code>，注意，可反复多次使用，添加多个文件；</p>
+<p>​                    ②第二步，使用命令<code>git commit</code>，完成。</p>
+</li>
+</ul>
 </blockquote>
 
     
@@ -301,7 +365,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/HTTP//" class="article-tag-list-link color5">HTTP</a>
+        			<a href="/Promise/categories/Git//" class="article-tag-list-link color4">Git</a>
         		</li>
       		
 		</ul>
@@ -356,7 +420,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/04/30/返回结果的HTTP状态码/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/03/30/Git版本控制-简介/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -370,9 +434,18 @@
   
 <nav id="article-nav">
   
+    <a href="/Promise/2018/04/03/Git版本控制-时光机穿梭/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Git版本控制-时光机穿梭
+        
+      </div>
+    </a>
   
-    <a href="/Promise/2018/04/03/Git版本控制-时光机穿梭/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Git版本控制-时光机穿梭</div>
+  
+    <a href="/Promise/2017/12/06/python基础语法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python基础语法</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -399,7 +472,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#返回结果的HTTP状态码"><span class="toc-number">1.</span> <span class="toc-text">返回结果的HTTP状态码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-前言"><span class="toc-number">1.0.1.</span> <span class="toc-text">一. 前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-状态码告知从服务器端返回的请求结果"><span class="toc-number">1.0.2.</span> <span class="toc-text">二. 状态码告知从服务器端返回的请求结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-2××-成功"><span class="toc-number">1.0.3.</span> <span class="toc-text">三. 2×× 成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四-3××-重定向"><span class="toc-number">1.0.4.</span> <span class="toc-text">四. 3×× 重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五-4××-客户端错误"><span class="toc-number">1.0.5.</span> <span class="toc-text">五. 4×× 客户端错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六-5××-服务器错误"><span class="toc-number">1.0.6.</span> <span class="toc-text">六. 5×× 服务器错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七-注意"><span class="toc-number">1.0.7.</span> <span class="toc-text">七. 注意</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-版本控制-简介"><span class="toc-number">1.</span> <span class="toc-text">Git 版本控制-简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git-的诞生"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. Git 的诞生</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-集中式-vs-分布式"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 集中式 vs 分布式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-创建版本库"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 创建版本库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-总结"><span class="toc-number">1.0.4.</span> <span class="toc-text">5. 总结</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -415,7 +488,7 @@
   
 
   
-  <div id="SOHUCS" sid="返回结果的HTTP状态码" ></div> 
+  <div id="SOHUCS" sid="Git版本控制-简介" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({

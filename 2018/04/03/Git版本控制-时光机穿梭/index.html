@@ -6,22 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.misscloud.top">
-  <title>Git版本控制 | Promise&#39;s blog</title>
+  <title>Git版本控制-时光机穿梭 | Promise&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git 版本控制1. Git 的诞生 ​    Linus 在1991年创建了开源的 Linux ,  在2002年以前，世界各地的志愿者把源代码文件通过 diff 的方式发给 Linus，然后由 Linus 本人通过手工方式合并代码，到了2002年，代码库之大让 Linus 很难继续通过手工方式管理了，于是 Linus 选择了一个商业的版本控制系统 BitKeeper，BitKeeper 的东家">
+  <meta name="description" content="Git版本控制-时光机穿梭一、简介 ​    我们不断对文件进行修改，然后不断提交修改到版本库里，就好比玩 RPG 游戏时，每公国一关就会自动把游戏状态存盘，如果某一关没有过去，我们还可以读取前一关的状态，从最近的地方重新开始。Git 也是一样，每当你觉得文件修改到一定程度的时候，就可以”保存一个快照“，这个快照在 Git 中被称为commit。一旦我们把文件改乱了，还可以从最近的一个commit">
 <meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git版本控制">
-<meta property="og:url" content="www.misscloud.top/2018/03/30/Git版本控制/index.html">
+<meta property="og:title" content="Git版本控制-时光机穿梭">
+<meta property="og:url" content="www.misscloud.top/2018/04/03/Git版本控制-时光机穿梭/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
-<meta property="og:description" content="Git 版本控制1. Git 的诞生 ​    Linus 在1991年创建了开源的 Linux ,  在2002年以前，世界各地的志愿者把源代码文件通过 diff 的方式发给 Linus，然后由 Linus 本人通过手工方式合并代码，到了2002年，代码库之大让 Linus 很难继续通过手工方式管理了，于是 Linus 选择了一个商业的版本控制系统 BitKeeper，BitKeeper 的东家">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E9%9B%86%E4%B8%AD%E5%BC%8F.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E5%88%86%E5%B8%83%E5%BC%8F.jpg">
-<meta property="og:updated_time" content="2018-04-01T14:09:02.156Z">
+<meta property="og:description" content="Git版本控制-时光机穿梭一、简介 ​    我们不断对文件进行修改，然后不断提交修改到版本库里，就好比玩 RPG 游戏时，每公国一关就会自动把游戏状态存盘，如果某一关没有过去，我们还可以读取前一关的状态，从最近的地方重新开始。Git 也是一样，每当你觉得文件修改到一定程度的时候，就可以”保存一个快照“，这个快照在 Git 中被称为commit。一旦我们把文件改乱了，还可以从最近的一个commit">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData//markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80.jpg">
+<meta property="og:updated_time" content="2018-04-03T00:44:36.255Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git版本控制">
-<meta name="twitter:description" content="Git 版本控制1. Git 的诞生 ​    Linus 在1991年创建了开源的 Linux ,  在2002年以前，世界各地的志愿者把源代码文件通过 diff 的方式发给 Linus，然后由 Linus 本人通过手工方式合并代码，到了2002年，代码库之大让 Linus 很难继续通过手工方式管理了，于是 Linus 选择了一个商业的版本控制系统 BitKeeper，BitKeeper 的东家">
-<meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E9%9B%86%E4%B8%AD%E5%BC%8F.jpg">
+<meta name="twitter:title" content="Git版本控制-时光机穿梭">
+<meta name="twitter:description" content="Git版本控制-时光机穿梭一、简介 ​    我们不断对文件进行修改，然后不断提交修改到版本库里，就好比玩 RPG 游戏时，每公国一关就会自动把游戏状态存盘，如果某一关没有过去，我们还可以读取前一关的状态，从最近的地方重新开始。Git 也是一样，每当你觉得文件修改到一定程度的时候，就可以”保存一个快照“，这个快照在 Git 中被称为commit。一旦我们把文件改乱了，还可以从最近的一个commit">
+<meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData//markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Promise&#39;s blog" type="application/atom+xml">
   
@@ -179,20 +178,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Git版本控制" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Git版本控制-时光机穿梭" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Git版本控制
+      Git版本控制-时光机穿梭
     </h1>
   
 
         
-        <a href="/Promise/2018/03/30/Git版本控制/" class="archive-article-date">
-  	<time datetime="2018-03-30T07:19:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-30</time>
+        <a href="/Promise/2018/04/03/Git版本控制-时光机穿梭/" class="archive-article-date">
+  	<time datetime="2018-04-02T23:47:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-03</time>
 </a>
         
 		
@@ -213,7 +212,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     <strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-版本控制"><span class="toc-number">1.</span> <span class="toc-text">Git 版本控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git-的诞生"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. Git 的诞生</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-集中式-vs-分布式"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 集中式 vs 分布式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-创建版本库"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 创建版本库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-总结"><span class="toc-number">1.0.4.</span> <span class="toc-text">5. 总结</span></a></li></ol></li></ol></li></ol>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git版本控制-时光机穿梭"><span class="toc-number">1.</span> <span class="toc-text">Git版本控制-时光机穿梭</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、简介"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-显示版本库历史"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、 显示版本库历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、-版本回退"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、 版本回退</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、总结"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、总结</span></a></li></ol></li></ol></li></ol>
          </div>
    <script type="text/javascript">
   function showToc(){
@@ -236,87 +235,80 @@
   
     
     
-      <h1 id="Git-版本控制"><a href="#Git-版本控制" class="headerlink" title="Git 版本控制"></a>Git 版本控制</h1><h3 id="1-Git-的诞生"><a href="#1-Git-的诞生" class="headerlink" title="1. Git 的诞生"></a>1. Git 的诞生</h3><blockquote>
-<p>​    Linus 在1991年创建了开源的 Linux ,  在2002年以前，世界各地的志愿者把源代码文件通过 diff 的方式发给 Linus，然后由 Linus 本人通过手工方式合并代码，到了2002年，代码库之大让 Linus 很难继续通过手工方式管理了，于是 Linus 选择了一个商业的版本控制系统 BitKeeper，BitKeeper 的东家 BitMover 公司出于人道主义精神，授权 Linux 社区免费使用这个版本控制系统。安定团结的大好局面在2005年就被打破了，原因是 Linux 社区牛人聚集，不免沾染了一些梁山好汉的江湖习气。开发 Samba 的 Andrew 试图破解BitKeeper 的协议（这么干的其实也不只他一个），被 BitMover 公司发现了，于是 BitMover 公司怒了，要收回 Linux 社区的免费使用权。于是 Linus 花了两周时间自己用 C 写了一个<strong>分布式版本控制系统</strong>，这就是<strong>Git</strong>！</p>
+      <h1 id="Git版本控制-时光机穿梭"><a href="#Git版本控制-时光机穿梭" class="headerlink" title="Git版本控制-时光机穿梭"></a>Git版本控制-时光机穿梭</h1><h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><blockquote>
+<p>​    我们不断对文件进行修改，然后不断提交修改到版本库里，就好比玩 RPG 游戏时，每公国一关就会自动把游戏状态存盘，如果某一关没有过去，我们还可以读取前一关的状态，从最近的地方重新开始。Git 也是一样，每当你觉得文件修改到一定程度的时候，就可以<strong>”保存一个快照</strong>“，这个快照在 Git 中被称为<code>commit</code>。一旦我们把文件改乱了，还可以从最近的一个<code>commit</code>恢复，然后继续工作，而不是把几个月的工作成果全部丢失。</p>
 </blockquote>
-<h3 id="2-集中式-vs-分布式"><a href="#2-集中式-vs-分布式" class="headerlink" title="2. 集中式 vs 分布式"></a>2. 集中式 vs 分布式</h3><blockquote>
-<p>​    <strong>集中式版本控制</strong> ：版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中 央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比  是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。</p>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E9%9B%86%E4%B8%AD%E5%BC%8F.jpg" alt="集中式"></p>
+<h3 id="二、-显示版本库历史"><a href="#二、-显示版本库历史" class="headerlink" title="二、 显示版本库历史"></a>二、 显示版本库历史</h3><blockquote>
+<p>假设 <strong>readme.txt</strong> 文件一共有以下三个版本被提交到 <strong>Git仓库</strong> 里了：</p>
+<ul>
+<li>版本1：wrote a readme file</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;Git is a version control system.</span><br><span class="line">&gt;Git is free software.</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 <ul>
-<li><p>CVCS的版本库集中存放在中央服务器，而工作时都是用自己的电脑，所以要先从中央服务器取得最新的版本，然后工作完后再将自己的代码推送给中央服务器。</p>
-</li>
-<li><p>CVS：最早的、开源、免费。由于自身设计的问题，会造成提交文件不完整、版本库莫名其妙损坏的情况</p>
-</li>
-<li><p>SVN：开源、免费。修正了CVS的一些稳定性问题，是目前用得最多的集中式版本库控制系统</p>
-</li>
-<li><p>ClearCase：收费、安装比Windows还大、运行比蜗牛还慢。IBM 收购了原本制作的Rational公司</p>
-</li>
-<li><p>VSS：集成在Visual Studio中。</p>
+<li>版本2：add distributed<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;Git is a distributed version control system.</span><br><span class="line">&gt;Git is free software.</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </blockquote>
 <blockquote>
-<p>  <strong>缺点</strong> ：集中式版本控制系统最大的问题就是必须联网才能工作，受网络状况、带宽影响。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>​    <strong>分布式版本控制</strong> ：分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上。多人协作时，只需把各自的修改推送给对方，就可以互相看到对方的修改了。在实际使用分布式版本控制系统的时候，其实很少在两人之间的电脑上推送版本库的修改，因为可能你们俩不在一个局域网内，两台电脑互相访问不了，也可能今天你的同事病了，他的电脑压根没有开机。因此，分布式版本控制系统通常也有一台充当“中央服务器”的电脑，但这个服务器的作用仅仅是用来方便“交换”大家的修改，没有它大家也一样干活，只是交换修改不方便而已。</p>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E5%88%86%E5%B8%83%E5%BC%8F.jpg" alt="分布式"></p>
-</blockquote>
-<blockquote>
 <ul>
-<li>Git</li>
-<li>BitKeeper(促使Git诞生)</li>
-<li>Mercurial</li>
-<li>Bazaar</li>
+<li>版本3：append GPL<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;Git is a distributed version control system.</span><br><span class="line">&gt;Git is free software distributed under the GPL.</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </blockquote>
-<hr>
 <blockquote>
-<p><strong>特点与比较</strong> ：</p>
-<p>​    <strong>集中式</strong>：</p>
-<p>​        ①通过与中心服务器的连接执行所有操作，必须联网。</p>
-<hr>
-<p>​    <strong>分布式</strong>：</p>
-<p>​        ①快速，本地客户机操作，不联网也不影响工作，离线工作，DVCS 比 Subversion 快大约3-10倍。</p>
-<p>​        ②可以实现非常灵活的工作流(传统的集中式工作流 + 特殊工作流 + 特殊工作流和集中式工作流的组合)            </p>
-<p>​        ③3、安全性更高，因为每个人电脑里都是完整的版本库，坏了复制一份即可，CVCS中央服务器出问题就GG 。</p>
-<p>​        ④两台电脑互相访问不了或某一台电脑未开机不能执行复制(交换修改)时，通常有一台电脑充当中央服务器。 </p>
-<p>​        ⑤分支管理。</p>
-</blockquote>
-<h3 id="3-创建版本库"><a href="#3-创建版本库" class="headerlink" title="3. 创建版本库"></a>3. 创建版本库</h3><blockquote>
-<p>①首先，选择一个合适的地方，创建一个空目录：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ mkdir learngit</span><br><span class="line">&gt;$ cd learngit</span><br><span class="line">&gt;$ pwd</span><br><span class="line">&gt;/Users/michael/learngit</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<figure class="highlight plain"><figcaption><span>命令用于显示当前目录。这个仓库位于```/Users/michael/learngit```。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt;</span><br><span class="line">&gt;***</span><br><span class="line">&gt;</span><br><span class="line">&gt;**注意：**</span><br><span class="line">&gt;如果你使用 Windows 系统，为了避免遇到各种莫名其妙的问题，请确保目录名（包括父目录）不包含中文。 </span><br><span class="line">&gt;</span><br><span class="line">&gt;***</span><br><span class="line">&gt;</span><br><span class="line">&gt;②通过```git init```命令把这个目录变成 Git 可以管理的仓库：</span><br><span class="line">&gt;</span><br><span class="line">&gt;```linux</span><br><span class="line">&gt;$ git init</span><br><span class="line">&gt;Initialized empty Git repository in /Users/michael/learngit/.git/</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>这样就把 Git 的仓库建好了，并且是一个空的仓库(empty Git repository) ，细心的读者课发现当前目录下多了一个<figure class="highlight plain"><figcaption><span>Git 来跟踪管理版本库的，没事千万不要手动修改这个目录里面的文件，不然改乱了，就把Git仓库给破坏了。如果没有看到```.git``` 目录，那是因为这个目录```.git```目录，那是因为这个目录默认是隐藏的，用```ls -ah```命令就可以看见。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 4. 把文件添加到版本库</span><br><span class="line"></span><br><span class="line">&gt;我们在```learngit``` 目录下(子目录也行)编写一个```readme.txt```文件，内容如下：</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>Git is a version control system.<br>Git is free software.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">然后把一个文件放到 Git 仓库只需要两步。</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">**①**第一步，用命令```git add```告诉 Git ，把文件添加到仓库：</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">```linux</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">$ git add readme.txt</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p><strong>②</strong>第二步，用命令<code>git commit</code>告诉Git，把文件提交到仓库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ git commit -m &quot;wrote a readme file&quot;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
+<p>​    当然我们在实际工作中，我们不可能记得一个几千行的文件每次都改了什么内容，版本控制系统肯定有某个命令可以告诉我们历史记录，在 <strong>Git</strong> 中，我们用<code>git log</code>命令查看：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ git log</span><br><span class="line">&gt;commit 3628164fb26d48395383f8f31179f24e0882e1e0</span><br><span class="line">&gt;Author: Michael Liao &lt;askxuefeng@gmail.com&gt;</span><br><span class="line">&gt;Date:   Tue Aug 20 15:11:49 2013 +0800</span><br><span class="line">&gt;</span><br><span class="line">&gt;    append GPL</span><br><span class="line">&gt;</span><br><span class="line">&gt;commit ea34578d5496d7dd233c827ed32a8cd576c5ee85</span><br><span class="line">&gt;Author: Michael Liao &lt;askxuefeng@gmail.com&gt;</span><br><span class="line">&gt;Date:   Tue Aug 20 14:53:12 2013 +0800</span><br><span class="line">&gt;</span><br><span class="line">&gt;    add distributed</span><br><span class="line">&gt;</span><br><span class="line">&gt;commit cb926e7ea50ad11b8f9e909c05226233bf755030</span><br><span class="line">&gt;Author: Michael Liao &lt;askxuefeng@gmail.com&gt;</span><br><span class="line">&gt;Date:   Mon Aug 19 17:51:55 2013 +0800</span><br><span class="line">&gt;</span><br><span class="line">&gt;    wrote a readme file</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 <hr>
-<p><strong>注意：</strong><code>git commit</code>命令，<code>-m</code>后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，能够见名知意，这样你就能从历史记录里方便地找到改动记录。</p>
-<hr>
-<p><code>git commit</code>命令执行成功后会告诉你，1个文件被改动（我们新添加的readme.txt文件），插入了两行内容（readme.txt有两行内容）。为什么Git添加文件需要<code>add</code>，<code>commit</code>一共两步呢？因为<code>commit</code>可以一次提交很多文件，所以你可以多次<code>add</code>不同的文件，比如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ git add file1.txt</span><br><span class="line">&gt;$ git add file2.txt file3.txt</span><br><span class="line">&gt;$ git commit -m &quot;add 3 files.&quot;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong><br><code>git log</code>命令显示从最近到最远的提交日志，我们可以看到3次提交，最近的一次是<code>append GPL</code>，上一次是<code>add distributed</code>，最早的一次是<code>wrote a readme file</code>。 如果嫌输出信息太多，看得眼花缭乱的，可以试试加上<code>--pretty=oneline</code>参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ git log --pretty=oneline</span><br><span class="line">&gt;3628164fb26d48395383f8f31179f24e0882e1e0 append GPL</span><br><span class="line">&gt;ea34578d5496d7dd233c827ed32a8cd576c5ee85 add distributed</span><br><span class="line">&gt;cb926e7ea50ad11b8f9e909c05226233bf755030 wrote a readme file</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
-<h3 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h3><blockquote>
+<blockquote>
+<p><strong>提示：</strong><br>   我们看到一大串类似 <code>3628164fb26d48395383f8f31179f24e0882e1e0</code> 的是<code>commit id</code>(版本号)，和SVN不一样，Git的<code>commit id</code>不是1，2，3……递增的数字，而是一个SHA1计算出来的一个非常大的数字，用十六进制表示，而且你看到的<code>commit id</code>和我的肯定不一样，以你自己的为准。为什么<code>commit id</code>需要用这么一大串数字表示呢？因为Git是分布式的版本控制系统，后面我们还要研究多人在同一个版本库里工作，如果大家都用1，2，3……作为版本号，那肯定就冲突了。</p>
+</blockquote>
+<h3 id="三、-版本回退"><a href="#三、-版本回退" class="headerlink" title="三、 版本回退"></a>三、 版本回退</h3><blockquote>
+<p>​    要想启动时光穿梭机，把 <strong>readme.txt</strong> 回退到上一个版本，也就是 <strong>“add distributed”</strong> 的那个版本，首先，<strong>Git</strong> 必须知道当前版本是哪个版本，用<code>HEAD</code>表示当前版本，也就是最新的提交<code>3628164...882e1e0</code>（注意我的提交ID和你的肯定不一样），上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，当然往上100个版本写100个<code>^</code>比较容易数不过来，所以写成<code>HEAD~100</code>。</p>
+<hr>
 <ul>
-<li><p>初始化一个Git仓库，使用<code>git init</code>命令。</p>
+<li>现在我们把当前版本 <strong>“ append GPL ”</strong> 回退到上一个版本 <strong>“ add distributed ”</strong> ，就可以使用<code>git reset</code>命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ git reset --hard HEAD^</span><br><span class="line">&gt;HEAD is now at ea34578 add distributed</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>添加文件到Git仓库，分两步：</p>
-<p>​                    ①第一步，使用命令<code>git add &lt;file&gt;</code>，注意，可反复多次使用，添加多个文件；</p>
-<p>​                    ②第二步，使用命令<code>git commit</code>，完成。</p>
+</ul>
+</blockquote>
+<blockquote>
+<p>此时查看 <strong>readme.txt</strong> 的内容是不是版本<code>add distributed</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ cat readme.txt</span><br><span class="line">&gt;Git is a distributed version control system.</span><br><span class="line">&gt;Git is free software.</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<ul>
+<li>我们还可以继续回退到上一个版本<code>wrote a readme file</code>，不过且慢，然我们用<code>git log</code>再看看现在版本库的状态：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ git log</span><br><span class="line">&gt;commit ea34578d5496d7dd233c827ed32a8cd576c5ee85</span><br><span class="line">&gt;Author: Michael Liao &lt;askxuefeng@gmail.com&gt;</span><br><span class="line">&gt;Date:   Tue Aug 20 14:53:12 2013 +0800</span><br><span class="line">&gt;</span><br><span class="line">&gt;    add distributed</span><br><span class="line">&gt;</span><br><span class="line">&gt;commit cb926e7ea50ad11b8f9e909c05226233bf755030</span><br><span class="line">&gt;Author: Michael Liao &lt;askxuefeng@gmail.com&gt;</span><br><span class="line">&gt;Date:   Mon Aug 19 17:51:55 2013 +0800</span><br><span class="line">&gt;</span><br><span class="line">&gt;    wrote a readme file</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+</blockquote>
+<blockquote>
+<p>​    之前最新的那个版本<code>append GPL</code>已经看不到了，如果我们现在后悔了，想要回到之前最新的那个版本<code>append GPL</code>，办法其实还是有的，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个<code>append GPL</code>的<code>commit id</code>是<code>3628164...</code>，于是就可以指定回到未来的某个版本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ git reset --hard 3628164</span><br><span class="line">&gt;HEAD is now at 3628164 append GPL</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>​    版本号没必要写全，前几位就可以了，Git会自动去找。当然也不能只写前一两位，因为Git可能会找到多个版本号，就无法确定是哪一个了。</p>
+<p>​    果然，我们再查看 <strong>readme.txt</strong> 的内容，发现已经回到了原来那个版本：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">$ cat readme.txt</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">Git is a distributed version control system.</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">Git is free software distributed under the GPL.</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<hr>
+<p><img src="https://sweetyc1oud.github.io/PromiseData//markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80.jpg" alt="版本回退"></p>
+<hr>
+<p>​    在 Git 中，总是由后悔药可以吃。当你用<code>$ git reset --hard HEAD^</code>回退到 <code>add distributed</code>版本时，再想恢复到<code>append GPL</code>，就必须找到<code>append GPL</code>的 <strong>commit id</strong> 。Git 提供了一个命令<code>git reflog</code>用来记录你的每一次命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ git reflog</span><br><span class="line">&gt;ea34578 HEAD@&#123;0&#125;: reset: moving to HEAD^</span><br><span class="line">&gt;3628164 HEAD@&#123;1&#125;: commit: append GPL</span><br><span class="line">&gt;ea34578 HEAD@&#123;2&#125;: commit: add distributed</span><br><span class="line">&gt;cb926e7 HEAD@&#123;3&#125;: commit (initial): wrote a readme file</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><blockquote>
+<ul>
+<li><code>HEAD</code>指向的版本就是当前版本。</li>
+<li>Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard commit_id</code>。</li>
+<li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。</li>
+<li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
 </ul>
 </blockquote>
 
@@ -420,7 +412,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/03/30/Git版本控制/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/04/03/Git版本控制-时光机穿梭/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -444,8 +436,8 @@
     </a>
   
   
-    <a href="/Promise/2017/12/06/python基础语法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Python基础语法</div>
+    <a href="/Promise/2018/03/30/Git版本控制-简介/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git版本控制-简介</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -472,7 +464,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-版本控制"><span class="toc-number">1.</span> <span class="toc-text">Git 版本控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git-的诞生"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. Git 的诞生</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-集中式-vs-分布式"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 集中式 vs 分布式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-创建版本库"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 创建版本库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-总结"><span class="toc-number">1.0.4.</span> <span class="toc-text">5. 总结</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git版本控制-时光机穿梭"><span class="toc-number">1.</span> <span class="toc-text">Git版本控制-时光机穿梭</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、简介"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-显示版本库历史"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、 显示版本库历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、-版本回退"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、 版本回退</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、总结"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、总结</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -488,7 +480,7 @@
   
 
   
-  <div id="SOHUCS" sid="Git版本控制" ></div> 
+  <div id="SOHUCS" sid="Git版本控制-时光机穿梭" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
