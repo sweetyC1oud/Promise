@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.misscloud.top">
-  <title>Archives: 2015/12 | Promise&#39;s blog</title>
+  <title>Java基础_13 | Promise&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Promise&#39;s blog">
-<meta property="og:url" content="www.misscloud.top/archives/2015/12/index.html">
+  <meta name="description" content="Java 基础1. List 和 Map 的区别？12345答：区别：	① List 是 Collection 的子接口，Map 是一个顶级接口。而 Collection 也是顶级接口，集合框架由 Collection 接口 和 Map 接口 两个接口实现。	② List 是一个是存储单列数据的集合，而 Map 是存储键和值这样的双列数据的集合。	③ List 中存储的数据是有顺序，并且允许重复；">
+<meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础_13">
+<meta property="og:url" content="www.misscloud.top/2015/12/12/Java基础_13/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
+<meta property="og:description" content="Java 基础1. List 和 Map 的区别？12345答：区别：	① List 是 Collection 的子接口，Map 是一个顶级接口。而 Collection 也是顶级接口，集合框架由 Collection 接口 和 Map 接口 两个接口实现。	② List 是一个是存储单列数据的集合，而 Map 是存储键和值这样的双列数据的集合。	③ List 中存储的数据是有顺序，并且允许重复；">
+<meta property="og:updated_time" content="2018-04-07T08:42:37.514Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Promise&#39;s blog">
+<meta name="twitter:title" content="Java基础_13">
+<meta name="twitter:description" content="Java 基础1. List 和 Map 的区别？12345答：区别：	① List 是 Collection 的子接口，Map 是一个顶级接口。而 Collection 也是顶级接口，集合框架由 Collection 接口 和 Map 接口 两个接口实现。	② List 是一个是存储单列数据的集合，而 Map 是存储键和值这样的双列数据的集合。	③ List 中存储的数据是有顺序，并且允许重复；">
   
     <link rel="alternative" href="/atom.xml" title="Promise&#39;s blog" type="application/atom+xml">
   
@@ -172,37 +176,116 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Java基础_13" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Java基础_13
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/Promise/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Promise/2015/12/12/Java基础_13/" class="archive-article-date">
+
+        
+        <a href="/Promise/2015/12/12/Java基础_13/" class="archive-article-date">
   	<time datetime="2015-12-12T03:09:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-12</time>
 </a>
-        </div>
-    	 
+        
+		
+				<span class="archive-article-date">
+					阅读量 <span id="busuanzi_value_page_pv"></span>
+				</span>
+		
+      </header>
+		
+    
+
+    <!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-基础"><span class="toc-number">1.</span> <span class="toc-text">Java 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-List-和-Map-的区别？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. List 和 Map 的区别？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-List-Set-Map是否继承自Collection接口"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. List, Set, Map是否继承自Collection接口?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-List、Map、Set三个接口，存取元素时，各有什么特点？"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. List、Map、Set三个接口，存取元素时，各有什么特点？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-说出-ArrayList-、Vector-、-LinkedList-的存储性能和特性？"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. 说出 ArrayList 、Vector 、 LinkedList 的存储性能和特性？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-去掉一个-Vector-集合中重复的元素-？"><span class="toc-number">1.0.5.</span> <span class="toc-text">5. 去掉一个 Vector 集合中重复的元素 ？</span></a></li></ol></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+  function showToc(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:block");
+    show_toc_btn.setAttribute("style","display:none");
+    };
+  function showBtn(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:none");
+    show_toc_btn.setAttribute("style","display:block");
+    };
+   </script>
+         
+<!-- 目录内容结束 -->
+    
+   <div class="article-entry" itemprop="articleBody">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Promise/2015/12/12/Java基础_13/">Java基础_13</a>
-    </h1>
+    
+    
+      <h1 id="Java-基础"><a href="#Java-基础" class="headerlink" title="Java 基础"></a>Java 基础</h1><h3 id="1-List-和-Map-的区别？"><a href="#1-List-和-Map-的区别？" class="headerlink" title="1. List 和 Map 的区别？"></a>1. List 和 Map 的区别？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">答：区别：</span><br><span class="line">	① List 是 Collection 的子接口，Map 是一个顶级接口。而 Collection 也是顶级接口，集合框架由 Collection 接口 和 Map 接口 两个接口实现。</span><br><span class="line">	② List 是一个是存储单列数据的集合，而 Map 是存储键和值这样的双列数据的集合。</span><br><span class="line">	③ List 中存储的数据是有顺序，并且允许重复；</span><br><span class="line">	  Map  中存储的数据是没有顺序的，其键是不能重复的，它的值是可以有重复的。</span><br></pre></td></tr></table></figure>
+<h3 id="2-List-Set-Map是否继承自Collection接口"><a href="#2-List-Set-Map是否继承自Collection接口" class="headerlink" title="2. List, Set, Map是否继承自Collection接口?"></a>2. List, Set, Map是否继承自Collection接口?</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	List 和 Set 是继承自 Collection 接口。Map 不是继承自 Collection 接口，Collection 接口和 Map 接口都是顶级接口。</span><br></pre></td></tr></table></figure>
+<h3 id="3-List、Map、Set三个接口，存取元素时，各有什么特点？"><a href="#3-List、Map、Set三个接口，存取元素时，各有什么特点？" class="headerlink" title="3. List、Map、Set三个接口，存取元素时，各有什么特点？"></a>3. List、Map、Set三个接口，存取元素时，各有什么特点？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	List 和 Set 都是单列元素的结合，他们有一个共同的副接口 Collection.</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	List 表示先后顺序的集合。</span><br><span class="line">	存元素：多次调用 add(Object) 方法时，每次加入的对象按先来后到的顺序排序，也可以插队，即调用 add(<span class="keyword">int</span> index ,Object) 方法，就可以指定当前对象在集合中的位置。</span><br><span class="line">	取元素：方法①：Iterator 接口取得所有，逐一遍历各个元素</span><br><span class="line">            方法②：调用 get(index i) 来明确说明取第几个。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	Set 里面不允许有重复的元素。</span><br><span class="line">	存元素：add 方法有一个 <span class="keyword">boolean</span> 的返回值，当集合中没有某个元素，此时 add 方法可成功加入该元素时，则返回 <span class="keyword">true</span>；当集合含有与某个元素 equals 相等的元素时，此时 add 方法无法加入该元素，返回结果为 <span class="keyword">false</span>。</span><br><span class="line">	取元素：没法说取第几个，只能以 Iterator 接口取得所有的元素，再逐一遍历各个元素。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	Map 是双列的集合。</span><br><span class="line">	存放用 put 方法: put(obj key,obj value)，每次存储时，要存储一对 key/value，不能存储重复的 key，这个重复的规则也是按 equals 比较相等。</span><br><span class="line">	取元素：用 get(Object key) 方法根据key获得相应的 value。</span><br><span class="line">           也可以获得所有的 key 的集合，还可以获得所有的 value 的集合。</span><br><span class="line">           还可以获得 key 和 value 组合成的 Map.Entry 对象的集合。</span><br></pre></td></tr></table></figure>
+<h3 id="4-说出-ArrayList-、Vector-、-LinkedList-的存储性能和特性？"><a href="#4-说出-ArrayList-、Vector-、-LinkedList-的存储性能和特性？" class="headerlink" title="4. 说出 ArrayList 、Vector 、 LinkedList 的存储性能和特性？"></a>4. 说出 ArrayList 、Vector 、 LinkedList 的存储性能和特性？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	ArrayList 和 Vector 都是使用数组方式存储数据，此数组元素数大于实际存储的数据以便增加和插入元素，它们都允许直接按序号索引元素，但是插入元素要涉及数组元素移动等内存操作，所以索引数据快而插入数据慢。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	Vector 由于使用了 <span class="keyword">synchronized</span> 方法（线程安全），通常性能上较 ArrayList 差。因此已经是 Java 中的遗留容器。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	LinkedList 使用双向链表实现存储，按序号索引数据需要进行前向或后向遍历，但是插入数据时只需要记录本项的前后项即可，所以插入速度较快。</span><br><span class="line">	LinkedList 也是线程不安全的，LinkedList 提供了一些方法，使得 LinkedList 可以被当作堆栈和队列来使用。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">相关：</span><br><span class="line">	 Vector 属于遗留容器（ Java 早期的版本中提供的容器，除此之外，Hashtable、Dictionary、BitSet、Stack、Properties 都是遗留容器），已经不推荐使用，但是由于 ArrayList 和 LinkedListed 都是非线程安全的，如果遇到多个线程操作同一个容器的场景，则可以通过工具类 Collections 中的 synchronizedList 方法将其转换成线程安全的容器后再使用。</span><br></pre></td></tr></table></figure>
+<h3 id="5-去掉一个-Vector-集合中重复的元素-？"><a href="#5-去掉一个-Vector-集合中重复的元素-？" class="headerlink" title="5. 去掉一个 Vector 集合中重复的元素 ？"></a>5. 去掉一个 Vector 集合中重复的元素 ？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">答：方法①：</span><br><span class="line">	Vector newVector = <span class="keyword">new</span> Vector();</span><br><span class="line">	For (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;vector.size();i++)</span><br><span class="line">	&#123;</span><br><span class="line">		Object obj = vector.get(i);</span><br><span class="line">		<span class="keyword">if</span>(!newVector.contains(obj);</span><br><span class="line">			newVector.add(obj);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：方法②：</span><br><span class="line">	HashSet set = <span class="keyword">new</span> HashSet(vector);</span><br></pre></td></tr></table></figure>
+
+    
   
 
-        <div class="article-info info-on-right">
-          
-          
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://sweetyc1oud.github.io/PromiseData/image/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://sweetyc1oud.github.io/PromiseData/image/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -215,207 +298,136 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2015/12/12/Java基础_13/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Promise/2015/12/10/Java基础_12/" class="archive-article-date">
-  	<time datetime="2015-12-10T00:23:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-10</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/Promise/2017/03/06/剑指offer编程题_01/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          剑指offer编程题_01
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Promise/2015/12/10/Java基础_12/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java基础_12</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Promise/2015/12/10/Java基础_12/">Java基础_12</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-基础"><span class="toc-number">1.</span> <span class="toc-text">Java 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-List-和-Map-的区别？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. List 和 Map 的区别？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-List-Set-Map是否继承自Collection接口"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. List, Set, Map是否继承自Collection接口?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-List、Map、Set三个接口，存取元素时，各有什么特点？"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. List、Map、Set三个接口，存取元素时，各有什么特点？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-说出-ArrayList-、Vector-、-LinkedList-的存储性能和特性？"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. 说出 ArrayList 、Vector 、 LinkedList 的存储性能和特性？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-去掉一个-Vector-集合中重复的元素-？"><span class="toc-number">1.0.5.</span> <span class="toc-text">5. 去掉一个 Vector 集合中重复的元素 ？</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Promise/2015/12/07/Java基础_11/" class="archive-article-date">
-  	<time datetime="2015-12-07T06:06:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Promise/2015/12/07/Java基础_11/">Java基础_11</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Promise/2015/12/06/Java基础_10/" class="archive-article-date">
-  	<time datetime="2015-12-06T03:06:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-06</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Promise/2015/12/06/Java基础_10/">Java基础_10</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Promise/2015/12/02/Java基础_09/" class="archive-article-date">
-  	<time datetime="2015-12-02T01:25:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Promise/2015/12/02/Java基础_09/">Java基础_09</a>
-    </h1>
+  <div id="SOHUCS" sid="Java基础_13" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cytvGDshU",
+        conf: "e28aac4272b532dc05a3e9bc658f7bc4"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Promise/2015/12/01/Java基础_08/" class="archive-article-date">
-  	<time datetime="2015-12-01T02:12:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Promise/2015/12/01/Java基础_08/">Java基础_08</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -443,8 +455,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
