@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.misscloud.top">
-  <title>Promise&#39;s blog</title>
+  <title>Java基础_15 | Promise&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Java 基础1. 说出一些常用的类，包，接口，请各举 5 个 ？1234答：	① 常见的类: BufferedReader、BufferedWriter、FileReader、FileWirter、String、Interger、java.util.Date、Class、HashMap	② 常用的接口: List、Map、Document、NodeList、Servlet、HttpServlet">
 <meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Promise&#39;s blog">
-<meta property="og:url" content="www.misscloud.top/2018/04/08/Java基础_15/index.html">
+<meta property="og:title" content="Java基础_15">
+<meta property="og:url" content="www.misscloud.top/2015/12/15/Java基础_15/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
 <meta property="og:description" content="Java 基础1. 说出一些常用的类，包，接口，请各举 5 个 ？1234答：	① 常见的类: BufferedReader、BufferedWriter、FileReader、FileWirter、String、Interger、java.util.Date、Class、HashMap	② 常用的接口: List、Map、Document、NodeList、Servlet、HttpServlet">
 <meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/demo.jpg">
-<meta property="og:updated_time" content="2018-04-08T05:06:30.057Z">
+<meta property="og:updated_time" content="2018-04-08T05:11:08.499Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Promise&#39;s blog">
+<meta name="twitter:title" content="Java基础_15">
 <meta name="twitter:description" content="Java 基础1. 说出一些常用的类，包，接口，请各举 5 个 ？1234答：	① 常见的类: BufferedReader、BufferedWriter、FileReader、FileWirter、String、Interger、java.util.Date、Class、HashMap	② 常用的接口: List、Map、Document、NodeList、Servlet、HttpServlet">
 <meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/demo.jpg">
   
@@ -181,9 +181,54 @@
             <article id="post-Java基础_15" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java基础_15
+    </h1>
+  
+
+        
+        <a href="/Promise/2015/12/15/Java基础_15/" class="archive-article-date">
+  	<time datetime="2015-12-14T23:39:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-15</time>
+</a>
+        
+		
+				<span class="archive-article-date">
+					阅读量 <span id="busuanzi_value_page_pv"></span>
+				</span>
+		
+      </header>
+		
+    
 
     <!-- 目录内容 -->
-   
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-基础"><span class="toc-number">1.</span> <span class="toc-text">Java 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-说出一些常用的类，包，接口，请各举-5-个-？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 说出一些常用的类，包，接口，请各举 5 个 ？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Java-中有几种类型的流？JDK-为每种类型的流提供了一些抽象类以供继承，请说出他们分别是哪些类-？"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. Java 中有几种类型的流？JDK 为每种类型的流提供了一些抽象类以供继承，请说出他们分别是哪些类 ？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-字节流和字符流的区别-？"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 字节流和字符流的区别 ？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-什么是-java-序列化，如何实现-java-序列化-？或者请解释-Serializable-接口的作用"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. 什么是 java 序列化，如何实现 java 序列化 ？或者请解释 Serializable 接口的作用 ?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-描述一下-JVM-加载-class-文件的原理机制"><span class="toc-number">1.0.5.</span> <span class="toc-text">5. 描述一下 JVM 加载 class 文件的原理机制 ?</span></a></li></ol></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+  function showToc(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:block");
+    show_toc_btn.setAttribute("style","display:none");
+    };
+  function showBtn(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:none");
+    show_toc_btn.setAttribute("style","display:block");
+    };
+   </script>
+         
 <!-- 目录内容结束 -->
     
    <div class="article-entry" itemprop="articleBody">
@@ -247,6 +292,17 @@
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -296,7 +352,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/04/08/Java基础_15/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2015/12/15/Java基础_15/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -310,18 +366,18 @@
   
 <nav id="article-nav">
   
-    <a href="/Promise/2018/04/30/返回结果的HTTP状态码/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Promise/2017/03/06/剑指offer编程题_01/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          返回结果的HTTP状态码
+          剑指offer编程题_01
         
       </div>
     </a>
   
   
-    <a href="/Promise/2018/04/03/Git版本控制-时光机穿梭/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Git版本控制-时光机穿梭</div>
+    <a href="/Promise/2015/12/13/Java基础_14/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java基础_14</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -340,6 +396,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-基础"><span class="toc-number">1.</span> <span class="toc-text">Java 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-说出一些常用的类，包，接口，请各举-5-个-？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 说出一些常用的类，包，接口，请各举 5 个 ？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Java-中有几种类型的流？JDK-为每种类型的流提供了一些抽象类以供继承，请说出他们分别是哪些类-？"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. Java 中有几种类型的流？JDK 为每种类型的流提供了一些抽象类以供继承，请说出他们分别是哪些类 ？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-字节流和字符流的区别-？"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 字节流和字符流的区别 ？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-什么是-java-序列化，如何实现-java-序列化-？或者请解释-Serializable-接口的作用"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. 什么是 java 序列化，如何实现 java 序列化 ？或者请解释 Serializable 接口的作用 ?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-描述一下-JVM-加载-class-文件的原理机制"><span class="toc-number">1.0.5.</span> <span class="toc-text">5. 描述一下 JVM 加载 class 文件的原理机制 ?</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>

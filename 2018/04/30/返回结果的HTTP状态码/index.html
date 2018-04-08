@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="www.misscloud.top">
   <title>返回结果的HTTP状态码 | Promise&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="返回结果的HTTP状态码一. 前言 ​    HTTP状态码负责表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常、通知出现的错误等工作。  二. 状态码告知从服务器端返回的请求结果 ​    状态码的职责：是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 ​    状态码：由以3位数字和原因短语组成。|     |">
+  <meta name="description" content="返回结果的HTTP状态码一. 前言 ​    HTTP状态码负责表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常、通知出现的错误等工作。  二. 状态码告知从服务器端返回的请求结果 ​    状态码的职责：是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 ​    状态码：由以3位数字和原因短语组成。      类别">
 <meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="返回结果的HTTP状态码">
 <meta property="og:url" content="www.misscloud.top/2018/04/30/返回结果的HTTP状态码/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
-<meta property="og:description" content="返回结果的HTTP状态码一. 前言 ​    HTTP状态码负责表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常、通知出现的错误等工作。  二. 状态码告知从服务器端返回的请求结果 ​    状态码的职责：是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 ​    状态码：由以3位数字和原因短语组成。|     |">
-<meta property="og:updated_time" content="2018-04-08T05:08:27.410Z">
+<meta property="og:description" content="返回结果的HTTP状态码一. 前言 ​    HTTP状态码负责表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常、通知出现的错误等工作。  二. 状态码告知从服务器端返回的请求结果 ​    状态码的职责：是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 ​    状态码：由以3位数字和原因短语组成。      类别">
+<meta property="og:updated_time" content="2018-04-08T05:14:52.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="返回结果的HTTP状态码">
-<meta name="twitter:description" content="返回结果的HTTP状态码一. 前言 ​    HTTP状态码负责表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常、通知出现的错误等工作。  二. 状态码告知从服务器端返回的请求结果 ​    状态码的职责：是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 ​    状态码：由以3位数字和原因短语组成。|     |">
+<meta name="twitter:description" content="返回结果的HTTP状态码一. 前言 ​    HTTP状态码负责表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常、通知出现的错误等工作。  二. 状态码告知从服务器端返回的请求结果 ​    状态码的职责：是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 ​    状态码：由以3位数字和原因短语组成。      类别">
   
     <link rel="alternative" href="/atom.xml" title="Promise&#39;s blog" type="application/atom+xml">
   
@@ -238,20 +238,152 @@
 </blockquote>
 <h3 id="二-状态码告知从服务器端返回的请求结果"><a href="#二-状态码告知从服务器端返回的请求结果" class="headerlink" title="二. 状态码告知从服务器端返回的请求结果"></a>二. 状态码告知从服务器端返回的请求结果</h3><blockquote>
 <p>​    <strong>状态码的职责</strong>：是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。</p>
-<p>​    <strong>状态码</strong>：由以3位数字和原因短语组成。<br>|     |  <strong>类别</strong>  | 原因短句 |<br>| :—–|:——| :——|<br>|  1××  |   Informational（ 信息性状态码 ）   |   接受的请求正在处理   |<br>| 2×× |   Success （ 成功状态码 ）   |   请求正常处理完毕   |<br>| 3×× |   Redirection （ 重定向状态码 ）   |   需要进行附加操作以完成请求   |<br>| 4×× |   Client Error （ 客户端错误状态码 ）   |   服务器无法处理请求   |<br>| 5×× |   Server Error（ 服务器错误状态码）   |   服务器处理请求出错   |</p>
+<p>​    <strong>状态码</strong>：由以3位数字和原因短语组成。</p>
 </blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"><strong>类别</strong></th>
+<th style="text-align:left">原因短句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1××</td>
+<td style="text-align:left">Informational（ 信息性状态码 ）</td>
+<td style="text-align:left">接受的请求正在处理</td>
+</tr>
+<tr>
+<td style="text-align:left">2××</td>
+<td style="text-align:left">Success （ 成功状态码 ）</td>
+<td style="text-align:left">请求正常处理完毕</td>
+</tr>
+<tr>
+<td style="text-align:left">3××</td>
+<td style="text-align:left">Redirection （ 重定向状态码 ）</td>
+<td style="text-align:left">需要进行附加操作以完成请求</td>
+</tr>
+<tr>
+<td style="text-align:left">4××</td>
+<td style="text-align:left">Client Error （ 客户端错误状态码 ）</td>
+<td style="text-align:left">服务器无法处理请求</td>
+</tr>
+<tr>
+<td style="text-align:left">5××</td>
+<td style="text-align:left">Server Error（ 服务器错误状态码）</td>
+<td style="text-align:left">服务器处理请求出错</td>
+</tr>
+</tbody>
+</table>
 <h3 id="三-2××-成功"><a href="#三-2××-成功" class="headerlink" title="三. 2×× 成功"></a>三. 2×× 成功</h3><blockquote>
-<p><strong>2×× 的响应结果表明请求被正常处理了 。</strong><br>| 状态码 | 表示含义 |<br>| :—–|:——|<br>|  200 OK  |   表示从客户端发来的请求在服务器端被正常处理了   |<br>| 204 No Content |   表示服务器接收的请求已成功处理，但在返回的相应报文中不含实体的主体部分   |<br>| 206 Partial Content |   表示客户端进行了范围请求，而服务器成功执行了这部分的Get请求   |</p>
+<p><strong>2×× 的响应结果表明请求被正常处理了 。</strong></p>
 </blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">状态码</th>
+<th style="text-align:left">表示含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">200 OK</td>
+<td style="text-align:left">表示从客户端发来的请求在服务器端被正常处理了</td>
+</tr>
+<tr>
+<td style="text-align:left">204 No Content</td>
+<td style="text-align:left">表示服务器接收的请求已成功处理，但在返回的相应报文中不含实体的主体部分</td>
+</tr>
+<tr>
+<td style="text-align:left">206 Partial Content</td>
+<td style="text-align:left">表示客户端进行了范围请求，而服务器成功执行了这部分的Get请求</td>
+</tr>
+</tbody>
+</table>
 <h3 id="四-3××-重定向"><a href="#四-3××-重定向" class="headerlink" title="四. 3×× 重定向"></a>四. 3×× 重定向</h3><blockquote>
-<p><strong>3×× 响应结果表明浏览器需要执行某些特殊的处理以正确处理请求。</strong><br>| 状态码 | 表示含义 |<br>| :—–|:——|<br>|  301 Moved Permanently  |   永久性重定向，表示请求的资源已被分配了新的URI，以后应使用资源现在所指的URI   |<br>| 302 Found |   临时性重定向，表示请求的资源已被分配了新的URI，希望用户(本次)能使用新的URI   |<br>| 303 See Other |   表示由于请求对应的资源存在着另一个URI，应使用 Get 方法定向获取请求的资源，303状态码 和 302 Found 状态码有着相同的功能，但303状态码明确要求客户端应当采用 Get 方法，这点与 302状态码 有区别   |<br>| 304 Not Modified |   表示客户端发送附带条件的请求时，服务器端允许请求访问资源，但因发成请求为满足条件的情况后，直接返回304 Not Modified   |<br>| 307 Temporary Redirect |   临时重定向，该状态码与 302 Found 有着相同的含义，尽管 302 标准禁止 Post 变换成 Get，但实际使用时大家并不遵守   |</p>
+<p><strong>3×× 响应结果表明浏览器需要执行某些特殊的处理以正确处理请求。</strong> </p>
 </blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">状态码</th>
+<th style="text-align:left">表示含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">301 Moved Permanently</td>
+<td style="text-align:left">永久性重定向，表示请求的资源已被分配了新的URI，以后应使用资源现在所指的URI</td>
+</tr>
+<tr>
+<td style="text-align:left">302 Found</td>
+<td style="text-align:left">临时性重定向，表示请求的资源已被分配了新的URI，希望用户(本次)能使用新的URI</td>
+</tr>
+<tr>
+<td style="text-align:left">303 See Other</td>
+<td style="text-align:left">表示由于请求对应的资源存在着另一个URI，应使用 Get 方法定向获取请求的资源，303状态码 和 302 Found 状态码有着相同的功能，但303状态码明确要求客户端应当采用 Get 方法，这点与 302状态码 有区别</td>
+</tr>
+<tr>
+<td style="text-align:left">304 Not Modified</td>
+<td style="text-align:left">表示客户端发送附带条件的请求时，服务器端允许请求访问资源，但因发成请求为满足条件的情况后，直接返回304 Not Modified</td>
+</tr>
+<tr>
+<td style="text-align:left">307 Temporary Redirect</td>
+<td style="text-align:left">临时重定向，该状态码与 302 Found 有着相同的含义，尽管 302 标准禁止 Post 变换成 Get，但实际使用时大家并不遵守</td>
+</tr>
+</tbody>
+</table>
 <h3 id="五-4××-客户端错误"><a href="#五-4××-客户端错误" class="headerlink" title="五. 4×× 客户端错误"></a>五. 4×× 客户端错误</h3><blockquote>
-<p><strong>4×× 的响应结果表明客户端是发生错误的原因所在。</strong><br>| 状态码 | 表示含义 |<br>| :—–|:——|<br>|  400 Bad Request  |   该状态码表示请求报文中存在语法错误，当错误发生时，需修改请求的内容后再次发送请求。另外，浏览器会像 200 OK 一样对待该状态码   |<br>| 401 Unauthorized |   表示发送的请求需要有通过 HTTP认证 的认证信息。另外若之前已经进行过1次请求，则表示用户认证失败   |<br>| 403 Forbidden |   表示队请求资源的访问被服务器拒绝了。未获得文件系统的访问授权，访问权限出现某些问题等列举的情况都可能是发生403的原因   |<br>| 404 Not Found |   表示服务器上无法找到请求的资源，除此之外，也可以在服务器端拒绝请求且不想说明理由时的使用   |</p>
+<p><strong>4×× 的响应结果表明客户端是发生错误的原因所在。</strong> </p>
 </blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">状态码</th>
+<th style="text-align:left">表示含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">400 Bad Request</td>
+<td style="text-align:left">该状态码表示请求报文中存在语法错误，当错误发生时，需修改请求的内容后再次发送请求。另外，浏览器会像 200 OK 一样对待该状态码</td>
+</tr>
+<tr>
+<td style="text-align:left">401 Unauthorized</td>
+<td style="text-align:left">表示发送的请求需要有通过 HTTP认证 的认证信息。另外若之前已经进行过1次请求，则表示用户认证失败</td>
+</tr>
+<tr>
+<td style="text-align:left">403 Forbidden</td>
+<td style="text-align:left">表示队请求资源的访问被服务器拒绝了。未获得文件系统的访问授权，访问权限出现某些问题等列举的情况都可能是发生403的原因</td>
+</tr>
+<tr>
+<td style="text-align:left">404 Not Found</td>
+<td style="text-align:left">表示服务器上无法找到请求的资源，除此之外，也可以在服务器端拒绝请求且不想说明理由时的使用</td>
+</tr>
+</tbody>
+</table>
 <h3 id="六-5××-服务器错误"><a href="#六-5××-服务器错误" class="headerlink" title="六. 5×× 服务器错误"></a>六. 5×× 服务器错误</h3><blockquote>
-<p><strong>5×× 的响应结果表明服务器本身发生错误</strong><br>| 状态码 | 表示含义 |<br>| :—–|:——|<br>|  500 Internal Server Error  |   表示服务器端在执行请求时发生了错误，也有可能是 Web 应用存在的 bug 或某些临时的故障   |<br>| 503 Service Unavailable |   表示服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。   |</p>
+<p><strong>5×× 的响应结果表明服务器本身发生错误</strong> </p>
 </blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">状态码</th>
+<th style="text-align:left">表示含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">500 Internal Server Error</td>
+<td style="text-align:left">表示服务器端在执行请求时发生了错误，也有可能是 Web 应用存在的 bug 或某些临时的故障</td>
+</tr>
+<tr>
+<td style="text-align:left">503 Service Unavailable</td>
+<td style="text-align:left">表示服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。</td>
+</tr>
+</tbody>
+</table>
 <h3 id="七-注意"><a href="#七-注意" class="headerlink" title="七. 注意"></a>七. 注意</h3><blockquote>
 <p>​    <strong>不少返回的状态码响应都是错误的，但是用户可能察觉不到这点。比如 Web 应用程序内部发生错误，状态码依然返回 200 OK ,这种情况也经常遇到。</strong> </p>
 </blockquote>
@@ -371,8 +503,8 @@
 <nav id="article-nav">
   
   
-    <a href="/Promise/2018/04/08/Java基础_15/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+    <a href="/Promise/2018/04/03/Git版本控制-时光机穿梭/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git版本控制-时光机穿梭</div>
       <i class="icon-circle-right"></i>
     </a>
   
