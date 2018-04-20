@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm文件的图片/Jmeter/录制脚本第二步.jpg">
 <meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm文件的图片/Jmeter/JMeter回放脚本.jpg">
 <meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm文件的图片/Jmeter/察看结果树.jpg">
-<meta property="og:updated_time" content="2018-04-13T03:02:42.594Z">
+<meta property="og:updated_time" content="2018-04-20T03:22:05.075Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JMeter入门指南">
 <meta name="twitter:description" content="JMeter——性能测试入门篇 1、JMeter 简介12Apache JMeter 是 Apache 组织开发的基于 Java 的压力测试工具。用于对软件做压力测试，它最初被设计用于Web 应用测试，但后来扩展到其他测试领域。 它可以用于测试静态和动态资源，例如静态文件、Java 小服务程序、CGI 脚本、Java 对象、数据库、FTP 服务器，等等。JMeter 可以用于对服务器、网络或对象模">
@@ -249,12 +249,13 @@
 <h3 id="2、JMeter-的优点"><a href="#2、JMeter-的优点" class="headerlink" title="2、JMeter 的优点"></a>2、JMeter 的优点</h3><ul>
 <li>开源免费，基于 Java 编写，可集成到其他系统可拓展各个功能插件</li>
 <li>支持接口测试，压力测试等多种功能，支持录制回放，入门简单</li>
-<li>相较于自己编写框架活其他开源工具，有较为完善的 UI 界面，便于接口调试</li>
+<li>相较于自己编写框架和其他开源工具，有较为完善的 UI 界面，便于接口调试</li>
 <li>多平台支持，可在 Linux，Windows，Mac 上运行</li>
 </ul>
 <hr>
 <h3 id="3、JMeter-下载安装"><a href="#3、JMeter-下载安装" class="headerlink" title="3、JMeter 下载安装"></a>3、JMeter 下载安装</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">附：</span><br><span class="line">	Jmeter 官方下载地址：<span class="string">http:</span><span class="comment">//jmeter.apache.org/download_jmeter.cgi</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm文件的图片/Jmeter/Jmeter官网.jpg" alt="Jmeter官网"><br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">JMeter </span>本身不需要安装，只需要配置好 <span class="keyword">JDK </span>环境即可，然后在 <span class="keyword">JMeter </span>文件夹中找到 <span class="keyword">bin </span>文件夹的 <span class="keyword">jMeter.bat </span>文件，双击即可运行。最新的 <span class="keyword">JMeter </span>版本最好用 <span class="keyword">JDK1.7 </span>及以上版本。</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm文件的图片/Jmeter/Jmeter官网.jpg" alt="Jmeter官网"><br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">一般开放原代码软件都会有两个版本发布：Source <span class="keyword">Distribution </span>和 <span class="keyword">Binary </span><span class="keyword">Distribution </span></span><br><span class="line">	Source 是源代码版，你需要自己编译成可执行软件。 </span><br><span class="line">	<span class="keyword">Binaries </span>是可执行版，直接下载解压就可以拿来用的，他已经给你编译好的版本。</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">JMeter </span>本身不需要安装，只需要配置好 <span class="keyword">JDK </span>环境即可，然后在 <span class="keyword">JMeter </span>文件夹中找到 <span class="keyword">bin </span>文件夹的 <span class="keyword">jMeter.bat </span>文件，双击即可运行。最新的 <span class="keyword">JMeter </span>版本最好用 <span class="keyword">JDK1.7 </span>及以上版本。</span><br></pre></td></tr></table></figure>
 <p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm文件的图片/Jmeter/Jmeter启动截图.jpg" alt="Jmeter启动"><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">相关：</span><br><span class="line">	<span class="selector-class">.bat</span> 一般指批处理，也称为批处理脚本。它应用于 DOS 和 Windows 系统中。上图中的 jmeter<span class="selector-class">.sh</span> 文件则是 UNIX、Linux、Mac 操作系统中的脚本文件。</span><br></pre></td></tr></table></figure></p>
 <hr>
 <h3 id="4、JMeter-的组成"><a href="#4、JMeter-的组成" class="headerlink" title="4、JMeter 的组成"></a>4、JMeter 的组成</h3><table>
@@ -267,7 +268,7 @@
 <tbody>
 <tr>
 <td style="text-align:left">①  测试计划（Test Plan）</td>
-<td style="text-align:left">使用 JMeter 进行测试的七点，是其他 Jmeter 测试元件的容器</td>
+<td style="text-align:left">使用 JMeter 进行测试的起点，是其他 Jmeter 测试元件的容器</td>
 </tr>
 <tr>
 <td style="text-align:left">②  线程组（Thread Group）</td>
