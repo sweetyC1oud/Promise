@@ -12,16 +12,16 @@
 <meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Redis_SDS">
-<meta property="og:url" content="www.misscloud.top/2018/04/13/Redis_SDS/index.html">
+<meta property="og:url" content="www.misscloud.top/2018/04/18/Redis_SDS/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
 <meta property="og:description" content="Redis_SDS 1、SDS 简介1Redis 中没有直接使用 C 语言传统的的字符串表示，而是自己构建了一种名为“简单动态字符串”（simple dyname string , SDS）的抽象类型，并将 SDS 用作 Redis 的默认字符串表示。 1.1、字符串字面量12Redis 中虽然有简单动态字符串 SDS 类型，但是还是可以用 C 语言中的字符串 string 类型，只是 C 字符串">
-<meta property="og:image" content="j:/PromiseData/markdowm文件的图片/Redis/SDS定义.jpg">
-<meta property="og:image" content="j:/PromiseData/markdowm文件的图片/Redis/惰性空间释放.jpg">
-<meta property="og:updated_time" content="2018-04-26T08:26:05.140Z">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\SDS定义.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\惰性空间释放.jpg">
+<meta property="og:updated_time" content="2018-04-27T02:50:17.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis_SDS">
 <meta name="twitter:description" content="Redis_SDS 1、SDS 简介1Redis 中没有直接使用 C 语言传统的的字符串表示，而是自己构建了一种名为“简单动态字符串”（simple dyname string , SDS）的抽象类型，并将 SDS 用作 Redis 的默认字符串表示。 1.1、字符串字面量12Redis 中虽然有简单动态字符串 SDS 类型，但是还是可以用 C 语言中的字符串 string 类型，只是 C 字符串">
-<meta name="twitter:image" content="j:/PromiseData/markdowm文件的图片/Redis/SDS定义.jpg">
+<meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\SDS定义.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Promise&#39;s blog" type="application/atom+xml">
   
@@ -191,8 +191,8 @@
   
 
         
-        <a href="/Promise/2018/04/13/Redis_SDS/" class="archive-article-date">
-  	<time datetime="2018-04-13T13:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-13</time>
+        <a href="/Promise/2018/04/18/Redis_SDS/" class="archive-article-date">
+  	<time datetime="2018-04-18T13:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-18</time>
 </a>
         
 		
@@ -253,7 +253,7 @@
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">用途②：</span><br><span class="line">	 SDS 还可以被用作缓冲区（<span class="built_in">buffer</span>）：AOF 模块中的 AOF 缓冲区，以及客户端状态中的输入缓冲区，都是用 SDS 实现的。</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="2、SDS-的定义"><a href="#2、SDS-的定义" class="headerlink" title="2、SDS 的定义"></a>2、SDS 的定义</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">每个 sds.h 头文件中的 sdshdr 结构表示一个 SDS 值：</span><br><span class="line">	struct sdshdr &#123;</span><br><span class="line">		<span class="keyword">int</span> len;    <span class="comment">// 记录 buf 数组中已使用字节的数量 // 等于 SDS 所保存字符串的长度</span></span><br><span class="line">		<span class="keyword">int</span> free;   <span class="comment">// 记录 buf 数组中未使用字节的数量</span></span><br><span class="line">		<span class="keyword">char</span> buf[]; <span class="comment">// 字节数组，用于保存字符串</span></span><br><span class="line">	&#125;;</span><br></pre></td></tr></table></figure>
-<p><img src="J:\PromiseData\markdowm文件的图片\Redis\SDS定义.jpg" alt="SDS定义"></p>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\SDS定义.jpg" alt="SDS定义"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SDS 遵循 C 字符串以空字符结尾的惯例，保存空字符的 <span class="number">1</span> 字节空间不计算在 SDS 的 len 属性里面，并且为空字符分配额外的 <span class="number">1</span> 字节空间，以及添加空字符到字符串末尾等操作，都是由 SDS 函数自动完成的。所以这个空字符对于 SDS 的使用者来说是完全透明的。遵循空字符结尾这一惯例的好处是，SDS 可以直接重用一部分 C 字符串函数库里面的函数。</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">现在有一个指向上图所示的 SDS 指针 s，我们打印 SDS 保存的字符串值 <span class="string">"Redis"</span>,无须为 SDS 编写专门的打印函数。</span><br><span class="line">printf(<span class="string">"%s"</span> , s-&gt;buf);</span><br></pre></td></tr></table></figure>
 <hr>
@@ -275,7 +275,7 @@
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">分配方法：</span><br><span class="line">	① 如果对 SDS 进行修改之后，SDS 的长度（也即是 len 属性的值）将小于 <span class="number">1</span>MB，那么程序分配和 len 属性同样大小的未使用空间，这时 SDS len 属性的值将和free 属性的值相同。举个例子，如果进行修改之后，SDS 的 len 将变成 <span class="number">13</span> 字节，那么程序也会分配 <span class="number">13</span> 字节的未使用空间，SDS 的 buf 数组的实际长度将变成</span><br><span class="line"><span class="number">13</span>+<span class="number">13</span>+<span class="number">1</span>=<span class="number">27</span> 字节（额外的一字节用于保存空字符）。</span><br><span class="line">	② 如果对 SDS 进行修改之后，SDS 的长度将大于等于 <span class="number">1</span>MB，那么程序会分配 <span class="number">1</span>MB 的未使用空间。举个例子，如果进行修改之后，SDS 的 len 将变成 <span class="number">30</span>MB，那么程序会分配 <span class="number">1</span>MB 的未使用空间，SDS 的 buf 数组的实际长度将为 <span class="number">30</span> MB + <span class="number">1</span>MB + <span class="number">1</span>byte。</span><br></pre></td></tr></table></figure>
 <figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">总结：</span><br><span class="line">	通过空间预分配策略，Redis 可以减少连续执行字符串增长操作所需的内存重分配次数。在扩展 SDS 空间之前，SDS API 会先检查未使用空间是否足够，如果足够的话，API 就会直接使用未使用空间，而无须执行内存重分配。通过这种预分配策略，SDS 将连续增长 <span class="built_in">N</span> 次字符串所需的内存重分配次数从必定 <span class="built_in">N</span> 次降低为最多 <span class="built_in">N</span> 次。</span><br></pre></td></tr></table></figure>
 <h5 id="3-3-2-、惰性空间释放"><a href="#3-3-2-、惰性空间释放" class="headerlink" title="3.3.2 、惰性空间释放"></a>3.3.2 、惰性空间释放</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">惰性空间释放：</span><br><span class="line">	惰性空间释放用于优化 SDS 的字符串缩短操作：当 SDS 的 API 需要缩短 SDS 保存的字符串时，程序并不立即使用内存重分配来回收缩短后多出来的字节，而是使用 <span class="built_in">free</span> 属性将这些字节的数量记录起来，并等待将来使用。</span><br></pre></td></tr></table></figure>
-<p><img src="J:\PromiseData\markdowm文件的图片\Redis\惰性空间释放.jpg" alt="惰性空间释放"></p>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\惰性空间释放.jpg" alt="惰性空间释放"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">总结：</span><br><span class="line">	通过惰性空间释放策略，SDS 避免了缩短字符串时所需的内存重分配操作，并为将来可能有的增长操作提供了优化，与此同时， SDS 也提高了相应的 API ,让我们可以在有需要时，真正地释放 SDS 的未使用空间，所以不用担心惰性空间释放策略会造成内存浪费。</span><br></pre></td></tr></table></figure>
 <h4 id="3-4、二进制安全"><a href="#3-4、二进制安全" class="headerlink" title="3.4、二进制安全"></a>3.4、二进制安全</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C 字符串：</span><br><span class="line">	C 字符串中的字符必须符合某种编码（比如 ASCII），并且除了字符串的末尾之外，字符串里面不能包含空字符，否则最先被程序读入的空字符将被误认为是字符串结尾，这些限制使得 C 字符串只能保存文本数据，而不能保存像图片、音频、视屏、压缩文件这样的二进制数据。</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SDS：</span><br><span class="line">	虽然数据库一般用于保存文本数据，但使用数据库来保存二进制数据的场景也不少见，因此，为了确保 Redis 可以适用于各种不同的使用场景，SDS 的 API 都是二进制安全的（binary-safe），所有 SDS API 都会以处理二进制的方式来处理 SDS 存放在 buf 数组里数据，程序不会对其中的数据做任何限制、过滤、或者假设、数据在写入时是什么样子的，他被读取就是什么样。</span><br><span class="line">	这也是我们将 SDS 的 buf 属性称为字符数组的原因-----Redis 不是用这个数组来保存字符，而是用它来保存一系列二进制数据。</span><br></pre></td></tr></table></figure>
@@ -495,7 +495,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/04/13/Redis_SDS/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/04/18/Redis_SDS/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -509,18 +509,18 @@
   
 <nav id="article-nav">
   
-    <a href="/Promise/2018/04/13/Redis入门指南/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Promise/2018/04/26/Redis_链表/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Redis初体验
+          Redis_链表
         
       </div>
     </a>
   
   
-    <a href="/Promise/2018/04/10/JMeter性能测试入门指南/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JMeter入门指南</div>
+    <a href="/Promise/2018/04/18/JMeter断言/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JMeter断言</div>
       <i class="icon-circle-right"></i>
     </a>
   

@@ -15,15 +15,15 @@
 <meta property="og:url" content="www.misscloud.top/2018/04/13/Redis入门指南/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
 <meta property="og:description" content="Redis 初体验 1、问题背景1234生活背景：	各大软件（比如：QQ、微信、支付宝等等...）都有一些推荐好友功能，然后你点进去看，就能看到你跟该好友有多少个共同好友。像这样当我们需要编写一个用户关系模块，这个模块需要实现一个“共同关注”的功能，用于计算两个用户关注了哪有相同的用户，或者有哪些相同的好友。例子：	假设 huang 关注了 peter、tom、jack 三个用户，而 john 关">
-<meta property="og:image" content="j:/PromiseData/markdowm文件的图片/Redis/数据库分类.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\数据库分类.jpg">
 <meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis%E4%B8%8B%E8%BD%BD.jpg">
 <meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis_cmd%E4%B8%AD%E5%90%AF%E5%8A%A8.jpg">
 <meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis%E8%AE%BE%E5%80%BC.jpg">
-<meta property="og:updated_time" content="2018-04-16T14:17:51.569Z">
+<meta property="og:updated_time" content="2018-04-27T02:49:52.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis初体验">
 <meta name="twitter:description" content="Redis 初体验 1、问题背景1234生活背景：	各大软件（比如：QQ、微信、支付宝等等...）都有一些推荐好友功能，然后你点进去看，就能看到你跟该好友有多少个共同好友。像这样当我们需要编写一个用户关系模块，这个模块需要实现一个“共同关注”的功能，用于计算两个用户关注了哪有相同的用户，或者有哪些相同的好友。例子：	假设 huang 关注了 peter、tom、jack 三个用户，而 john 关">
-<meta name="twitter:image" content="j:/PromiseData/markdowm文件的图片/Redis/数据库分类.jpg">
+<meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\数据库分类.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Promise&#39;s blog" type="application/atom+xml">
   
@@ -243,10 +243,10 @@
 <figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">问题思考:</span><br><span class="line">	从数学集合计算的角度来看，共同关注功能本质上就是计算两个用户关注集合的交集，因为交集这个概念是如此的常见，所以我很自然地认为共同关注这个功能可以很容易地实现，但现实却给了我当头一棒：我所使用的关系数据库并不直接支持交集计算操作，要计算两个集合的交集，除了需要对两个数据表执行合并（<span class="keyword">join</span>）操作之外，还需要对合并的结果执行去重复（<span class="keyword">distinct</span>）操作，最终导致交集操作的实现变得异常复杂。</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">解决方法：</span><br><span class="line">	带着这个疑问，我在搜索引擎上面进行查找，并最终发现了 Redis。在我看来，Redis 正是我想要找的那种数据库——它内置了集合数据类型，并支持对集合执行交集、并集、差集等集合计算操作，其中的交集计算操作可以直接用于实现我想要的共同关注功能。</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="2、What-is-the-Redis"><a href="#2、What-is-the-Redis" class="headerlink" title="2、What is the Redis"></a>2、What is the Redis</h3><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">简介：</span><br><span class="line">	Redis 是完全开源免费的，使用ANSI <span class="keyword">C</span>语言编写，遵守 BSD 协议，支持网络、可基于内存亦可持久化的日志型、Key-<span class="keyword">Value</span> 数据库，并提供多种语言的 API。</span><br></pre></td></tr></table></figure>
+<h3 id="2、What-is-the-Redis"><a href="#2、What-is-the-Redis" class="headerlink" title="2、What is the Redis"></a>2、What is the Redis</h3><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">简介：</span><br><span class="line">	Redis 是完全开源免费的，使用 ANSI <span class="keyword">C</span> 语言编写，遵守 BSD 协议，支持网络、可基于内存亦可持久化的日志型、Key-<span class="keyword">Value</span> 数据库，并提供多种语言的 API。</span><br></pre></td></tr></table></figure>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">相关：</span><br><span class="line">	<span class="keyword">BSD </span>开源协议是一个给于使用者很大自由的协议。可以自由的使用，修改源代码，也可以将修改后的代码作为开源或者专有软件再发布。<span class="keyword">BSD </span>代码鼓励代码共享，但需要尊重代码作者的著作权。<span class="keyword">BSD </span>由于允许使用者修改和重新发布代码，也允许使用或在 <span class="keyword">BSD </span>代码上开发商业软件发布和销 售，因此是对商业集成很友好的协议。</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="3、Why-use-it"><a href="#3、Why-use-it" class="headerlink" title="3、Why use it"></a>3、Why use it</h3><p><img src="J:\PromiseData\markdowm文件的图片\Redis\数据库分类.jpg" alt="数据库分类"></p>
+<h3 id="3、Why-use-it"><a href="#3、Why-use-it" class="headerlink" title="3、Why use it"></a>3、Why use it</h3><p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\数据库分类.jpg" alt="数据库分类"></p>
 <blockquote>
 <p><strong>Redis 与其他 key - value 缓存产品有以下三个特点：</strong></p>
 <ul>
@@ -434,8 +434,8 @@
     </a>
   
   
-    <a href="/Promise/2018/04/13/Redis_SDS/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Redis_SDS</div>
+    <a href="/Promise/2018/04/10/JMeter性能测试入门指南/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JMeter入门指南</div>
       <i class="icon-circle-right"></i>
     </a>
   
