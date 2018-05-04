@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.misscloud.top">
-  <title>Promise&#39;s blog</title>
+  <title>MySQL 时间戳转换问题 | Promise&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Promise&#39;s blog">
-<meta property="og:url" content="www.misscloud.top/page/4/index.html">
+  <meta name="description" content="MySQL 时间戳转换问题在写Sql语句的时候，经常用到时间戳作为限制条件来查询。对时间、字符串、时间戳三者之间的互相转换整理如下：  涉及的函数 date_farmat( date , format ) 函数 ```     MySQL ‘日期’ 格式化函数。123456789101112131415161718&amp;gt;&amp;gt; ```2. unix_timestamp( ) 函数```   时">
+<meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL 时间戳转换问题">
+<meta property="og:url" content="www.misscloud.top/2017/09/07/Mysql时间戳问题/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
+<meta property="og:description" content="MySQL 时间戳转换问题在写Sql语句的时候，经常用到时间戳作为限制条件来查询。对时间、字符串、时间戳三者之间的互相转换整理如下：  涉及的函数 date_farmat( date , format ) 函数 ```     MySQL ‘日期’ 格式化函数。123456789101112131415161718&amp;gt;&amp;gt; ```2. unix_timestamp( ) 函数```   时">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Mysql/Mysql%E9%99%84%E8%A1%A8.jpg">
+<meta property="og:updated_time" content="2018-05-04T06:45:01.926Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Promise&#39;s blog">
+<meta name="twitter:title" content="MySQL 时间戳转换问题">
+<meta name="twitter:description" content="MySQL 时间戳转换问题在写Sql语句的时候，经常用到时间戳作为限制条件来查询。对时间、字符串、时间戳三者之间的互相转换整理如下：  涉及的函数 date_farmat( date , format ) 函数 ```     MySQL ‘日期’ 格式化函数。123456789101112131415161718&amp;gt;&amp;gt; ```2. unix_timestamp( ) 函数```   时">
+<meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Mysql/Mysql%E9%99%84%E8%A1%A8.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Promise&#39;s blog" type="application/atom+xml">
   
@@ -172,46 +178,137 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Java基础_07" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Mysql时间戳问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/Promise/2015/11/26/Java基础_07/">Java基础_07</a>
+    <h1 class="article-title" itemprop="name">
+      MySQL 时间戳转换问题
     </h1>
   
 
         
-        <a href="/Promise/2015/11/26/Java基础_07/" class="archive-article-date">
-  	<time datetime="2015-11-26T07:07:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-26</time>
+        <a href="/Promise/2017/09/07/Mysql时间戳问题/" class="archive-article-date">
+  	<time datetime="2017-09-07T06:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-07</time>
 </a>
         
+		
+				<span class="archive-article-date">
+					阅读量 <span id="busuanzi_value_page_pv"></span>
+				</span>
 		
       </header>
 		
     
 
     <!-- 目录内容 -->
-   
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL-时间戳转换问题"><span class="toc-number">1.</span> <span class="toc-text">MySQL 时间戳转换问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#涉及的函数"><span class="toc-number">1.1.</span> <span class="toc-text">涉及的函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间-→-时间戳"><span class="toc-number">1.2.</span> <span class="toc-text">时间 → 时间戳</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串→时间"><span class="toc-number">1.3.</span> <span class="toc-text">字符串→时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串→时间戳"><span class="toc-number">1.4.</span> <span class="toc-text">字符串→时间戳</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间戳→时间"><span class="toc-number">1.5.</span> <span class="toc-text">时间戳→时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间戳→字符串"><span class="toc-number">1.6.</span> <span class="toc-text">时间戳→字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL日期格式化（format）取值范围"><span class="toc-number">1.7.</span> <span class="toc-text">MySQL日期格式化（format）取值范围</span></a></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+  function showToc(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:block");
+    show_toc_btn.setAttribute("style","display:none");
+    };
+  function showBtn(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:none");
+    show_toc_btn.setAttribute("style","display:block");
+    };
+   </script>
+         
 <!-- 目录内容结束 -->
     
    <div class="article-entry" itemprop="articleBody">
   
     
     
-      <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h3 id="1-String-s-“Hello”-s-s-“-world-“-这两行代码执行后，原始的String对象中的内容到底变了没有？"><a href="#1-String-s-“Hello”-s-s-“-world-“-这两行代码执行后，原始的String对象中的内容到底变了没有？" class="headerlink" title="1. String s = “Hello” ; s = s + “ world! “; 这两行代码执行后，原始的String对象中的内容到底变了没有？"></a>1. String s = “Hello” ; s = s + “ world! “; 这两行代码执行后，原始的String对象中的内容到底变了没有？</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答:</span><br><span class="line">	原始的 <span class="keyword">String</span> 对象中的内容没有变。</span><br></pre></td></tr></table></figure>
-      
-        <p class="article-more-link">
-          <a href="/Promise/2015/11/26/Java基础_07/#more">more</a>
-        </p>
-      
+      <h1 id="MySQL-时间戳转换问题"><a href="#MySQL-时间戳转换问题" class="headerlink" title="MySQL 时间戳转换问题"></a>MySQL 时间戳转换问题</h1><p>在写Sql语句的时候，经常用到时间戳作为限制条件来查询。对时间、字符串、时间戳三者之间的互相转换整理如下：</p>
+<ul>
+<li><h2 id="涉及的函数"><a href="#涉及的函数" class="headerlink" title="涉及的函数"></a>涉及的函数</h2><blockquote>
+<figure class="highlight plain"><figcaption><span>date_farmat( date , format ) 函数 ```     MySQL ‘日期’ 格式化函数。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&gt;</span><br><span class="line">&gt; ```2. unix_timestamp( ) 函数```   时间转时间戳格式。</span><br><span class="line">&gt;</span><br><span class="line">&gt; ``` 3. str_to_data( str , format )  函数```  字符串转时间。</span><br><span class="line">&gt;</span><br><span class="line">&gt; ```4. from_unixtime( unix_timestamp , format )  函数```   MySQL ‘ 时间戳 ’ 格式化函数。</span><br><span class="line"></span><br><span class="line">* ## 时间 → 字符串</span><br><span class="line"></span><br><span class="line">&gt; ``` </span><br><span class="line">&gt; select now();</span><br><span class="line">&gt; 结果为： 2017-09-07 15:25:09</span><br><span class="line">&gt;</span><br><span class="line">&gt; --------------------------------用时间格式化函数后-------------------------------------------</span><br><span class="line">&gt;</span><br><span class="line">&gt; select date_format ( now() , &apos;%Y-%m-%d&apos; ) ;</span><br><span class="line">&gt; 结果为： 2017-09-07</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><h2 id="时间-→-时间戳"><a href="#时间-→-时间戳" class="headerlink" title="时间 → 时间戳"></a>时间 → 时间戳</h2></li>
+</ul>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> select unix_timestamp ( now() ) ;    </span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 结果为：1504769430                    </span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li><h2 id="字符串→时间"><a href="#字符串→时间" class="headerlink" title="字符串→时间"></a>字符串→时间</h2><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">select str_to_date( <span class="string">'2017-09-07'</span>, <span class="string">'%Y-%m-%d %H:%M:%S'</span> ) ;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">结果为：2017-09-07 00:00:00</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">---------------------------------------注意-------------------------------------------------</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">select str_to_date( <span class="string">'2017-09-07'</span>, <span class="string">'%Y-%m'</span> )  select str_to_date( <span class="string">'2017-09-07'</span>, <span class="string">'%Y-%m-%d'</span> )</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">结果为：2017-09-00                            结果为：2017-09-07</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><h2 id="字符串→时间戳"><a href="#字符串→时间戳" class="headerlink" title="字符串→时间戳"></a>字符串→时间戳</h2></li>
+</ul>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> select unix_timestamp( <span class="string">'2017-09-07 15:39:23'</span> )</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 结果为：1504769963</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ---------------------若字符串中未给出时分秒，默认为该天开始（0点0分0秒）的时间戳----------------</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> select unix_timestamp( <span class="string">'2017-09-07'</span> ) ;  </span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 结果为：1504713600（该时间戳为：2017年9月7号0点0分0秒的时间戳）</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ---------------------若给出的字符串不符合时间规范，则返回0.000000------------------------------</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> select unix_timestamp( <span class="string">'2017-2-31'</span> )</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 结果为：0.000000</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li><h2 id="时间戳→时间"><a href="#时间戳→时间" class="headerlink" title="时间戳→时间"></a>时间戳→时间</h2></li>
+</ul>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> select from_unixtime( 1504770030 ) ;  </span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 结果为：2017-09-07 15:40:30</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+</blockquote>
+<ul>
+<li><h2 id="时间戳→字符串"><a href="#时间戳→字符串" class="headerlink" title="时间戳→字符串"></a>时间戳→字符串</h2></li>
+</ul>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">select from_unixtime(1504770030,<span class="string">'%Y-%m-%d %H:%I:%S'</span>) ;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">结果为：2017-09-07 15:03:30</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">------------------------------------------注意----------------------------------------------</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">select from_unixtime(1504770030,<span class="string">'%Y-%m'</span>); </span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">结果为：2017-09</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">select from_unixtime(1504770030,<span class="string">'%Y-%m-%d %H:%I'</span>) ;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">结果为：2017-09-07 15:03</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">select from_unixtime(1504770030,<span class="string">'%Y-%m-%d %H:%S'</span>) ;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">结果为：2017-09-07 15:30</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li><h2 id="MySQL日期格式化（format）取值范围"><a href="#MySQL日期格式化（format）取值范围" class="headerlink" title="MySQL日期格式化（format）取值范围"></a>MySQL日期格式化（format）取值范围</h2></li>
+</ul>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Mysql/Mysql%E9%99%84%E8%A1%A8.jpg" alt="Mysql附表"></p>
+
     
   
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://sweetyc1oud.github.io/PromiseData/image/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://sweetyc1oud.github.io/PromiseData/image/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -223,7 +320,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
+        			<a href="/Promise/categories/MySQL//" class="article-tag-list-link color1">MySQL</a>
         		</li>
       		
 		</ul>
@@ -231,16 +328,84 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Promise/2015/11/26/Java基础_07/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2017/09/07/Mysql时间戳问题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/Promise/2017/12/06/Markdown入门指南/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Markdown入门指南
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Promise/2017/03/06/剑指offer编程题_01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">剑指offer编程题_01</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -255,545 +420,42 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java基础_06" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Promise/2015/11/23/Java基础_06/">Java基础_06</a>
-    </h1>
-  
-
-        
-        <a href="/Promise/2015/11/23/Java基础_06/" class="archive-article-date">
-  	<time datetime="2015-11-23T12:00:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-23</time>
-</a>
-        
-		
-      </header>
-		
-    
-
-    <!-- 目录内容 -->
-   
-<!-- 目录内容结束 -->
-    
-   <div class="article-entry" itemprop="articleBody">
-  
-    
-    
-      <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h3 id="1-什么是内部类？Inner-Class-和-Static-Nested-Class-的不同？"><a href="#1-什么是内部类？Inner-Class-和-Static-Nested-Class-的不同？" class="headerlink" title="1. 什么是内部类？Inner Class 和 Static Nested Class 的不同？"></a>1. 什么是内部类？Inner Class 和 Static Nested Class 的不同？</h3><figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	可以将一个类的定义放在另一个类的定义内部，这就是内部类。</span><br><span class="line">	Inner <span class="class"><span class="keyword">Class</span> 称为内部类。</span></span><br><span class="line">	Static Nested <span class="class"><span class="keyword">Class</span> 称为嵌套类。</span></span><br></pre></td></tr></table></figure>
-      
-        <p class="article-more-link">
-          <a href="/Promise/2015/11/23/Java基础_06/#more">more</a>
-        </p>
-      
-    
-  
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Promise/2015/11/23/Java基础_06/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL-时间戳转换问题"><span class="toc-number">1.</span> <span class="toc-text">MySQL 时间戳转换问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#涉及的函数"><span class="toc-number">1.1.</span> <span class="toc-text">涉及的函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间-→-时间戳"><span class="toc-number">1.2.</span> <span class="toc-text">时间 → 时间戳</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串→时间"><span class="toc-number">1.3.</span> <span class="toc-text">字符串→时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串→时间戳"><span class="toc-number">1.4.</span> <span class="toc-text">字符串→时间戳</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间戳→时间"><span class="toc-number">1.5.</span> <span class="toc-text">时间戳→时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间戳→字符串"><span class="toc-number">1.6.</span> <span class="toc-text">时间戳→字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL日期格式化（format）取值范围"><span class="toc-number">1.7.</span> <span class="toc-text">MySQL日期格式化（format）取值范围</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-Java基础_05" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Promise/2015/11/23/Java基础_05/">Java基础_05</a>
-    </h1>
-  
-
-        
-        <a href="/Promise/2015/11/23/Java基础_05/" class="archive-article-date">
-  	<time datetime="2015-11-23T00:40:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-23</time>
-</a>
-        
-		
-      </header>
-		
-    
-
-    <!-- 目录内容 -->
-   
-<!-- 目录内容结束 -->
-    
-   <div class="article-entry" itemprop="articleBody">
-  
-    
-    
-      <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h3 id="1-写-clone-方法时，通常都有一行代码，是什么？"><a href="#1-写-clone-方法时，通常都有一行代码，是什么？" class="headerlink" title="1. 写 clone() 方法时，通常都有一行代码，是什么？"></a>1. 写 clone() 方法时，通常都有一行代码，是什么？</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：</span><br><span class="line">	<span class="keyword">clone</span> <span class="title">有缺省行为，super</span>.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。</span><br></pre></td></tr></table></figure>
-      
-        <p class="article-more-link">
-          <a href="/Promise/2015/11/23/Java基础_05/#more">more</a>
-        </p>
-      
-    
-  
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Promise/2015/11/23/Java基础_05/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java基础_04" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Promise/2015/11/22/Java基础_04/">Java基础_04</a>
-    </h1>
-  
-
-        
-        <a href="/Promise/2015/11/22/Java基础_04/" class="archive-article-date">
-  	<time datetime="2015-11-22T01:25:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-22</time>
-</a>
-        
-		
-      </header>
-		
-    
-
-    <!-- 目录内容 -->
-   
-<!-- 目录内容结束 -->
-    
-   <div class="article-entry" itemprop="articleBody">
-  
-    
-    
-      <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h3 id="1-下面的代码有什么不妥之处？"><a href="#1-下面的代码有什么不妥之处？" class="headerlink" title="1. 下面的代码有什么不妥之处？"></a>1. 下面的代码有什么不妥之处？</h3><h4 id="1-1-if-username-equals-“zxx”-有什么不妥之处？"><a href="#1-1-if-username-equals-“zxx”-有什么不妥之处？" class="headerlink" title="1.1. if ( username . equals( “zxx” ) {  } 有什么不妥之处？"></a>1.1. if ( username . equals( “zxx” ) {  } 有什么不妥之处？</h4><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：一个变量直接调用<span class="keyword">equals</span>方法可能会抛出NullPointerException异常(当username为<span class="built_in">Null</span>时)，为了防止程序抛出异常在调用<span class="keyword">equals</span>方法之前要先判断一下是否为空。或者改成：<span class="string">"zxx"</span>.<span class="keyword">equals</span>(username)</span><br></pre></td></tr></table></figure>
-      
-        <p class="article-more-link">
-          <a href="/Promise/2015/11/22/Java基础_04/#more">more</a>
-        </p>
-      
-    
-  
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Promise/2015/11/22/Java基础_04/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java基础_03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Promise/2015/11/19/Java基础_03/">Java基础_03</a>
-    </h1>
-  
-
-        
-        <a href="/Promise/2015/11/19/Java基础_03/" class="archive-article-date">
-  	<time datetime="2015-11-19T03:36:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-19</time>
-</a>
-        
-		
-      </header>
-		
-    
-
-    <!-- 目录内容 -->
-   
-<!-- 目录内容结束 -->
-    
-   <div class="article-entry" itemprop="articleBody">
-  
-    
-    
-      <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h3 id="1-“-“和-equals-方法究竟有什么区别？"><a href="#1-“-“和-equals-方法究竟有什么区别？" class="headerlink" title="1. “ == “和 equals 方法究竟有什么区别？"></a>1. “ == “和 equals 方法究竟有什么区别？</h3><figure class="highlight fix"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">答： =</span>=<span class="string"> 操作符专门用来比较两个变量的值是否相等，也就是用于比较变量所对应的内存中所存储的数值是否相同。如     果要比较两个基本类型的数据或两个引用变量是否相等，只能用 == 操作符。</span></span><br></pre></td></tr></table></figure>
-      
-        <p class="article-more-link">
-          <a href="/Promise/2015/11/19/Java基础_03/#more">more</a>
-        </p>
-      
-    
-  
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Promise/2015/11/19/Java基础_03/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java基础_02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Promise/2015/11/18/Java基础_02/">Java基础_02</a>
-    </h1>
-  
-
-        
-        <a href="/Promise/2015/11/18/Java基础_02/" class="archive-article-date">
-  	<time datetime="2015-11-18T05:18:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-18</time>
-</a>
-        
-		
-      </header>
-		
-    
-
-    <!-- 目录内容 -->
-   
-<!-- 目录内容结束 -->
-    
-   <div class="article-entry" itemprop="articleBody">
-  
-    
-    
-      <p>#Java基础</p>
-      
-        <p class="article-more-link">
-          <a href="/Promise/2015/11/18/Java基础_02/#more">more</a>
-        </p>
-      
-    
-  
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Promise/2015/11/18/Java基础_02/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java基础_01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Promise/2015/11/16/Java基础_01/">Java基础_01</a>
-    </h1>
-  
-
-        
-        <a href="/Promise/2015/11/16/Java基础_01/" class="archive-article-date">
-  	<time datetime="2015-11-16T07:42:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-16</time>
-</a>
-        
-		
-      </header>
-		
-    
-
-    <!-- 目录内容 -->
-   
-<!-- 目录内容结束 -->
-    
-   <div class="article-entry" itemprop="articleBody">
-  
-    
-    
-      <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h3 id="1-一个-java源文件中是否可以包含多个类（不是内部类）？有什么限制？"><a href="#1-一个-java源文件中是否可以包含多个类（不是内部类）？有什么限制？" class="headerlink" title="1. 一个.java源文件中是否可以包含多个类（不是内部类）？有什么限制？"></a>1. 一个.java源文件中是否可以包含多个类（不是内部类）？有什么限制？</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：一个 .java 文件中可以有多个类，但只能有一个 <span class="keyword">public</span> 类，并且 <span class="keyword">public</span> 类的类名必须要和文件名相同。</span><br></pre></td></tr></table></figure>
-      
-        <p class="article-more-link">
-          <a href="/Promise/2015/11/16/Java基础_01/#more">more</a>
-        </p>
-      
-    
-  
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Promise/2015/11/16/Java基础_01/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/Promise/page/3/">&laquo; Prev</a><a class="page-number" href="/Promise/">1</a><a class="page-number" href="/Promise/page/2/">2</a><a class="page-number" href="/Promise/page/3/">3</a><span class="page-number current">4</span>
-    </nav>
+  
+
+  
+  <div id="SOHUCS" sid="Mysql时间戳问题" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cytvGDshU",
+        conf: "e28aac4272b532dc05a3e9bc658f7bc4"
+    });
+</script>
+</script>
+  
+
+  
+
   
 
 
@@ -821,8 +483,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
