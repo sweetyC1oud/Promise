@@ -6,24 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.misscloud.top">
-  <title>Redis初体验 | Promise&#39;s blog</title>
+  <title>Maven 安装配置 | Promise&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Redis 初体验 1、问题背景1234生活背景：	各大软件（比如：QQ、微信、支付宝等等...）都有一些推荐好友功能，然后你点进去看，就能看到你跟该好友有多少个共同好友。像这样当我们需要编写一个用户关系模块，这个模块需要实现一个“共同关注”的功能，用于计算两个用户关注了哪有相同的用户，或者有哪些相同的好友。例子：	假设 huang 关注了 peter、tom、jack 三个用户，而 john 关">
+  <meta name="description" content="Maven 安装配置1、Maven 是什么？12Maven（翻译为 &quot;专家&quot;、&quot;内行&quot;）是跨平台的项目管理工具，主要服务于基于 Java 平台的项目构建，依赖管理和项目信息管理。简单来讲，Maven 是一套强大的自动化构建工具，覆盖了项目的编译、测试、运行和打包的过程，Maven 提供了仓库管理的概念，统一地帮助我们管理第三方 jar 包。 2、Maven 可以做什么事？1① 构建 ② 文档生成">
 <meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis初体验">
-<meta property="og:url" content="www.misscloud.top/2018/04/13/Redis入门指南/index.html">
+<meta property="og:title" content="Maven 安装配置">
+<meta property="og:url" content="www.misscloud.top/2018/05/11/Maven安装配置/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
-<meta property="og:description" content="Redis 初体验 1、问题背景1234生活背景：	各大软件（比如：QQ、微信、支付宝等等...）都有一些推荐好友功能，然后你点进去看，就能看到你跟该好友有多少个共同好友。像这样当我们需要编写一个用户关系模块，这个模块需要实现一个“共同关注”的功能，用于计算两个用户关注了哪有相同的用户，或者有哪些相同的好友。例子：	假设 huang 关注了 peter、tom、jack 三个用户，而 john 关">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\数据库分类.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis%E4%B8%8B%E8%BD%BD.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis_cmd%E4%B8%AD%E5%90%AF%E5%8A%A8.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis%E8%AE%BE%E5%80%BC.jpg">
-<meta property="og:updated_time" content="2018-04-27T02:49:52.107Z">
+<meta property="og:description" content="Maven 安装配置1、Maven 是什么？12Maven（翻译为 &quot;专家&quot;、&quot;内行&quot;）是跨平台的项目管理工具，主要服务于基于 Java 平台的项目构建，依赖管理和项目信息管理。简单来讲，Maven 是一套强大的自动化构建工具，覆盖了项目的编译、测试、运行和打包的过程，Maven 提供了仓库管理的概念，统一地帮助我们管理第三方 jar 包。 2、Maven 可以做什么事？1① 构建 ② 文档生成">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/Maven下载.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/Maven目录.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/查看jdk.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/环境变量MAVEN_HOME.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/win7环境变量Path.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/win10环境变量Path.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/查看Maven.jpg">
+<meta property="og:updated_time" content="2018-05-12T07:17:12.609Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Redis初体验">
-<meta name="twitter:description" content="Redis 初体验 1、问题背景1234生活背景：	各大软件（比如：QQ、微信、支付宝等等...）都有一些推荐好友功能，然后你点进去看，就能看到你跟该好友有多少个共同好友。像这样当我们需要编写一个用户关系模块，这个模块需要实现一个“共同关注”的功能，用于计算两个用户关注了哪有相同的用户，或者有哪些相同的好友。例子：	假设 huang 关注了 peter、tom、jack 三个用户，而 john 关">
-<meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\数据库分类.jpg">
+<meta name="twitter:title" content="Maven 安装配置">
+<meta name="twitter:description" content="Maven 安装配置1、Maven 是什么？12Maven（翻译为 &quot;专家&quot;、&quot;内行&quot;）是跨平台的项目管理工具，主要服务于基于 Java 平台的项目构建，依赖管理和项目信息管理。简单来讲，Maven 是一套强大的自动化构建工具，覆盖了项目的编译、测试、运行和打包的过程，Maven 提供了仓库管理的概念，统一地帮助我们管理第三方 jar 包。 2、Maven 可以做什么事？1① 构建 ② 文档生成">
+<meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Promise&#39;s blog" type="application/atom+xml">
   
@@ -181,20 +185,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Redis入门指南" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Maven安装配置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Redis初体验
+      Maven 安装配置
     </h1>
   
 
         
-        <a href="/Promise/2018/04/13/Redis入门指南/" class="archive-article-date">
-  	<time datetime="2018-04-13T13:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-13</time>
+        <a href="/Promise/2018/05/11/Maven安装配置/" class="archive-article-date">
+  	<time datetime="2018-05-11T06:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-11</time>
 </a>
         
 		
@@ -215,7 +219,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     <strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis-初体验"><span class="toc-number">1.</span> <span class="toc-text">Redis 初体验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、问题背景"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、问题背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、What-is-the-Redis"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、What is the Redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Why-use-it"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、Why use it</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Redis-安装"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. Redis 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1、Windows-下安装："><span class="toc-number">1.0.4.1.</span> <span class="toc-text">4.1、Windows 下安装：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2、Linux-下安装："><span class="toc-number">1.0.4.2.</span> <span class="toc-text">4.2、Linux 下安装：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3、Ubuntu-下安装："><span class="toc-number">1.0.4.3.</span> <span class="toc-text">4.3、Ubuntu 下安装：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4、Mac-下安装："><span class="toc-number">1.0.4.4.</span> <span class="toc-text">4.4、Mac 下安装：</span></a></li></ol></li></ol></li></ol></li></ol>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Maven-安装配置"><span class="toc-number">1.</span> <span class="toc-text">Maven 安装配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Maven-是什么？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、Maven 是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Maven-可以做什么事？"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、Maven 可以做什么事？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1、项目构建"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">2.1、项目构建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2、项目结构"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.2、项目结构</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Maven-的优点"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、Maven 的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、Maven-下载"><span class="toc-number">1.0.4.</span> <span class="toc-text">4、Maven 下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、Maven-安装"><span class="toc-number">1.0.5.</span> <span class="toc-text">5、Maven 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1、检查-JDK"><span class="toc-number">1.0.5.1.</span> <span class="toc-text">5.1、检查 JDK</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2、解压"><span class="toc-number">1.0.5.2.</span> <span class="toc-text">5.2、解压</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3、设置环境变量-MAVEN-HOME"><span class="toc-number">1.0.5.3.</span> <span class="toc-text">5.3、设置环境变量 MAVEN_HOME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-4、设置环境变量-Path"><span class="toc-number">1.0.5.4.</span> <span class="toc-text">5.4、设置环境变量 Path</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5、检验-Maven-是否安装成功"><span class="toc-number">1.0.5.5.</span> <span class="toc-text">5.5、检验 Maven 是否安装成功</span></a></li></ol></li></ol></li></ol></li></ol>
          </div>
    <script type="text/javascript">
   function showToc(){
@@ -238,77 +242,28 @@
   
     
     
-      <h1 id="Redis-初体验"><a href="#Redis-初体验" class="headerlink" title="Redis 初体验"></a>Redis 初体验</h1><hr>
-<h3 id="1、问题背景"><a href="#1、问题背景" class="headerlink" title="1、问题背景"></a>1、问题背景</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">生活背景：</span><br><span class="line">	各大软件（比如：QQ、微信、支付宝等等...）都有一些推荐好友功能，然后你点进去看，就能看到你跟该好友有多少个共同好友。像这样当我们需要编写一个用户关系模块，这个模块需要实现一个“共同关注”的功能，用于计算两个用户关注了哪有相同的用户，或者有哪些相同的好友。</span><br><span class="line">例子：</span><br><span class="line">	假设 huang 关注了 peter、tom、jack 三个用户，而 john 关注了 peter、tom、bob、david 四个用户，那么 huang 访问 john 的页面时，共同关注功能就会计算并打印出类似 “你跟 john 都关注了 peter 和 tom” 这样的信息。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">问题思考:</span><br><span class="line">	从数学集合计算的角度来看，共同关注功能本质上就是计算两个用户关注集合的交集，因为交集这个概念是如此的常见，所以我很自然地认为共同关注这个功能可以很容易地实现，但现实却给了我当头一棒：我所使用的关系数据库并不直接支持交集计算操作，要计算两个集合的交集，除了需要对两个数据表执行合并（join）操作之外，还需要对合并的结果执行去重复（distinct）操作，最终导致交集操作的实现变得异常复杂。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">解决方法：</span><br><span class="line">	带着这个疑问，我在搜索引擎上面进行查找，并最终发现了 Redis。在我看来，Redis 正是我想要找的那种数据库——它内置了集合数据类型，并支持对集合执行交集、并集、差集等集合计算操作，其中的交集计算操作可以直接用于实现我想要的共同关注功能。</span><br></pre></td></tr></table></figure>
+      <h1 id="Maven-安装配置"><a href="#Maven-安装配置" class="headerlink" title="Maven 安装配置"></a>Maven 安装配置</h1><h3 id="1、Maven-是什么？"><a href="#1、Maven-是什么？" class="headerlink" title="1、Maven 是什么？"></a>1、Maven 是什么？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Maven（翻译为 <span class="string">"专家"</span>、<span class="string">"内行"</span>）是跨平台的项目管理工具，主要服务于基于 Java 平台的项目构建，依赖管理和项目信息管理。</span><br><span class="line">简单来讲，Maven 是一套强大的自动化构建工具，覆盖了项目的编译、测试、运行和打包的过程，Maven 提供了仓库管理的概念，统一地帮助我们管理第三方 jar 包。</span><br></pre></td></tr></table></figure>
+<h3 id="2、Maven-可以做什么事？"><a href="#2、Maven-可以做什么事？" class="headerlink" title="2、Maven 可以做什么事？"></a>2、Maven 可以做什么事？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">① 构建 ② 文档生成 ③ 报告 ④ 依赖 ⑤ SCMs(software configuration Management) ⑥ 发布 ⑦ 分发 ⑧ 邮件列表</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Maven 工程结构和内容被定义在 pom.xml 中，全称即为 project object moduel .</span><br></pre></td></tr></table></figure>
+<h4 id="2-1、项目构建"><a href="#2-1、项目构建" class="headerlink" title="2.1、项目构建"></a>2.1、项目构建</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">项目构建过程包括【清理项目】→【编译项目】→【测试项目】→【生成测试报告】→【打包项目】→【部署项目】这几个步骤，这六个步骤就是一个项目的完整构建过程。</span><br></pre></td></tr></table></figure>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA.jpg" alt="项目构建"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">理想的项目构建是高度自动化，跨平台，可重用的组件，标准化的，使用maven就可以帮我们完成上述所说的项目构建过程。</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-2、项目结构"><a href="#2-2、项目结构" class="headerlink" title="2.2、项目结构"></a>2.2、项目结构</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">	Maven 项目需要按照一定的项目结构进行维护，项目结构如下：</span><br><span class="line">src</span><br><span class="line">  - main</span><br><span class="line">    -java</span><br><span class="line">      -<span class="keyword">package</span></span><br><span class="line">  - test</span><br><span class="line">  	-java</span><br><span class="line">  	  -<span class="keyword">package</span></span><br><span class="line">  -resource</span><br><span class="line">pom.xml</span><br></pre></td></tr></table></figure>
+<h3 id="3、Maven-的优点"><a href="#3、Maven-的优点" class="headerlink" title="3、Maven 的优点"></a>3、Maven 的优点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">① Maven 中使用约定，约定 java 源代码代码必须放在哪个目录下，编译好的 java 代码又必须放到哪个目录下，这些目录都有明确的约定。</span><br><span class="line">② Maven 的每一个动作都拥有一个生命周期，例如执行 mvn install 就可以自动执行编译，测试，打包等构建过程。</span><br><span class="line">③ 只需要定义一个 pom.xml ，然后把源码放到默认的目录，Maven 帮我们处理其他事情。</span><br><span class="line">④ 使用 Maven 可以进行项目高度自动化构建，依赖管理(这是使用 Maven 最大的好处)，仓库管理。</span><br></pre></td></tr></table></figure>
+<h3 id="4、Maven-下载"><a href="#4、Maven-下载" class="headerlink" title="4、Maven 下载"></a>4、Maven 下载</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">下载地址：http:<span class="comment">//maven.apache.org/download.cgi</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/Maven下载.jpg" alt="项目构建"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">下载完成后，我们可以得到一个压缩包，我们把它解压到我们想要放的地方即可看到 Maven 的组成目录。</span><br></pre></td></tr></table></figure>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/Maven目录.jpg" style="width:400px;height:200px"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Maven 目录分析：</span><br><span class="line">	① bin：含有 mvn 运行的脚本。</span><br><span class="line">	② boot：含有 plexus-classworlds 类加载器框架。</span><br><span class="line">	③ conf：含有 settings.xml 配置文件。</span><br><span class="line">	④ lib：含有 Maven 运行时所需要的 java 类库。</span><br><span class="line">	⑤ LICENSE.txt、NOTICE.txt、Readme.txt 针对 Maven 版本，第三方软件等简要介绍。</span><br></pre></td></tr></table></figure>
+<h3 id="5、Maven-安装"><a href="#5、Maven-安装" class="headerlink" title="5、Maven 安装"></a>5、Maven 安装</h3><h4 id="5-1、检查-JDK"><a href="#5-1、检查-JDK" class="headerlink" title="5.1、检查 JDK"></a>5.1、检查 JDK</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">步骤①：</span><br><span class="line">	首先确保电脑上已经安装了 JDK 版本，配置好 JDK 的环境变量，使用如下的两个命令检查 JDK 安装的情况。</span><br></pre></td></tr></table></figure>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/查看jdk.jpg" style="width:800px"></p>
+<h4 id="5-2、解压"><a href="#5-2、解压" class="headerlink" title="5.2、解压"></a>5.2、解压</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">步骤②：</span><br><span class="line">	对上述下载的 apache-maven-3.5.3-bin.tar.gz 压缩包进行解压，解压的目录最好不要有中文。</span><br></pre></td></tr></table></figure>
+<h4 id="5-3、设置环境变量-MAVEN-HOME"><a href="#5-3、设置环境变量-MAVEN-HOME" class="headerlink" title="5.3、设置环境变量 MAVEN_HOME"></a>5.3、设置环境变量 MAVEN_HOME</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">步骤③：</span><br><span class="line">	设置系统的环境变量：MAVEN_HOME</span><br></pre></td></tr></table></figure>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/环境变量MAVEN_HOME.jpg" style="width:800px"></p>
+<h4 id="5-4、设置环境变量-Path"><a href="#5-4、设置环境变量-Path" class="headerlink" title="5.4、设置环境变量 Path"></a>5.4、设置环境变量 Path</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">步骤④：</span><br><span class="line">	设置环境变量 Path，将 %MAVEN_HOME%\bin 加入 Path 中，一定要注意要用分号；与其他值隔开，如果你的电脑是 win10系统，则直接选择下一行添加进去即可，无须使用分号进行隔开。</span><br></pre></td></tr></table></figure>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/win7环境变量Path.jpg" style="width:800px;height:600px"><br><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/win10环境变量Path.jpg" style="width:800px;height:600px"></p>
+<h4 id="5-5、检验-Maven-是否安装成功"><a href="#5-5、检验-Maven-是否安装成功" class="headerlink" title="5.5、检验 Maven 是否安装成功"></a>5.5、检验 Maven 是否安装成功</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">快捷键 windows+R 打开 cmd 窗口，输入&quot;mvn -v&quot;命令查看 Maven 的相关信息，如下图所示：</span><br></pre></td></tr></table></figure>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/查看Maven.jpg" alt="查看Maven"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">显示以上信息就说明 Maven 的安装已经成功了。</span><br></pre></td></tr></table></figure></p>
 <hr>
-<h3 id="2、What-is-the-Redis"><a href="#2、What-is-the-Redis" class="headerlink" title="2、What is the Redis"></a>2、What is the Redis</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">简介：</span><br><span class="line">	Redis 是完全开源免费的，使用 ANSI C 语言编写，遵守 BSD 协议，支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">相关：</span><br><span class="line">	BSD 开源协议是一个给于使用者很大自由的协议。可以自由的使用，修改源代码，也可以将修改后的代码作为开源或者专有软件再发布。BSD 代码鼓励代码共享，但需要尊重代码作者的著作权。BSD 由于允许使用者修改和重新发布代码，也允许使用或在 BSD 代码上开发商业软件发布和销 售，因此是对商业集成很友好的协议。</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="3、Why-use-it"><a href="#3、Why-use-it" class="headerlink" title="3、Why use it"></a>3、Why use it</h3><p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\数据库分类.jpg" alt="数据库分类"></p>
-<blockquote>
-<p><strong>Redis 与其他 key - value 缓存产品有以下三个特点：</strong></p>
-<ul>
-<li>Redis 支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行<br>使用。</li>
-<li>Redis 不仅仅支持简单的 key-value 类型的数据，同时还提供 list，set，zset，hash 等数据结构<br>的存储。</li>
-<li>Redis 支持数据的备份，即 master-slave 模式的数据备份。</li>
-</ul>
-</blockquote>
-<blockquote>
-<p><strong>Redis 优势：</strong></p>
-<ul>
-<li>性能极高 – Redis能读的速度是110000次/s,写的速度是81000次/s 。</li>
-<li>丰富的数据类型 – Redis支持二进制案例的 Strings, Lists, Hashes, Sets 及 Ordered Sets 数据类型操作。</li>
-<li>原子 – Redis的所有操作都是原子性的，意思就是要么成功执行要么失败完全不执行。单个操作是原子性的。多个操作也支持事务，即原子性，通过MULTI和EXEC指令包起来。</li>
-<li>丰富的特性 – Redis还支持 publish/subscribe, 通知, key 过期等等特性。</li>
-</ul>
-</blockquote>
-<blockquote>
-<p><strong>Redis与其他key-value存储有什么不同点：</strong></p>
-<ul>
-<li>Redis有着更为复杂的数据结构并且提供对他们的原子性操作，这是一个不同于其他数据库的进化路径。Redis的数据类型都是基于基本数据结构的同时对程序员透明，无需进行额外的抽象。</li>
-<li>Redis运行在内存中但是可以持久化到磁盘，所以在对不同数据集进行高速读写时需要权衡内存，因为数据量不能大于硬件内存。在内存数据库方面的另一个优点是，相比在磁盘上相同的复杂的数据结构，在内存中操作起来非常简单，这样Redis可以做很多内部复杂性很强的事情。同时，在磁盘格式方面他们是紧凑的以追加的方式产生的，因为他们并不需要进行随机访问。</li>
-</ul>
-</blockquote>
-<hr>
-<h3 id="4-Redis-安装"><a href="#4-Redis-安装" class="headerlink" title="4. Redis 安装"></a>4. Redis 安装</h3><h4 id="4-1、Windows-下安装："><a href="#4-1、Windows-下安装：" class="headerlink" title="4.1、Windows 下安装："></a>4.1、Windows 下安装：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">附：</span><br><span class="line">	官方下载链接：https:<span class="comment">//github.com/MSOpenTech/redis/releases</span></span><br><span class="line">	Redis 支持 <span class="number">32</span> 位和 <span class="number">64</span> 位。这个需要根据你系统平台的实际情况选择，这里我们下载 Redis-x64-xxx.zip压缩包到 C 盘，解压后，将文件夹重新命名为 redis。</span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis%E4%B8%8B%E8%BD%BD.jpg" alt="Redis的github下载地址"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	① Windows+R 快捷键打开 cmd 窗口，使用 cd 命令切换到 Redis 的目录，这里我把刚才下载的 Redis 放在了D 盘。</span><br><span class="line">	② 在 D:\Redis 目录下运行 redis-server.exe redis.windows.conf 。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注意：</span><br><span class="line">	如果想方便的话，可以把 redis 的路径加到系统的环境变量里，这样就省得再输路径了，后面的那个 redis.windows.conf 可以省略，如果省略，会启用默认的。输入之后，会显示如下界面：</span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis_cmd%E4%B8%AD%E5%90%AF%E5%8A%A8.jpg" alt="Redis启动"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	③ 这时候 Redis 服务就启动起来了，我们另启一个 cmd 窗口，原来的不要关闭，否则我们就无法通过6379端口访问服务端了。</span><br><span class="line">	④ 同样切换到 Redis 目录下运行如下命令：redis-cli.exe -h 127.0.0.1 -p 6379 。</span><br><span class="line">	⑤ 设置键值对，运行如下命令：set myKey abc 。</span><br><span class="line">	⑥ 获取键值对，运行如下命令：get myKey 。</span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis%E8%AE%BE%E5%80%BC.jpg" alt="Redis设值"></p>
-<h4 id="4-2、Linux-下安装："><a href="#4-2、Linux-下安装：" class="headerlink" title="4.2、Linux 下安装："></a>4.2、Linux 下安装：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">附：</span><br><span class="line">	下载地址：http:<span class="comment">//redis.io/download ，下载最新文档版本。</span></span><br><span class="line">	本教程使用的最新文档版本为 <span class="number">2.8</span>.7，下载并安装：</span><br></pre></td></tr></table></figure>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$ wget http://download.redis.io/releases/redis-<span class="number">2</span>.<span class="number">8</span>.<span class="number">17</span>.tar.gz</span><br><span class="line">	$ tar xzf redis-<span class="number">2</span>.<span class="number">8</span>.<span class="number">17</span>.tar.gz</span><br><span class="line">	$ <span class="built_in">cd</span> redis-<span class="number">2</span>.<span class="number">8</span>.<span class="number">17</span></span><br><span class="line">	$ make</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注意：</span><br><span class="line">	make 完后 redis-2.8.17 目录下会出现编译后的 redis 服务程序 redis-server,还有用于测试的客户端程序redis-cli,两个程序位于安装目录 src 目录下：</span><br><span class="line">	下面启动 redis 服务</span><br></pre></td></tr></table></figure>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$ <span class="built_in">cd</span> src</span><br><span class="line">	$ ./redis-server</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注意：</span><br><span class="line">	注意这种方式启动 redis 使用的是默认配置。也可以通过启动参数告诉 redis 使用指定配置文件使用下面命令启动。</span><br></pre></td></tr></table></figure>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$ <span class="built_in">cd</span> src</span><br><span class="line">	$ ./redis-server redis.conf</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注意：</span><br><span class="line">	redis.conf 是一个默认的配置文件。我们可以根据需要使用自己的配置文件。</span><br><span class="line">	启动 redis 服务进程后，就可以使用测试客户端程序 redis-cli和redis 服务交互了。 比如：</span><br></pre></td></tr></table></figure>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$ <span class="built_in">cd</span> src</span><br><span class="line">	$ ./redis-cli</span><br><span class="line">	redis&gt; <span class="built_in">set</span> foo bar</span><br><span class="line">	OK</span><br><span class="line">	redis&gt; get foo</span><br><span class="line">	"bar"</span><br></pre></td></tr></table></figure>
-<h4 id="4-3、Ubuntu-下安装："><a href="#4-3、Ubuntu-下安装：" class="headerlink" title="4.3、Ubuntu 下安装："></a>4.3、Ubuntu 下安装：</h4><ul>
-<li><strong>在 Ubuntu 系统安装 Redis 可以使用以下命令:</strong></li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$sudo apt-get update</span><br><span class="line">	$sudo apt-get install redis-server</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p><strong>启动 Redis：</strong></p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$ redis-server</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>查看 Redis 是否启动？</strong></p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$ redis-cli</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>以上命令将打开以下终端：</strong></p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6379</span>&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>127.0.0.1 是本机 IP ，6379 是 redis 服务端口。现在我们输入 PING 命令</strong></p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	redis <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6379</span>&gt; <span class="built_in">ping</span></span><br><span class="line">	PONG</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>以上说明我们已经成功安装了 Redis .</p>
-</li>
-</ul>
-<h4 id="4-4、Mac-下安装："><a href="#4-4、Mac-下安装：" class="headerlink" title="4.4、Mac 下安装："></a>4.4、Mac 下安装：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">方法①：</span><br><span class="line">	<span class="number">1</span>. 官网http:<span class="comment">//redis.io/ 下载最新的稳定版本,这里是3.2.0</span></span><br><span class="line"> 	<span class="number">2</span>. sudo mv 到 /usr/local/</span><br><span class="line"> 	<span class="number">3</span>. sudo tar -zxf redis-<span class="number">3.2</span>.0.tar 解压文件</span><br><span class="line"> 	<span class="number">4</span>. 进入解压后的目录 cd redis-<span class="number">3.2</span>.0</span><br><span class="line"> 	<span class="number">5</span>. sudo make test 测试编译</span><br><span class="line"> 	<span class="number">6</span>. sudo make install</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">方法②：</span><br><span class="line">	<span class="number">1</span>、执行 brew install redis</span><br><span class="line">	<span class="number">2</span>、启动 redis，可以使用后台服务启动 brew services start redis。或者直接启动：redis-server /usr/local/etc/redis.conf</span><br></pre></td></tr></table></figure>
 
     
   
@@ -355,7 +310,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Redis//" class="article-tag-list-link color1">Redis</a>
+        			<a href="/Promise/categories/Maven//" class="article-tag-list-link color1">Maven</a>
         		</li>
       		
 		</ul>
@@ -410,7 +365,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/04/13/Redis入门指南/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/05/11/Maven安装配置/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -424,18 +379,18 @@
   
 <nav id="article-nav">
   
-    <a href="/Promise/2018/04/18/JMeter断言/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Promise/2018/05/22/Git-分支管理/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JMeter断言
+          Git-分支管理
         
       </div>
     </a>
   
   
-    <a href="/Promise/2018/04/10/JMeter性能测试入门指南/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JMeter入门指南</div>
+    <a href="/Promise/2018/05/10/Git-删除文件/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git-删除文件</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -462,7 +417,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis-初体验"><span class="toc-number">1.</span> <span class="toc-text">Redis 初体验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、问题背景"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、问题背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、What-is-the-Redis"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、What is the Redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Why-use-it"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、Why use it</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Redis-安装"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. Redis 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1、Windows-下安装："><span class="toc-number">1.0.4.1.</span> <span class="toc-text">4.1、Windows 下安装：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2、Linux-下安装："><span class="toc-number">1.0.4.2.</span> <span class="toc-text">4.2、Linux 下安装：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3、Ubuntu-下安装："><span class="toc-number">1.0.4.3.</span> <span class="toc-text">4.3、Ubuntu 下安装：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4、Mac-下安装："><span class="toc-number">1.0.4.4.</span> <span class="toc-text">4.4、Mac 下安装：</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Maven-安装配置"><span class="toc-number">1.</span> <span class="toc-text">Maven 安装配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Maven-是什么？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、Maven 是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Maven-可以做什么事？"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、Maven 可以做什么事？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1、项目构建"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">2.1、项目构建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2、项目结构"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.2、项目结构</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Maven-的优点"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、Maven 的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、Maven-下载"><span class="toc-number">1.0.4.</span> <span class="toc-text">4、Maven 下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、Maven-安装"><span class="toc-number">1.0.5.</span> <span class="toc-text">5、Maven 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1、检查-JDK"><span class="toc-number">1.0.5.1.</span> <span class="toc-text">5.1、检查 JDK</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2、解压"><span class="toc-number">1.0.5.2.</span> <span class="toc-text">5.2、解压</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3、设置环境变量-MAVEN-HOME"><span class="toc-number">1.0.5.3.</span> <span class="toc-text">5.3、设置环境变量 MAVEN_HOME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-4、设置环境变量-Path"><span class="toc-number">1.0.5.4.</span> <span class="toc-text">5.4、设置环境变量 Path</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5、检验-Maven-是否安装成功"><span class="toc-number">1.0.5.5.</span> <span class="toc-text">5.5、检验 Maven 是否安装成功</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -478,7 +433,7 @@
   
 
   
-  <div id="SOHUCS" sid="Redis入门指南" ></div> 
+  <div id="SOHUCS" sid="Maven安装配置" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({

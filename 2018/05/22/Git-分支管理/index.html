@@ -6,24 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.misscloud.top">
-  <title>Redis初体验 | Promise&#39;s blog</title>
+  <title>Git-分支管理 | Promise&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Redis 初体验 1、问题背景1234生活背景：	各大软件（比如：QQ、微信、支付宝等等...）都有一些推荐好友功能，然后你点进去看，就能看到你跟该好友有多少个共同好友。像这样当我们需要编写一个用户关系模块，这个模块需要实现一个“共同关注”的功能，用于计算两个用户关注了哪有相同的用户，或者有哪些相同的好友。例子：	假设 huang 关注了 peter、tom、jack 三个用户，而 john 关">
+  <meta name="description" content="Git 分支管理 1、为什么要有分支？12假设你准备开发一个新的功能，但是需要三周时间才能完成，如果第一周你写了30%的代码，如果你立刻提交，由于你的代码还没有写完，不完整的代码库会导致别人不能干活了。如果等三周之后你的代码全部写完了再一次提交，又存在丢失每天进度的巨大风险。针对以上问题，就出现了分支，你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，">
 <meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis初体验">
-<meta property="og:url" content="www.misscloud.top/2018/04/13/Redis入门指南/index.html">
+<meta property="og:title" content="Git-分支管理">
+<meta property="og:url" content="www.misscloud.top/2018/05/22/Git-分支管理/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
-<meta property="og:description" content="Redis 初体验 1、问题背景1234生活背景：	各大软件（比如：QQ、微信、支付宝等等...）都有一些推荐好友功能，然后你点进去看，就能看到你跟该好友有多少个共同好友。像这样当我们需要编写一个用户关系模块，这个模块需要实现一个“共同关注”的功能，用于计算两个用户关注了哪有相同的用户，或者有哪些相同的好友。例子：	假设 huang 关注了 peter、tom、jack 三个用户，而 john 关">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\数据库分类.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis%E4%B8%8B%E8%BD%BD.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis_cmd%E4%B8%AD%E5%90%AF%E5%8A%A8.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis%E8%AE%BE%E5%80%BC.jpg">
-<meta property="og:updated_time" content="2018-04-27T02:49:52.107Z">
+<meta property="og:description" content="Git 分支管理 1、为什么要有分支？12假设你准备开发一个新的功能，但是需要三周时间才能完成，如果第一周你写了30%的代码，如果你立刻提交，由于你的代码还没有写完，不完整的代码库会导致别人不能干活了。如果等三周之后你的代码全部写完了再一次提交，又存在丢失每天进度的巨大风险。针对以上问题，就出现了分支，你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/HEAD%E6%8C%87%E5%90%91.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/创建分支.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/删除分支.jpg">
+<meta property="og:updated_time" content="2018-05-22T14:02:28.944Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Redis初体验">
-<meta name="twitter:description" content="Redis 初体验 1、问题背景1234生活背景：	各大软件（比如：QQ、微信、支付宝等等...）都有一些推荐好友功能，然后你点进去看，就能看到你跟该好友有多少个共同好友。像这样当我们需要编写一个用户关系模块，这个模块需要实现一个“共同关注”的功能，用于计算两个用户关注了哪有相同的用户，或者有哪些相同的好友。例子：	假设 huang 关注了 peter、tom、jack 三个用户，而 john 关">
-<meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\数据库分类.jpg">
+<meta name="twitter:title" content="Git-分支管理">
+<meta name="twitter:description" content="Git 分支管理 1、为什么要有分支？12假设你准备开发一个新的功能，但是需要三周时间才能完成，如果第一周你写了30%的代码，如果你立刻提交，由于你的代码还没有写完，不完整的代码库会导致别人不能干活了。如果等三周之后你的代码全部写完了再一次提交，又存在丢失每天进度的巨大风险。针对以上问题，就出现了分支，你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，">
+<meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/HEAD%E6%8C%87%E5%90%91.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Promise&#39;s blog" type="application/atom+xml">
   
@@ -181,20 +180,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Redis入门指南" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Git-分支管理" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Redis初体验
+      Git-分支管理
     </h1>
   
 
         
-        <a href="/Promise/2018/04/13/Redis入门指南/" class="archive-article-date">
-  	<time datetime="2018-04-13T13:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-13</time>
+        <a href="/Promise/2018/05/22/Git-分支管理/" class="archive-article-date">
+  	<time datetime="2018-05-22T11:08:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-22</time>
 </a>
         
 		
@@ -215,7 +214,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     <strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis-初体验"><span class="toc-number">1.</span> <span class="toc-text">Redis 初体验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、问题背景"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、问题背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、What-is-the-Redis"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、What is the Redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Why-use-it"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、Why use it</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Redis-安装"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. Redis 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1、Windows-下安装："><span class="toc-number">1.0.4.1.</span> <span class="toc-text">4.1、Windows 下安装：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2、Linux-下安装："><span class="toc-number">1.0.4.2.</span> <span class="toc-text">4.2、Linux 下安装：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3、Ubuntu-下安装："><span class="toc-number">1.0.4.3.</span> <span class="toc-text">4.3、Ubuntu 下安装：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4、Mac-下安装："><span class="toc-number">1.0.4.4.</span> <span class="toc-text">4.4、Mac 下安装：</span></a></li></ol></li></ol></li></ol></li></ol>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-分支管理"><span class="toc-number">1.</span> <span class="toc-text">Git 分支管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、为什么要有分支？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、为什么要有分支？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、Git-分支与其他版本控制工具的分支有什么区别？"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">1.1、Git 分支与其他版本控制工具的分支有什么区别？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、创建与合并分支"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、创建与合并分支</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1、master-分支-和-HEAD-指针"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">2.1、master 分支 和 HEAD 指针</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2、创建分支"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.2、创建分支</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1、图解"><span class="toc-number">1.0.2.2.1.</span> <span class="toc-text">2.2.1、图解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-2、具体命令"><span class="toc-number">1.0.2.2.2.</span> <span class="toc-text">2.2.2、具体命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、总结"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、总结</span></a></li></ol></li></ol></li></ol>
          </div>
    <script type="text/javascript">
   function showToc(){
@@ -238,77 +237,23 @@
   
     
     
-      <h1 id="Redis-初体验"><a href="#Redis-初体验" class="headerlink" title="Redis 初体验"></a>Redis 初体验</h1><hr>
-<h3 id="1、问题背景"><a href="#1、问题背景" class="headerlink" title="1、问题背景"></a>1、问题背景</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">生活背景：</span><br><span class="line">	各大软件（比如：QQ、微信、支付宝等等...）都有一些推荐好友功能，然后你点进去看，就能看到你跟该好友有多少个共同好友。像这样当我们需要编写一个用户关系模块，这个模块需要实现一个“共同关注”的功能，用于计算两个用户关注了哪有相同的用户，或者有哪些相同的好友。</span><br><span class="line">例子：</span><br><span class="line">	假设 huang 关注了 peter、tom、jack 三个用户，而 john 关注了 peter、tom、bob、david 四个用户，那么 huang 访问 john 的页面时，共同关注功能就会计算并打印出类似 “你跟 john 都关注了 peter 和 tom” 这样的信息。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">问题思考:</span><br><span class="line">	从数学集合计算的角度来看，共同关注功能本质上就是计算两个用户关注集合的交集，因为交集这个概念是如此的常见，所以我很自然地认为共同关注这个功能可以很容易地实现，但现实却给了我当头一棒：我所使用的关系数据库并不直接支持交集计算操作，要计算两个集合的交集，除了需要对两个数据表执行合并（join）操作之外，还需要对合并的结果执行去重复（distinct）操作，最终导致交集操作的实现变得异常复杂。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">解决方法：</span><br><span class="line">	带着这个疑问，我在搜索引擎上面进行查找，并最终发现了 Redis。在我看来，Redis 正是我想要找的那种数据库——它内置了集合数据类型，并支持对集合执行交集、并集、差集等集合计算操作，其中的交集计算操作可以直接用于实现我想要的共同关注功能。</span><br></pre></td></tr></table></figure>
+      <h1 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h1><hr>
+<h3 id="1、为什么要有分支？"><a href="#1、为什么要有分支？" class="headerlink" title="1、为什么要有分支？"></a>1、为什么要有分支？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">假设你准备开发一个新的功能，但是需要三周时间才能完成，如果第一周你写了<span class="number">30</span>%的代码，如果你立刻提交，由于你的代码还没有写完，不完整的代码库会导致别人不能干活了。如果等三周之后你的代码全部写完了再一次提交，又存在丢失每天进度的巨大风险。</span><br><span class="line">针对以上问题，就出现了分支，你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样既安全，又不影响别人的工作。</span><br></pre></td></tr></table></figure>
+<h4 id="1-1、Git-分支与其他版本控制工具的分支有什么区别？"><a href="#1-1、Git-分支与其他版本控制工具的分支有什么区别？" class="headerlink" title="1.1、Git 分支与其他版本控制工具的分支有什么区别？"></a>1.1、Git 分支与其他版本控制工具的分支有什么区别？</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">其他版本控制工具例如 SVN 等都有分支管理，但是用过之后你就会发现，这些版本控制系统创建和切换分支非常非常慢，导致分支功能成了摆设，大家都不去用。但是 Git 的分支是与众不同的，无论创建、切换和删除分支，Git 在<span class="number">1</span>秒钟之内都能完成，无论你的版本库是<span class="number">1</span>个文件还是<span class="number">1</span>万个文件甚至更多文件。</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="2、What-is-the-Redis"><a href="#2、What-is-the-Redis" class="headerlink" title="2、What is the Redis"></a>2、What is the Redis</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">简介：</span><br><span class="line">	Redis 是完全开源免费的，使用 ANSI C 语言编写，遵守 BSD 协议，支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">相关：</span><br><span class="line">	BSD 开源协议是一个给于使用者很大自由的协议。可以自由的使用，修改源代码，也可以将修改后的代码作为开源或者专有软件再发布。BSD 代码鼓励代码共享，但需要尊重代码作者的著作权。BSD 由于允许使用者修改和重新发布代码，也允许使用或在 BSD 代码上开发商业软件发布和销 售，因此是对商业集成很友好的协议。</span><br></pre></td></tr></table></figure>
+<h3 id="2、创建与合并分支"><a href="#2、创建与合并分支" class="headerlink" title="2、创建与合并分支"></a>2、创建与合并分支</h3><h4 id="2-1、master-分支-和-HEAD-指针"><a href="#2-1、master-分支-和-HEAD-指针" class="headerlink" title="2.1、master 分支 和 HEAD 指针"></a>2.1、master 分支 和 HEAD 指针</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">master 分支：</span><br><span class="line">	我们每次 git commit 提交后，Git 都会把它们串成一条时间线，这条时间线就是一条分支。通常情况下只有一条时间线，在 Git 里，这个分支叫主分支，即 master 分支。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HEAD 指针：</span><br><span class="line">	严格来说，HEAD 不是指向提交，而是指向 master 的，master 才是指向最新的提交，所以，HEAD 指向的就是当前分支。</span><br></pre></td></tr></table></figure>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/HEAD%E6%8C%87%E5%90%91.jpg" style="width:800px"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一开始的时候，master 分支是一条线， Git 用 master 指向最新的提交，再用 HEAD 指向 master, 就能确定当前分支，以及当前分支的提交点。每次提交，master 分支都会向前移动一步，这样，随着你不断提交，master 分支的线也越来越长。</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-2、创建分支"><a href="#2-2、创建分支" class="headerlink" title="2.2、创建分支"></a>2.2、创建分支</h4><h5 id="2-2-1、图解"><a href="#2-2-1、图解" class="headerlink" title="2.2.1、图解"></a>2.2.1、图解</h5><p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/创建分支.jpg" style="width:800px"><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/删除分支.jpg" style="width:800px"></p>
+<h5 id="2-2-2、具体命令"><a href="#2-2-2、具体命令" class="headerlink" title="2.2.2、具体命令"></a>2.2.2、具体命令</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">步骤①：</span><br><span class="line">	首先我们创建 dev 分支，然后切换到 dev 分支：</span><br><span class="line">命令：</span><br><span class="line">	$ git checkout -b dev</span><br><span class="line">结果：</span><br><span class="line">	Switched to a <span class="keyword">new</span> branch <span class="string">'dev'</span></span><br><span class="line">注意：</span><br><span class="line">	git checkout 命令加上 -b 参数表示创建并切换，相当于以下两条命令：</span><br><span class="line">	$ git branch dev</span><br><span class="line">	$ git checkout dev</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">步骤②：</span><br><span class="line">	用 git branch 命令查看当前分支：</span><br><span class="line">命令：</span><br><span class="line">	$ git branch</span><br><span class="line">结果：</span><br><span class="line">	* dev</span><br><span class="line">	master</span><br><span class="line">注意；</span><br><span class="line">	git branch 命令会列出所有分支，当前分支前面会标一个 * 号。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">步骤③：</span><br><span class="line">	修改工作区中的内容（修改readme.txt文件），并用 git commit 命令提交：</span><br><span class="line">命令：</span><br><span class="line">	$ git add readme.txt</span><br><span class="line">	$ git commit -m <span class="string">"branch test"</span></span><br><span class="line">结果：</span><br><span class="line">	[dev b17d20e] branch test</span><br><span class="line"> 	<span class="number">1</span> file changed, <span class="number">1</span> insertion(+)</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">步骤④：</span><br><span class="line">	dev 分支工作完成，切换回 master 分支：</span><br><span class="line">命令：</span><br><span class="line">	$ git checkout master</span><br><span class="line">结果：</span><br><span class="line">	Switched to branch <span class="string">'master'</span></span><br><span class="line">注意：</span><br><span class="line">	切换回 master 分支后，再查看 readme.txt 文件，发现刚刚添加的内容不见了，那是因为那个修改提交是在 dev 分支上，而 master 分支此刻的提交点并没有变。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">步骤⑤：</span><br><span class="line">	现在我们把 dev分支 合并到 master 分支上：</span><br><span class="line">命令：</span><br><span class="line">	$ git merge dev</span><br><span class="line">结果：</span><br><span class="line">	Updating d46f35e..b17d20e</span><br><span class="line">	Fast-forward</span><br><span class="line"> 	readme.txt | 1 +</span><br><span class="line"> 	1 file changed, 1 insertion(+)</span><br><span class="line">注意：</span><br><span class="line">	上面结果中的 Fast-forward 信息，Git 告诉我们这次合并是“快速模式”，也就是直接把 master 指向 dev 的当前提交，所以合并速度非常快，当然并不是每次合并都能 Fast-forward ，还有其他的合并方式。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">步骤⑤：</span><br><span class="line">	合并完成后，就可以放心地删除 dev 分支了：</span><br><span class="line">命令：</span><br><span class="line">	$ git branch -d dev</span><br><span class="line">结果：</span><br><span class="line">	Deleted branch dev (was b17d20e).</span><br><span class="line">注意：</span><br><span class="line">	删除后，查看 branch ，就只剩下 master 分支了，因为创建、合并和删除分支非常快，所以 Git 鼓励你使用分支完成某个人物，合并后再删掉分支，这个直接在 master 分支上工作效果是一样的，但是过程更安全。</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="3、Why-use-it"><a href="#3、Why-use-it" class="headerlink" title="3、Why use it"></a>3、Why use it</h3><p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis\数据库分类.jpg" alt="数据库分类"></p>
-<blockquote>
-<p><strong>Redis 与其他 key - value 缓存产品有以下三个特点：</strong></p>
-<ul>
-<li>Redis 支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行<br>使用。</li>
-<li>Redis 不仅仅支持简单的 key-value 类型的数据，同时还提供 list，set，zset，hash 等数据结构<br>的存储。</li>
-<li>Redis 支持数据的备份，即 master-slave 模式的数据备份。</li>
-</ul>
-</blockquote>
-<blockquote>
-<p><strong>Redis 优势：</strong></p>
-<ul>
-<li>性能极高 – Redis能读的速度是110000次/s,写的速度是81000次/s 。</li>
-<li>丰富的数据类型 – Redis支持二进制案例的 Strings, Lists, Hashes, Sets 及 Ordered Sets 数据类型操作。</li>
-<li>原子 – Redis的所有操作都是原子性的，意思就是要么成功执行要么失败完全不执行。单个操作是原子性的。多个操作也支持事务，即原子性，通过MULTI和EXEC指令包起来。</li>
-<li>丰富的特性 – Redis还支持 publish/subscribe, 通知, key 过期等等特性。</li>
-</ul>
-</blockquote>
-<blockquote>
-<p><strong>Redis与其他key-value存储有什么不同点：</strong></p>
-<ul>
-<li>Redis有着更为复杂的数据结构并且提供对他们的原子性操作，这是一个不同于其他数据库的进化路径。Redis的数据类型都是基于基本数据结构的同时对程序员透明，无需进行额外的抽象。</li>
-<li>Redis运行在内存中但是可以持久化到磁盘，所以在对不同数据集进行高速读写时需要权衡内存，因为数据量不能大于硬件内存。在内存数据库方面的另一个优点是，相比在磁盘上相同的复杂的数据结构，在内存中操作起来非常简单，这样Redis可以做很多内部复杂性很强的事情。同时，在磁盘格式方面他们是紧凑的以追加的方式产生的，因为他们并不需要进行随机访问。</li>
-</ul>
-</blockquote>
+<h3 id="3、总结"><a href="#3、总结" class="headerlink" title="3、总结"></a>3、总结</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">查看分支：git branch</span><br><span class="line"></span><br><span class="line">创建分支：git branch &lt;name&gt;</span><br><span class="line"></span><br><span class="line">切换分支：git checkout &lt;name&gt;</span><br><span class="line"></span><br><span class="line">创建+切换分支：git checkout -b &lt;name&gt;</span><br><span class="line"></span><br><span class="line">合并某分支到当前分支：git merge &lt;name&gt;</span><br><span class="line"></span><br><span class="line">删除分支：git branch -d &lt;name&gt;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="4-Redis-安装"><a href="#4-Redis-安装" class="headerlink" title="4. Redis 安装"></a>4. Redis 安装</h3><h4 id="4-1、Windows-下安装："><a href="#4-1、Windows-下安装：" class="headerlink" title="4.1、Windows 下安装："></a>4.1、Windows 下安装：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">附：</span><br><span class="line">	官方下载链接：https:<span class="comment">//github.com/MSOpenTech/redis/releases</span></span><br><span class="line">	Redis 支持 <span class="number">32</span> 位和 <span class="number">64</span> 位。这个需要根据你系统平台的实际情况选择，这里我们下载 Redis-x64-xxx.zip压缩包到 C 盘，解压后，将文件夹重新命名为 redis。</span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis%E4%B8%8B%E8%BD%BD.jpg" alt="Redis的github下载地址"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	① Windows+R 快捷键打开 cmd 窗口，使用 cd 命令切换到 Redis 的目录，这里我把刚才下载的 Redis 放在了D 盘。</span><br><span class="line">	② 在 D:\Redis 目录下运行 redis-server.exe redis.windows.conf 。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注意：</span><br><span class="line">	如果想方便的话，可以把 redis 的路径加到系统的环境变量里，这样就省得再输路径了，后面的那个 redis.windows.conf 可以省略，如果省略，会启用默认的。输入之后，会显示如下界面：</span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis_cmd%E4%B8%AD%E5%90%AF%E5%8A%A8.jpg" alt="Redis启动"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	③ 这时候 Redis 服务就启动起来了，我们另启一个 cmd 窗口，原来的不要关闭，否则我们就无法通过6379端口访问服务端了。</span><br><span class="line">	④ 同样切换到 Redis 目录下运行如下命令：redis-cli.exe -h 127.0.0.1 -p 6379 。</span><br><span class="line">	⑤ 设置键值对，运行如下命令：set myKey abc 。</span><br><span class="line">	⑥ 获取键值对，运行如下命令：get myKey 。</span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Redis/Redis%E8%AE%BE%E5%80%BC.jpg" alt="Redis设值"></p>
-<h4 id="4-2、Linux-下安装："><a href="#4-2、Linux-下安装：" class="headerlink" title="4.2、Linux 下安装："></a>4.2、Linux 下安装：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">附：</span><br><span class="line">	下载地址：http:<span class="comment">//redis.io/download ，下载最新文档版本。</span></span><br><span class="line">	本教程使用的最新文档版本为 <span class="number">2.8</span>.7，下载并安装：</span><br></pre></td></tr></table></figure>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$ wget http://download.redis.io/releases/redis-<span class="number">2</span>.<span class="number">8</span>.<span class="number">17</span>.tar.gz</span><br><span class="line">	$ tar xzf redis-<span class="number">2</span>.<span class="number">8</span>.<span class="number">17</span>.tar.gz</span><br><span class="line">	$ <span class="built_in">cd</span> redis-<span class="number">2</span>.<span class="number">8</span>.<span class="number">17</span></span><br><span class="line">	$ make</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注意：</span><br><span class="line">	make 完后 redis-2.8.17 目录下会出现编译后的 redis 服务程序 redis-server,还有用于测试的客户端程序redis-cli,两个程序位于安装目录 src 目录下：</span><br><span class="line">	下面启动 redis 服务</span><br></pre></td></tr></table></figure>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$ <span class="built_in">cd</span> src</span><br><span class="line">	$ ./redis-server</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注意：</span><br><span class="line">	注意这种方式启动 redis 使用的是默认配置。也可以通过启动参数告诉 redis 使用指定配置文件使用下面命令启动。</span><br></pre></td></tr></table></figure>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$ <span class="built_in">cd</span> src</span><br><span class="line">	$ ./redis-server redis.conf</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注意：</span><br><span class="line">	redis.conf 是一个默认的配置文件。我们可以根据需要使用自己的配置文件。</span><br><span class="line">	启动 redis 服务进程后，就可以使用测试客户端程序 redis-cli和redis 服务交互了。 比如：</span><br></pre></td></tr></table></figure>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$ <span class="built_in">cd</span> src</span><br><span class="line">	$ ./redis-cli</span><br><span class="line">	redis&gt; <span class="built_in">set</span> foo bar</span><br><span class="line">	OK</span><br><span class="line">	redis&gt; get foo</span><br><span class="line">	"bar"</span><br></pre></td></tr></table></figure>
-<h4 id="4-3、Ubuntu-下安装："><a href="#4-3、Ubuntu-下安装：" class="headerlink" title="4.3、Ubuntu 下安装："></a>4.3、Ubuntu 下安装：</h4><ul>
-<li><strong>在 Ubuntu 系统安装 Redis 可以使用以下命令:</strong></li>
-</ul>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$sudo apt-get update</span><br><span class="line">	$sudo apt-get install redis-server</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p><strong>启动 Redis：</strong></p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$ redis-server</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>查看 Redis 是否启动？</strong></p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	$ redis-cli</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>以上命令将打开以下终端：</strong></p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6379</span>&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>127.0.0.1 是本机 IP ，6379 是 redis 服务端口。现在我们输入 PING 命令</strong></p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">步骤：</span><br><span class="line">	redis <span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6379</span>&gt; <span class="built_in">ping</span></span><br><span class="line">	PONG</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>以上说明我们已经成功安装了 Redis .</p>
-</li>
-</ul>
-<h4 id="4-4、Mac-下安装："><a href="#4-4、Mac-下安装：" class="headerlink" title="4.4、Mac 下安装："></a>4.4、Mac 下安装：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">方法①：</span><br><span class="line">	<span class="number">1</span>. 官网http:<span class="comment">//redis.io/ 下载最新的稳定版本,这里是3.2.0</span></span><br><span class="line"> 	<span class="number">2</span>. sudo mv 到 /usr/local/</span><br><span class="line"> 	<span class="number">3</span>. sudo tar -zxf redis-<span class="number">3.2</span>.0.tar 解压文件</span><br><span class="line"> 	<span class="number">4</span>. 进入解压后的目录 cd redis-<span class="number">3.2</span>.0</span><br><span class="line"> 	<span class="number">5</span>. sudo make test 测试编译</span><br><span class="line"> 	<span class="number">6</span>. sudo make install</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">方法②：</span><br><span class="line">	<span class="number">1</span>、执行 brew install redis</span><br><span class="line">	<span class="number">2</span>、启动 redis，可以使用后台服务启动 brew services start redis。或者直接启动：redis-server /usr/local/etc/redis.conf</span><br></pre></td></tr></table></figure>
 
     
   
@@ -355,7 +300,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Redis//" class="article-tag-list-link color1">Redis</a>
+        			<a href="/Promise/categories/Git//" class="article-tag-list-link color4">Git</a>
         		</li>
       		
 		</ul>
@@ -410,7 +355,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/04/13/Redis入门指南/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/05/22/Git-分支管理/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -424,18 +369,9 @@
   
 <nav id="article-nav">
   
-    <a href="/Promise/2018/04/18/JMeter断言/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JMeter断言
-        
-      </div>
-    </a>
   
-  
-    <a href="/Promise/2018/04/10/JMeter性能测试入门指南/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JMeter入门指南</div>
+    <a href="/Promise/2018/05/11/Maven安装配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Maven 安装配置</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -462,7 +398,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis-初体验"><span class="toc-number">1.</span> <span class="toc-text">Redis 初体验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、问题背景"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、问题背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、What-is-the-Redis"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、What is the Redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Why-use-it"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、Why use it</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Redis-安装"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. Redis 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1、Windows-下安装："><span class="toc-number">1.0.4.1.</span> <span class="toc-text">4.1、Windows 下安装：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2、Linux-下安装："><span class="toc-number">1.0.4.2.</span> <span class="toc-text">4.2、Linux 下安装：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3、Ubuntu-下安装："><span class="toc-number">1.0.4.3.</span> <span class="toc-text">4.3、Ubuntu 下安装：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4、Mac-下安装："><span class="toc-number">1.0.4.4.</span> <span class="toc-text">4.4、Mac 下安装：</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-分支管理"><span class="toc-number">1.</span> <span class="toc-text">Git 分支管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、为什么要有分支？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、为什么要有分支？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、Git-分支与其他版本控制工具的分支有什么区别？"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">1.1、Git 分支与其他版本控制工具的分支有什么区别？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、创建与合并分支"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、创建与合并分支</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1、master-分支-和-HEAD-指针"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">2.1、master 分支 和 HEAD 指针</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2、创建分支"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.2、创建分支</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1、图解"><span class="toc-number">1.0.2.2.1.</span> <span class="toc-text">2.2.1、图解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-2、具体命令"><span class="toc-number">1.0.2.2.2.</span> <span class="toc-text">2.2.2、具体命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、总结"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、总结</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -478,7 +414,7 @@
   
 
   
-  <div id="SOHUCS" sid="Redis入门指南" ></div> 
+  <div id="SOHUCS" sid="Git-分支管理" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
