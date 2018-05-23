@@ -6,22 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.misscloud.top">
-  <title>Git版本控制-简介 | Promise&#39;s blog</title>
+  <title>Git-分支管理 | Promise&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git 版本控制-简介1. Git 的诞生 ​    Linus 在1991年创建了开源的 Linux ,  在2002年以前，世界各地的志愿者把源代码文件通过 diff 的方式发给 Linus，然后由 Linus 本人通过手工方式合并代码，到了2002年，代码库之大让 Linus 很难继续通过手工方式管理了，于是 Linus 选择了一个商业的版本控制系统 BitKeeper，BitKeeper">
+  <meta name="description" content="Git 创建与合并分支 1、为什么要有分支？12假设你准备开发一个新的功能，但是需要三周时间才能完成，如果第一周你写了30%的代码，如果你立刻提交，由于你的代码还没有写完，不完整的代码库会导致别人不能干活了。如果等三周之后你的代码全部写完了再一次提交，又存在丢失每天进度的巨大风险。针对以上问题，就出现了分支，你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上">
 <meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git版本控制-简介">
-<meta property="og:url" content="www.misscloud.top/2018/03/30/Git版本控制-简介/index.html">
+<meta property="og:title" content="Git-分支管理">
+<meta property="og:url" content="www.misscloud.top/2018/05/22/Git-分支管理①/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
-<meta property="og:description" content="Git 版本控制-简介1. Git 的诞生 ​    Linus 在1991年创建了开源的 Linux ,  在2002年以前，世界各地的志愿者把源代码文件通过 diff 的方式发给 Linus，然后由 Linus 本人通过手工方式合并代码，到了2002年，代码库之大让 Linus 很难继续通过手工方式管理了，于是 Linus 选择了一个商业的版本控制系统 BitKeeper，BitKeeper">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E9%9B%86%E4%B8%AD%E5%BC%8F.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E5%88%86%E5%B8%83%E5%BC%8F.jpg">
-<meta property="og:updated_time" content="2018-04-04T14:07:49.625Z">
+<meta property="og:description" content="Git 创建与合并分支 1、为什么要有分支？12假设你准备开发一个新的功能，但是需要三周时间才能完成，如果第一周你写了30%的代码，如果你立刻提交，由于你的代码还没有写完，不完整的代码库会导致别人不能干活了。如果等三周之后你的代码全部写完了再一次提交，又存在丢失每天进度的巨大风险。针对以上问题，就出现了分支，你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/HEAD%E6%8C%87%E5%90%91.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/创建分支.jpg">
+<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/删除分支.jpg">
+<meta property="og:updated_time" content="2018-05-23T06:19:36.785Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git版本控制-简介">
-<meta name="twitter:description" content="Git 版本控制-简介1. Git 的诞生 ​    Linus 在1991年创建了开源的 Linux ,  在2002年以前，世界各地的志愿者把源代码文件通过 diff 的方式发给 Linus，然后由 Linus 本人通过手工方式合并代码，到了2002年，代码库之大让 Linus 很难继续通过手工方式管理了，于是 Linus 选择了一个商业的版本控制系统 BitKeeper，BitKeeper">
-<meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E9%9B%86%E4%B8%AD%E5%BC%8F.jpg">
+<meta name="twitter:title" content="Git-分支管理">
+<meta name="twitter:description" content="Git 创建与合并分支 1、为什么要有分支？12假设你准备开发一个新的功能，但是需要三周时间才能完成，如果第一周你写了30%的代码，如果你立刻提交，由于你的代码还没有写完，不完整的代码库会导致别人不能干活了。如果等三周之后你的代码全部写完了再一次提交，又存在丢失每天进度的巨大风险。针对以上问题，就出现了分支，你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上">
+<meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/HEAD%E6%8C%87%E5%90%91.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Promise&#39;s blog" type="application/atom+xml">
   
@@ -179,20 +180,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Git版本控制-简介" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Git-分支管理①" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Git版本控制-简介
+      Git-分支管理
     </h1>
   
 
         
-        <a href="/Promise/2018/03/30/Git版本控制-简介/" class="archive-article-date">
-  	<time datetime="2018-03-30T07:19:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-30</time>
+        <a href="/Promise/2018/05/22/Git-分支管理①/" class="archive-article-date">
+  	<time datetime="2018-05-22T11:08:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-22</time>
 </a>
         
 		
@@ -213,7 +214,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     <strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-版本控制-简介"><span class="toc-number">1.</span> <span class="toc-text">Git 版本控制-简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git-的诞生"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. Git 的诞生</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-集中式-vs-分布式"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 集中式 vs 分布式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-创建版本库"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 创建版本库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-总结"><span class="toc-number">1.0.4.</span> <span class="toc-text">5. 总结</span></a></li></ol></li></ol></li></ol>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-创建与合并分支"><span class="toc-number">1.</span> <span class="toc-text">Git 创建与合并分支</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、为什么要有分支？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、为什么要有分支？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、Git-分支与其他版本控制工具的分支有什么区别？"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">1.1、Git 分支与其他版本控制工具的分支有什么区别？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、创建与合并分支"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、创建与合并分支</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1、master-分支-和-HEAD-指针"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">2.1、master 分支 和 HEAD 指针</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2、创建分支"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.2、创建分支</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1、图解"><span class="toc-number">1.0.2.2.1.</span> <span class="toc-text">2.2.1、图解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-2、具体命令"><span class="toc-number">1.0.2.2.2.</span> <span class="toc-text">2.2.2、具体命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、总结"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、总结</span></a></li></ol></li></ol></li></ol>
          </div>
    <script type="text/javascript">
   function showToc(){
@@ -236,89 +237,23 @@
   
     
     
-      <h1 id="Git-版本控制-简介"><a href="#Git-版本控制-简介" class="headerlink" title="Git 版本控制-简介"></a>Git 版本控制-简介</h1><h3 id="1-Git-的诞生"><a href="#1-Git-的诞生" class="headerlink" title="1. Git 的诞生"></a>1. Git 的诞生</h3><blockquote>
-<p>​    Linus 在1991年创建了开源的 Linux ,  在2002年以前，世界各地的志愿者把源代码文件通过 diff 的方式发给 Linus，然后由 Linus 本人通过手工方式合并代码，到了2002年，代码库之大让 Linus 很难继续通过手工方式管理了，于是 Linus 选择了一个商业的版本控制系统 BitKeeper，BitKeeper 的东家 BitMover 公司出于人道主义精神，授权 Linux 社区免费使用这个版本控制系统。安定团结的大好局面在2005年就被打破了，原因是 Linux 社区牛人聚集，不免沾染了一些梁山好汉的江湖习气。开发 Samba 的 Andrew 试图破解BitKeeper 的协议（这么干的其实也不只他一个），被 BitMover 公司发现了，于是 BitMover 公司怒了，要收回 Linux 社区的免费使用权。于是 Linus 花了两周时间自己用 C 写了一个<strong>分布式版本控制系统</strong>，这就是<strong>Git</strong>！</p>
-</blockquote>
-<h3 id="2-集中式-vs-分布式"><a href="#2-集中式-vs-分布式" class="headerlink" title="2. 集中式 vs 分布式"></a>2. 集中式 vs 分布式</h3><blockquote>
-<p>​    <strong>集中式版本控制</strong> ：版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中 央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比  是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。</p>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E9%9B%86%E4%B8%AD%E5%BC%8F.jpg" alt="集中式"></p>
-</blockquote>
-<blockquote>
-<ul>
-<li><p>CVCS的版本库集中存放在中央服务器，而工作时都是用自己的电脑，所以要先从中央服务器取得最新的版本，然后工作完后再将自己的代码推送给中央服务器。</p>
-</li>
-<li><p>CVS：最早的、开源、免费。由于自身设计的问题，会造成提交文件不完整、版本库莫名其妙损坏的情况</p>
-</li>
-<li><p>SVN：开源、免费。修正了CVS的一些稳定性问题，是目前用得最多的集中式版本库控制系统</p>
-</li>
-<li><p>ClearCase：收费、安装比Windows还大、运行比蜗牛还慢。IBM 收购了原本制作的Rational公司</p>
-</li>
-<li><p>VSS：集成在Visual Studio中。</p>
-</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>  <strong>缺点</strong> ：集中式版本控制系统最大的问题就是必须联网才能工作，受网络状况、带宽影响。</p>
-</blockquote>
+      <h1 id="Git-创建与合并分支"><a href="#Git-创建与合并分支" class="headerlink" title="Git 创建与合并分支"></a>Git 创建与合并分支</h1><hr>
+<h3 id="1、为什么要有分支？"><a href="#1、为什么要有分支？" class="headerlink" title="1、为什么要有分支？"></a>1、为什么要有分支？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">假设你准备开发一个新的功能，但是需要三周时间才能完成，如果第一周你写了<span class="number">30</span>%的代码，如果你立刻提交，由于你的代码还没有写完，不完整的代码库会导致别人不能干活了。如果等三周之后你的代码全部写完了再一次提交，又存在丢失每天进度的巨大风险。</span><br><span class="line">针对以上问题，就出现了分支，你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样既安全，又不影响别人的工作。</span><br></pre></td></tr></table></figure>
+<h4 id="1-1、Git-分支与其他版本控制工具的分支有什么区别？"><a href="#1-1、Git-分支与其他版本控制工具的分支有什么区别？" class="headerlink" title="1.1、Git 分支与其他版本控制工具的分支有什么区别？"></a>1.1、Git 分支与其他版本控制工具的分支有什么区别？</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">其他版本控制工具例如 SVN 等都有分支管理，但是用过之后你就会发现，这些版本控制系统创建和切换分支非常非常慢，导致分支功能成了摆设，大家都不去用。但是 Git 的分支是与众不同的，无论创建、切换和删除分支，Git 在<span class="number">1</span>秒钟之内都能完成，无论你的版本库是<span class="number">1</span>个文件还是<span class="number">1</span>万个文件甚至更多文件。</span><br></pre></td></tr></table></figure>
 <hr>
-<blockquote>
-<p>​    <strong>分布式版本控制</strong> ：分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上。多人协作时，只需把各自的修改推送给对方，就可以互相看到对方的修改了。在实际使用分布式版本控制系统的时候，其实很少在两人之间的电脑上推送版本库的修改，因为可能你们俩不在一个局域网内，两台电脑互相访问不了，也可能今天你的同事病了，他的电脑压根没有开机。因此，分布式版本控制系统通常也有一台充当“中央服务器”的电脑，但这个服务器的作用仅仅是用来方便“交换”大家的修改，没有它大家也一样干活，只是交换修改不方便而已。</p>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/%E5%88%86%E5%B8%83%E5%BC%8F.jpg" alt="分布式"></p>
-</blockquote>
-<blockquote>
-<ul>
-<li>Git</li>
-<li>BitKeeper(促使Git诞生)</li>
-<li>Mercurial</li>
-<li>Bazaar</li>
-</ul>
-</blockquote>
+<h3 id="2、创建与合并分支"><a href="#2、创建与合并分支" class="headerlink" title="2、创建与合并分支"></a>2、创建与合并分支</h3><h4 id="2-1、master-分支-和-HEAD-指针"><a href="#2-1、master-分支-和-HEAD-指针" class="headerlink" title="2.1、master 分支 和 HEAD 指针"></a>2.1、master 分支 和 HEAD 指针</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">master 分支：</span><br><span class="line">	我们每次 git commit 提交后，Git 都会把它们串成一条时间线，这条时间线就是一条分支。通常情况下只有一条时间线，在 Git 里，这个分支叫主分支，即 master 分支。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HEAD 指针：</span><br><span class="line">	严格来说，HEAD 不是指向提交，而是指向 master 的，master 才是指向最新的提交，所以，HEAD 指向的就是当前分支。</span><br></pre></td></tr></table></figure>
+<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/HEAD%E6%8C%87%E5%90%91.jpg" style="width:800px"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一开始的时候，master 分支是一条线， Git 用 master 指向最新的提交，再用 HEAD 指向 master, 就能确定当前分支，以及当前分支的提交点。每次提交，master 分支都会向前移动一步，这样，随着你不断提交，master 分支的线也越来越长。</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-2、创建分支"><a href="#2-2、创建分支" class="headerlink" title="2.2、创建分支"></a>2.2、创建分支</h4><h5 id="2-2-1、图解"><a href="#2-2-1、图解" class="headerlink" title="2.2.1、图解"></a>2.2.1、图解</h5><p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/创建分支.jpg" style="width:800px"><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Git/%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/删除分支.jpg" style="width:800px"></p>
+<h5 id="2-2-2、具体命令"><a href="#2-2-2、具体命令" class="headerlink" title="2.2.2、具体命令"></a>2.2.2、具体命令</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">步骤①：</span><br><span class="line">	首先我们创建 dev 分支，然后切换到 dev 分支：</span><br><span class="line">命令：</span><br><span class="line">	$ git checkout -b dev</span><br><span class="line">结果：</span><br><span class="line">	Switched to a <span class="keyword">new</span> branch <span class="string">'dev'</span></span><br><span class="line">注意：</span><br><span class="line">	git checkout 命令加上 -b 参数表示创建并切换，相当于以下两条命令：</span><br><span class="line">	$ git branch dev</span><br><span class="line">	$ git checkout dev</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">步骤②：</span><br><span class="line">	用 git branch 命令查看当前分支：</span><br><span class="line">命令：</span><br><span class="line">	$ git branch</span><br><span class="line">结果：</span><br><span class="line">	* dev</span><br><span class="line">	master</span><br><span class="line">注意；</span><br><span class="line">	git branch 命令会列出所有分支，当前分支前面会标一个 * 号。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">步骤③：</span><br><span class="line">	修改工作区中的内容（修改readme.txt文件），并用 git commit 命令提交：</span><br><span class="line">命令：</span><br><span class="line">	$ git add readme.txt</span><br><span class="line">	$ git commit -m <span class="string">"branch test"</span></span><br><span class="line">结果：</span><br><span class="line">	[dev b17d20e] branch test</span><br><span class="line"> 	<span class="number">1</span> file changed, <span class="number">1</span> insertion(+)</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">步骤④：</span><br><span class="line">	dev 分支工作完成，切换回 master 分支：</span><br><span class="line">命令：</span><br><span class="line">	$ git checkout master</span><br><span class="line">结果：</span><br><span class="line">	Switched to branch <span class="string">'master'</span></span><br><span class="line">注意：</span><br><span class="line">	切换回 master 分支后，再查看 readme.txt 文件，发现刚刚添加的内容不见了，那是因为那个修改提交是在 dev 分支上，而 master 分支此刻的提交点并没有变。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">步骤⑤：</span><br><span class="line">	现在我们把 dev分支 合并到 master 分支上：</span><br><span class="line">命令：</span><br><span class="line">	$ git merge dev</span><br><span class="line">结果：</span><br><span class="line">	Updating d46f35e..b17d20e</span><br><span class="line">	Fast-forward</span><br><span class="line"> 	readme.txt | 1 +</span><br><span class="line"> 	1 file changed, 1 insertion(+)</span><br><span class="line">注意：</span><br><span class="line">	上面结果中的 Fast-forward 信息，Git 告诉我们这次合并是“快速模式”，也就是直接把 master 指向 dev 的当前提交，所以合并速度非常快，当然并不是每次合并都能 Fast-forward ，还有其他的合并方式。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">步骤⑤：</span><br><span class="line">	合并完成后，就可以放心地删除 dev 分支了：</span><br><span class="line">命令：</span><br><span class="line">	$ git branch -d dev</span><br><span class="line">结果：</span><br><span class="line">	Deleted branch dev (was b17d20e).</span><br><span class="line">注意：</span><br><span class="line">	删除后，查看 branch ，就只剩下 master 分支了，因为创建、合并和删除分支非常快，所以 Git 鼓励你使用分支完成某个人物，合并后再删掉分支，这个直接在 master 分支上工作效果是一样的，但是过程更安全。</span><br></pre></td></tr></table></figure>
 <hr>
-<blockquote>
-<p><strong>特点与比较</strong> ：</p>
-<p>​    <strong>集中式</strong>：</p>
-<p>​        ①通过与中心服务器的连接执行所有操作，必须联网。</p>
+<h3 id="3、总结"><a href="#3、总结" class="headerlink" title="3、总结"></a>3、总结</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">查看分支：git branch</span><br><span class="line"></span><br><span class="line">创建分支：git branch &lt;name&gt;</span><br><span class="line"></span><br><span class="line">切换分支：git checkout &lt;name&gt;</span><br><span class="line"></span><br><span class="line">创建+切换分支：git checkout -b &lt;name&gt;</span><br><span class="line"></span><br><span class="line">合并某分支到当前分支：git merge &lt;name&gt;</span><br><span class="line"></span><br><span class="line">删除分支：git branch -d &lt;name&gt;</span><br></pre></td></tr></table></figure>
 <hr>
-<p>​    <strong>分布式</strong>：</p>
-<p>​        ①快速，本地客户机操作，不联网也不影响工作，离线工作，DVCS 比 Subversion 快大约3-10倍。</p>
-<p>​        ②可以实现非常灵活的工作流(传统的集中式工作流 + 特殊工作流 + 特殊工作流和集中式工作流的组合)            </p>
-<p>​        ③3、安全性更高，因为每个人电脑里都是完整的版本库，坏了复制一份即可，CVCS中央服务器出问题就GG 。</p>
-<p>​        ④两台电脑互相访问不了或某一台电脑未开机不能执行复制(交换修改)时，通常有一台电脑充当中央服务器。 </p>
-<p>​        ⑤分支管理。</p>
-</blockquote>
-<h3 id="3-创建版本库"><a href="#3-创建版本库" class="headerlink" title="3. 创建版本库"></a>3. 创建版本库</h3><blockquote>
-<p>①首先，选择一个合适的地方，创建一个空目录：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; $ mkdir learngit</span><br><span class="line">&gt; $ cd learngit</span><br><span class="line">&gt; $ pwd</span><br><span class="line">&gt; /Users/michael/learngit</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<figure class="highlight plain"><figcaption><span>命令用于显示当前目录。这个仓库位于```/Users/michael/learngit```。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt;</span><br><span class="line">&gt; ***</span><br><span class="line">&gt;</span><br><span class="line">&gt; **注意：**</span><br><span class="line">&gt; 如果你使用 Windows 系统，为了避免遇到各种莫名其妙的问题，请确保目录名（包括父目录）不包含中文。 </span><br><span class="line">&gt;</span><br><span class="line">&gt; ***</span><br><span class="line">&gt;</span><br><span class="line">&gt; ②通过```git init```命令把这个目录变成 Git 可以管理的仓库：</span><br><span class="line">&gt;</span><br><span class="line">&gt; ```linux</span><br><span class="line">&gt; $ git init</span><br><span class="line">&gt; Initialized empty Git repository in /Users/michael/learngit/.git/</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>这样就把 Git 的仓库建好了，并且是一个空的仓库(empty Git repository) ，细心的读者课发现当前目录下多了一个<figure class="highlight plain"><figcaption><span>Git 来跟踪管理版本库的，没事千万不要手动修改这个目录里面的文件，不然改乱了，就把Git仓库给破坏了。如果没有看到```.git``` 目录，那是因为这个目录```.git```目录，那是因为这个目录默认是隐藏的，用```ls -ah```命令就可以看见。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 4. 把文件添加到版本库</span><br><span class="line"></span><br><span class="line">&gt; 我们在```learngit``` 目录下(子目录也行)编写一个```readme.txt```文件，内容如下：</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>Git is a version control system.<br>Git is free software.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 然后把一个文件放到 Git 仓库只需要两步。</span><br><span class="line">&gt;</span><br><span class="line">&gt; **①**第一步，用命令```git add```告诉 Git ，把文件添加到仓库：</span><br><span class="line">&gt; ```linux</span><br><span class="line">&gt; $ git add readme.txt</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p><strong>②</strong>第二步，用命令<code>git commit</code>告诉Git，把文件提交到仓库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; $ git commit -m &quot;wrote a readme file&quot;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<hr>
-<p><strong>注意：</strong><code>git commit</code>命令，<code>-m</code>后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，能够见名知意，这样你就能从历史记录里方便地找到改动记录。</p>
-<hr>
-<p><code>git commit</code>命令执行成功后会告诉你，1个文件被改动（我们新添加的readme.txt文件），插入了两行内容（readme.txt有两行内容）。为什么Git添加文件需要<code>add</code>，<code>commit</code>一共两步呢？因为<code>commit</code>可以一次提交很多文件，所以你可以多次<code>add</code>不同的文件，比如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; $ git add file1.txt</span><br><span class="line">&gt; $ git add file2.txt file3.txt</span><br><span class="line">&gt; $ git commit -m &quot;add 3 files.&quot;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h3 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h3><blockquote>
-<ul>
-<li><p>初始化一个Git仓库，使用<code>git init</code>命令。</p>
-</li>
-<li><p>添加文件到Git仓库，分两步：</p>
-<p>​                    ①第一步，使用命令<code>git add &lt;file&gt;</code>，注意，可反复多次使用，添加多个文件；</p>
-<p>​                    ②第二步，使用命令<code>git commit</code>，完成。</p>
-</li>
-</ul>
-</blockquote>
 
     
   
@@ -420,7 +355,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/03/30/Git版本控制-简介/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/05/22/Git-分支管理①/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -434,18 +369,18 @@
   
 <nav id="article-nav">
   
-    <a href="/Promise/2018/04/03/Git版本控制-时光机穿梭/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Promise/2018/05/23/Git-分支管理②/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Git版本控制-时光机穿梭
+          Git-分支管理
         
       </div>
     </a>
   
   
-    <a href="/Promise/2017/12/06/python基础语法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Python基础语法</div>
+    <a href="/Promise/2018/05/11/Maven安装配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Maven 安装配置</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -472,7 +407,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-版本控制-简介"><span class="toc-number">1.</span> <span class="toc-text">Git 版本控制-简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git-的诞生"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. Git 的诞生</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-集中式-vs-分布式"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 集中式 vs 分布式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-创建版本库"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 创建版本库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-总结"><span class="toc-number">1.0.4.</span> <span class="toc-text">5. 总结</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-创建与合并分支"><span class="toc-number">1.</span> <span class="toc-text">Git 创建与合并分支</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、为什么要有分支？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、为什么要有分支？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、Git-分支与其他版本控制工具的分支有什么区别？"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">1.1、Git 分支与其他版本控制工具的分支有什么区别？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、创建与合并分支"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、创建与合并分支</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1、master-分支-和-HEAD-指针"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">2.1、master 分支 和 HEAD 指针</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2、创建分支"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.2、创建分支</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1、图解"><span class="toc-number">1.0.2.2.1.</span> <span class="toc-text">2.2.1、图解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-2、具体命令"><span class="toc-number">1.0.2.2.2.</span> <span class="toc-text">2.2.2、具体命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、总结"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、总结</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -488,7 +423,7 @@
   
 
   
-  <div id="SOHUCS" sid="Git版本控制-简介" ></div> 
+  <div id="SOHUCS" sid="Git-分支管理①" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
