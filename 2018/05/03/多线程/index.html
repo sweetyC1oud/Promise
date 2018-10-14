@@ -6,28 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.misscloud.top">
-  <title>Maven 安装配置 | Promise&#39;s blog</title>
+  <title>进程 vs 线程 vs 协程 | Promise&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Maven 安装配置1、Maven 是什么？12Maven（翻译为 &quot;专家&quot;、&quot;内行&quot;）是跨平台的项目管理工具，主要服务于基于 Java 平台的项目构建，依赖管理和项目信息管理。简单来讲，Maven 是一套强大的自动化构建工具，覆盖了项目的编译、测试、运行和打包的过程，Maven 提供了仓库管理的概念，统一地帮助我们管理第三方 jar 包。 2、Maven 可以做什么事？1① 构建 ② 文档生成">
+  <meta name="description" content="操作系统 ##进程管理 进程、线程、协程1、进程12什么是进程？	进程是进程实体的运行过程，是系统进行资源分配和调度的一个独立单位。 1进程控制块（Process Control Block,PCB）描述进程的基本信息和运行状态，所谓的创建进程和撤销进程，都是指对 PCB 的操作（所谓创建进程，实际上是创建进程映像中的 PCB；而撤销进程，实质上是撤销进程的 PCB）。  2、线程12什么是线程？">
 <meta name="keywords" content="redis,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,java,linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Maven 安装配置">
-<meta property="og:url" content="www.misscloud.top/2018/05/11/Maven安装配置/index.html">
+<meta property="og:title" content="进程 vs 线程 vs 协程">
+<meta property="og:url" content="www.misscloud.top/2018/05/03/多线程/index.html">
 <meta property="og:site_name" content="Promise&#39;s blog">
-<meta property="og:description" content="Maven 安装配置1、Maven 是什么？12Maven（翻译为 &quot;专家&quot;、&quot;内行&quot;）是跨平台的项目管理工具，主要服务于基于 Java 平台的项目构建，依赖管理和项目信息管理。简单来讲，Maven 是一套强大的自动化构建工具，覆盖了项目的编译、测试、运行和打包的过程，Maven 提供了仓库管理的概念，统一地帮助我们管理第三方 jar 包。 2、Maven 可以做什么事？1① 构建 ② 文档生成">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/Maven下载.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/Maven目录.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/查看jdk.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/环境变量MAVEN_HOME.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/win7环境变量Path.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/win10环境变量Path.jpg">
-<meta property="og:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/查看Maven.jpg">
-<meta property="og:updated_time" content="2018-05-12T07:17:12.609Z">
+<meta property="og:description" content="操作系统 ##进程管理 进程、线程、协程1、进程12什么是进程？	进程是进程实体的运行过程，是系统进行资源分配和调度的一个独立单位。 1进程控制块（Process Control Block,PCB）描述进程的基本信息和运行状态，所谓的创建进程和撤销进程，都是指对 PCB 的操作（所谓创建进程，实际上是创建进程映像中的 PCB；而撤销进程，实质上是撤销进程的 PCB）。  2、线程12什么是线程？">
+<meta property="og:image" content="www.misscloud.top/2018/05/03/Pics/进程.png">
+<meta property="og:image" content="www.misscloud.top/2018/05/03/Pics/线程.png">
+<meta property="og:image" content="www.misscloud.top/2018/05/03/Pics/进程状态转换.jpg">
+<meta property="og:updated_time" content="2018-10-14T07:37:35.458Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Maven 安装配置">
-<meta name="twitter:description" content="Maven 安装配置1、Maven 是什么？12Maven（翻译为 &quot;专家&quot;、&quot;内行&quot;）是跨平台的项目管理工具，主要服务于基于 Java 平台的项目构建，依赖管理和项目信息管理。简单来讲，Maven 是一套强大的自动化构建工具，覆盖了项目的编译、测试、运行和打包的过程，Maven 提供了仓库管理的概念，统一地帮助我们管理第三方 jar 包。 2、Maven 可以做什么事？1① 构建 ② 文档生成">
-<meta name="twitter:image" content="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA.jpg">
+<meta name="twitter:title" content="进程 vs 线程 vs 协程">
+<meta name="twitter:description" content="操作系统 ##进程管理 进程、线程、协程1、进程12什么是进程？	进程是进程实体的运行过程，是系统进行资源分配和调度的一个独立单位。 1进程控制块（Process Control Block,PCB）描述进程的基本信息和运行状态，所谓的创建进程和撤销进程，都是指对 PCB 的操作（所谓创建进程，实际上是创建进程映像中的 PCB；而撤销进程，实质上是撤销进程的 PCB）。  2、线程12什么是线程？">
+<meta name="twitter:image" content="www.misscloud.top/2018/05/03/Pics/进程.png">
   
     <link rel="alternative" href="/atom.xml" title="Promise&#39;s blog" type="application/atom+xml">
   
@@ -185,20 +180,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Maven安装配置" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-多线程" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Maven 安装配置
+      进程 vs 线程 vs 协程
     </h1>
   
 
         
-        <a href="/Promise/2018/05/11/Maven安装配置/" class="archive-article-date">
-  	<time datetime="2018-05-11T06:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-11</time>
+        <a href="/Promise/2018/05/03/多线程/" class="archive-article-date">
+  	<time datetime="2018-05-03T13:17:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-03</time>
 </a>
         
 		
@@ -219,7 +214,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     <strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Maven-安装配置"><span class="toc-number">1.</span> <span class="toc-text">Maven 安装配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Maven-是什么？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、Maven 是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Maven-可以做什么事？"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、Maven 可以做什么事？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1、项目构建"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">2.1、项目构建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2、项目结构"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.2、项目结构</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Maven-的优点"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、Maven 的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、Maven-下载"><span class="toc-number">1.0.4.</span> <span class="toc-text">4、Maven 下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、Maven-安装"><span class="toc-number">1.0.5.</span> <span class="toc-text">5、Maven 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1、检查-JDK"><span class="toc-number">1.0.5.1.</span> <span class="toc-text">5.1、检查 JDK</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2、解压"><span class="toc-number">1.0.5.2.</span> <span class="toc-text">5.2、解压</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3、设置环境变量-MAVEN-HOME"><span class="toc-number">1.0.5.3.</span> <span class="toc-text">5.3、设置环境变量 MAVEN_HOME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-4、设置环境变量-Path"><span class="toc-number">1.0.5.4.</span> <span class="toc-text">5.4、设置环境变量 Path</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5、检验-Maven-是否安装成功"><span class="toc-number">1.0.5.5.</span> <span class="toc-text">5.5、检验 Maven 是否安装成功</span></a></li></ol></li></ol></li></ol></li></ol>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#操作系统"><span class="toc-number">1.</span> <span class="toc-text">操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#进程、线程、协程"><span class="toc-number">1.0.1.</span> <span class="toc-text">进程、线程、协程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、进程"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">1、进程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、线程"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">2、线程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、协程"><span class="toc-number">1.0.1.3.</span> <span class="toc-text">3、协程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、区别"><span class="toc-number">1.0.1.4.</span> <span class="toc-text">4、区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进程状态的切换"><span class="toc-number">1.0.2.</span> <span class="toc-text">进程状态的切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引入多线程的原因"><span class="toc-number">1.0.3.</span> <span class="toc-text">引入多线程的原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多线程原理"><span class="toc-number">1.0.4.</span> <span class="toc-text">多线程原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多线程的优缺点"><span class="toc-number">1.0.5.</span> <span class="toc-text">多线程的优缺点</span></a></li></ol></li></ol></li></ol>
          </div>
    <script type="text/javascript">
   function showToc(){
@@ -242,27 +237,31 @@
   
     
     
-      <h1 id="Maven-安装配置"><a href="#Maven-安装配置" class="headerlink" title="Maven 安装配置"></a>Maven 安装配置</h1><h3 id="1、Maven-是什么？"><a href="#1、Maven-是什么？" class="headerlink" title="1、Maven 是什么？"></a>1、Maven 是什么？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Maven（翻译为 <span class="string">"专家"</span>、<span class="string">"内行"</span>）是跨平台的项目管理工具，主要服务于基于 Java 平台的项目构建，依赖管理和项目信息管理。</span><br><span class="line">简单来讲，Maven 是一套强大的自动化构建工具，覆盖了项目的编译、测试、运行和打包的过程，Maven 提供了仓库管理的概念，统一地帮助我们管理第三方 jar 包。</span><br></pre></td></tr></table></figure>
-<h3 id="2、Maven-可以做什么事？"><a href="#2、Maven-可以做什么事？" class="headerlink" title="2、Maven 可以做什么事？"></a>2、Maven 可以做什么事？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">① 构建 ② 文档生成 ③ 报告 ④ 依赖 ⑤ SCMs(software configuration Management) ⑥ 发布 ⑦ 分发 ⑧ 邮件列表</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Maven 工程结构和内容被定义在 pom.xml 中，全称即为 project object moduel .</span><br></pre></td></tr></table></figure>
-<h4 id="2-1、项目构建"><a href="#2-1、项目构建" class="headerlink" title="2.1、项目构建"></a>2.1、项目构建</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">项目构建过程包括【清理项目】→【编译项目】→【测试项目】→【生成测试报告】→【打包项目】→【部署项目】这几个步骤，这六个步骤就是一个项目的完整构建过程。</span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA.jpg" alt="项目构建"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">理想的项目构建是高度自动化，跨平台，可重用的组件，标准化的，使用maven就可以帮我们完成上述所说的项目构建过程。</span><br></pre></td></tr></table></figure></p>
-<h4 id="2-2、项目结构"><a href="#2-2、项目结构" class="headerlink" title="2.2、项目结构"></a>2.2、项目结构</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">	Maven 项目需要按照一定的项目结构进行维护，项目结构如下：</span><br><span class="line">src</span><br><span class="line">  - main</span><br><span class="line">    -java</span><br><span class="line">      -<span class="keyword">package</span></span><br><span class="line">  - test</span><br><span class="line">  	-java</span><br><span class="line">  	  -<span class="keyword">package</span></span><br><span class="line">  -resource</span><br><span class="line">pom.xml</span><br></pre></td></tr></table></figure>
-<h3 id="3、Maven-的优点"><a href="#3、Maven-的优点" class="headerlink" title="3、Maven 的优点"></a>3、Maven 的优点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">① Maven 中使用约定，约定 java 源代码代码必须放在哪个目录下，编译好的 java 代码又必须放到哪个目录下，这些目录都有明确的约定。</span><br><span class="line">② Maven 的每一个动作都拥有一个生命周期，例如执行 mvn install 就可以自动执行编译，测试，打包等构建过程。</span><br><span class="line">③ 只需要定义一个 pom.xml ，然后把源码放到默认的目录，Maven 帮我们处理其他事情。</span><br><span class="line">④ 使用 Maven 可以进行项目高度自动化构建，依赖管理(这是使用 Maven 最大的好处)，仓库管理。</span><br></pre></td></tr></table></figure>
-<h3 id="4、Maven-下载"><a href="#4、Maven-下载" class="headerlink" title="4、Maven 下载"></a>4、Maven 下载</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">下载地址：http:<span class="comment">//maven.apache.org/download.cgi</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/Maven下载.jpg" alt="项目构建"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">下载完成后，我们可以得到一个压缩包，我们把它解压到我们想要放的地方即可看到 Maven 的组成目录。</span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/Maven目录.jpg" style="width:400px;height:200px"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Maven 目录分析：</span><br><span class="line">	① bin：含有 mvn 运行的脚本。</span><br><span class="line">	② boot：含有 plexus-classworlds 类加载器框架。</span><br><span class="line">	③ conf：含有 settings.xml 配置文件。</span><br><span class="line">	④ lib：含有 Maven 运行时所需要的 java 类库。</span><br><span class="line">	⑤ LICENSE.txt、NOTICE.txt、Readme.txt 针对 Maven 版本，第三方软件等简要介绍。</span><br></pre></td></tr></table></figure>
-<h3 id="5、Maven-安装"><a href="#5、Maven-安装" class="headerlink" title="5、Maven 安装"></a>5、Maven 安装</h3><h4 id="5-1、检查-JDK"><a href="#5-1、检查-JDK" class="headerlink" title="5.1、检查 JDK"></a>5.1、检查 JDK</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">步骤①：</span><br><span class="line">	首先确保电脑上已经安装了 JDK 版本，配置好 JDK 的环境变量，使用如下的两个命令检查 JDK 安装的情况。</span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/查看jdk.jpg" style="width:800px"></p>
-<h4 id="5-2、解压"><a href="#5-2、解压" class="headerlink" title="5.2、解压"></a>5.2、解压</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">步骤②：</span><br><span class="line">	对上述下载的 apache-maven-3.5.3-bin.tar.gz 压缩包进行解压，解压的目录最好不要有中文。</span><br></pre></td></tr></table></figure>
-<h4 id="5-3、设置环境变量-MAVEN-HOME"><a href="#5-3、设置环境变量-MAVEN-HOME" class="headerlink" title="5.3、设置环境变量 MAVEN_HOME"></a>5.3、设置环境变量 MAVEN_HOME</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">步骤③：</span><br><span class="line">	设置系统的环境变量：MAVEN_HOME</span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/环境变量MAVEN_HOME.jpg" style="width:800px"></p>
-<h4 id="5-4、设置环境变量-Path"><a href="#5-4、设置环境变量-Path" class="headerlink" title="5.4、设置环境变量 Path"></a>5.4、设置环境变量 Path</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">步骤④：</span><br><span class="line">	设置环境变量 Path，将 %MAVEN_HOME%\bin 加入 Path 中，一定要注意要用分号；与其他值隔开，如果你的电脑是 win10系统，则直接选择下一行添加进去即可，无须使用分号进行隔开。</span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/win7环境变量Path.jpg" style="width:800px;height:600px"><br><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/win10环境变量Path.jpg" style="width:800px;height:600px"></p>
-<h4 id="5-5、检验-Maven-是否安装成功"><a href="#5-5、检验-Maven-是否安装成功" class="headerlink" title="5.5、检验 Maven 是否安装成功"></a>5.5、检验 Maven 是否安装成功</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">快捷键 windows+R 打开 cmd 窗口，输入&quot;mvn -v&quot;命令查看 Maven 的相关信息，如下图所示：</span><br></pre></td></tr></table></figure>
-<p><img src="https://sweetyc1oud.github.io/PromiseData/markdowm%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%BE%E7%89%87/Maven/查看Maven.jpg" alt="查看Maven"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">显示以上信息就说明 Maven 的安装已经成功了。</span><br></pre></td></tr></table></figure></p>
+      <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><hr>
+<p>##进程管理</p>
+<h3 id="进程、线程、协程"><a href="#进程、线程、协程" class="headerlink" title="进程、线程、协程"></a>进程、线程、协程</h3><h4 id="1、进程"><a href="#1、进程" class="headerlink" title="1、进程"></a>1、进程</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">什么是进程？</span><br><span class="line">	进程是进程实体的运行过程，是系统进行资源分配和调度的一个独立单位。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">进程控制块（Process Control Block,PCB）描述进程的基本信息和运行状态，所谓的创建进程和撤销进程，都是指对 PCB 的操作（所谓创建进程，实际上是创建进程映像中的 PCB；而撤销进程，实质上是撤销进程的 PCB）。</span><br></pre></td></tr></table></figure>
+<p><img src="../Pics/进程.png"></p>
+<h4 id="2、线程"><a href="#2、线程" class="headerlink" title="2、线程"></a>2、线程</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">什么是线程？</span><br><span class="line">	线程是进程中的一个实体，是 CPU 调度和分派的基本单位。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一个进程中可以有多个线程，他们共享进程资源。</span><br></pre></td></tr></table></figure>
+<p><img src="..\Pics\线程.png"></p>
+<h4 id="3、协程"><a href="#3、协程" class="headerlink" title="3、协程"></a>3、协程</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">什么是协程？</span><br><span class="line">	协程是一种用户态的轻量级线程，又称微线程，协程的调度完全由用户控制。协程拥有自己的寄存器上下文和栈。协程调度切换时，将寄存器上下文和栈保存到其他地方，在切回来的时候，恢复先前保存的寄存器上下文和栈，直接操作栈则基本没有内核切换的开销，可以不加锁的访问全局变量，所以上下文的切换非常快。</span><br></pre></td></tr></table></figure>
+<h4 id="4、区别"><a href="#4、区别" class="headerlink" title="4、区别"></a>4、区别</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">进程和线程的区别：</span><br><span class="line">	<span class="number">1</span>、调度：进程是拥有资源的基本单位。线程是独立调度的基本单位。在同一进程中，线程的切换不会引起进程切换。在不同进程中进行线程切换，从一个进程内线程切换到另一个进程中的线程时，会引起进程切换。</span><br><span class="line">	<span class="number">2</span>、拥有资源：进程是拥有资源的基本单位，而线程不拥有资源，但线程可以访问其隶属进程的系统资源。</span><br><span class="line">	<span class="number">3</span>、系统开销：由于创建或撤销进程时，系统都要为之分配或回收资源，如内存空间、I/O设备等，因此操作系统所付出的开销远大于创建或撤销线程时的开销。类似地，在进行进程切换时，涉及当前执行进程 CPU 环境的保存及新调度进程 CPU 环境的设置，而线程切换时只需保存和设置少量寄存器内容，开销很少。</span><br><span class="line">	<span class="number">4</span>、通信方面：进程间通信（IPC）需要进程同步和互斥手段的辅助，以保证数据的一致性。而线程间可以通过直接读/写统一进程中的数据段（如全局变量）来进行通信。</span><br><span class="line"></span><br><span class="line">举例：</span><br><span class="line">	QQ 和浏览器是两个进程，浏览器进程里面有很多线程，例如 HTTP 请求线程、事件响应线程、渲染线程等等，线程的并发执行使得在浏览器中点击一个新链接从而发起 HTTP 请求时，浏览器还可以响应用户的其它事件。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">进程和协程的区别：</span><br><span class="line">	<span class="number">1</span>、一个线程可以有多个协程，一个进程也可以单独拥有多个协程，这样 Python 中则能使用多核 CPU 。</span><br><span class="line">	<span class="number">2</span>、线程进程都是同步机制，而协程则是异步。</span><br><span class="line">	<span class="number">3</span>、协程能保留上一次调用时的状态，每次过程重入时，就相当于进入上一次调用的状态。</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="进程状态的切换"><a href="#进程状态的切换" class="headerlink" title="进程状态的切换"></a>进程状态的切换</h3><p><img src="../Pics/进程状态转换.jpg" style="width:650px;height:300px"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">就绪状态：</span><br><span class="line">	进程已经处于准备运行状态，即线程获得了除处理机之外的一切所需要的资源，一旦得到处理机即可运行。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">运行状态：</span><br><span class="line">	进程正在处理机上运行。在单处理机环境下，每一时刻最多只有一个进程处于运行状态。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">阻塞状态：</span><br><span class="line">	进程正在等待某一事件而暂停运行，如等待某资源为可用（不包括处理机）或等待输入/输出完成。即使处理机空闲，该进程也不能运行。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">创建状态：</span><br><span class="line">	进程正在被创建，尚未转到就绪状态。创建进程通常需要多个步骤：①首先申请一个空白的 PCB ，②并向 PCB 中填写一些控制和管理进程的信息，③然后由系统为该进程分配运行时所必需的资源，④最后把该进程转入到就绪状态。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">结束状态：</span><br><span class="line">	进程正从系统中消失，这可能是进程正常结束或其他原因中断退出运行。当进程需要结束运行时，系统首先必需置该进程为结束状态，然后再进一步处理资源释放和回收等工作。</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注意：</span><br><span class="line">	只有就绪态和运行态可以相互转换，其它的都是单向转换。就绪状态的进程通过调度算法从而获得 CPU 时间，转为运行状态；而运行状态的进程，在分配给它的 CPU 时间片用完之后就会转为就绪状态，等待下一次调度。</span><br><span class="line">	阻塞状态是缺少需要的资源从而由运行状态转换而来，但是该资源不包括 CPU 时间，缺少 CPU 时间会从运行态转换为就绪态。</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="引入多线程的原因"><a href="#引入多线程的原因" class="headerlink" title="引入多线程的原因"></a>引入多线程的原因</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">为了解决负载均衡问题,充分利用CPU资源.为了提高CPU的使用率,采用多线程的方式去同时完成几件事情而不互相干扰.为了处理大量的IO操作时或处理的情况需要花费大量的时间等等,比如:读写文件,视频图像的采集,处理,显示,保存等</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="多线程原理"><a href="#多线程原理" class="headerlink" title="多线程原理"></a>多线程原理</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">海康威视面试被问到过：</span><br><span class="line">	线程是 CPU 调度和分派的基本单位，多个线程<span class="string">"同时"</span>运行只是我们感官上的一种表现。事实上线程是并发运行的，操作系统将时间划分为很多时间段，尽可能的均匀分配给每一个线程，获取到时间片的线程被 CPU 执行，其它的线程则一直在等待。所以微观上是串行的，宏观上是并行的。这种现象叫并发，但不是绝对意义上的同时发生，实则操作系统里面<span class="string">"同一时刻"</span>只有一个线程在执行，但是处理速率快，效果上是并发运行。</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="多线程的优缺点"><a href="#多线程的优缺点" class="headerlink" title="多线程的优缺点"></a>多线程的优缺点</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">	<span class="number">1</span>.使用线程可以把占据时间长的程序中的任务放到后台去处理</span><br><span class="line">	<span class="number">2</span>.用户界面更加吸引人,这样比如用户点击了一个按钮去触发某件事件的处理,可以弹出一个进度条来显示处理的进度</span><br><span class="line">	<span class="number">3</span>.程序的运行效率可能会提高</span><br><span class="line">	<span class="number">4</span>.在一些等待的任务实现上如用户输入,文件读取和网络收发数据等,线程就比较有用了.</span><br><span class="line">缺点：</span><br><span class="line">	<span class="number">1</span>.如果有大量的线程,会影响性能,因为操作系统需要在它们之间切换.</span><br><span class="line">	<span class="number">2</span>.更多的线程需要更多的内存空间</span><br><span class="line">	<span class="number">3</span>.线程中止需要考虑对程序运行的影响.</span><br><span class="line">	<span class="number">4</span>.通常块模型数据是在多个线程间共享的,需要防止线程死锁情况的发生</span><br></pre></td></tr></table></figure>
 <hr>
 
     
@@ -310,7 +309,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/Promise/categories/Maven//" class="article-tag-list-link color1">Maven</a>
+        			<a href="/Promise/categories/操作系统//" class="article-tag-list-link color5">操作系统</a>
         		</li>
       		
 		</ul>
@@ -365,7 +364,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/05/11/Maven安装配置/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http:www.misscloud.top/2018/05/03/多线程/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -379,18 +378,18 @@
   
 <nav id="article-nav">
   
-    <a href="/Promise/2018/05/22/Git-分支管理①/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Promise/2018/05/06/Git-工作区和暂存区/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Git-分支管理①
+          Git-工作区和暂存区
         
       </div>
     </a>
   
   
-    <a href="/Promise/2018/05/10/Git-删除文件/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Git-删除文件</div>
+    <a href="/Promise/2018/05/02/缓存在分布式系统中的应用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">大型分布式网站架构：缓存在分布式系统中的应用</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -417,7 +416,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Maven-安装配置"><span class="toc-number">1.</span> <span class="toc-text">Maven 安装配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Maven-是什么？"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、Maven 是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Maven-可以做什么事？"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、Maven 可以做什么事？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1、项目构建"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">2.1、项目构建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2、项目结构"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.2、项目结构</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Maven-的优点"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、Maven 的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、Maven-下载"><span class="toc-number">1.0.4.</span> <span class="toc-text">4、Maven 下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、Maven-安装"><span class="toc-number">1.0.5.</span> <span class="toc-text">5、Maven 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1、检查-JDK"><span class="toc-number">1.0.5.1.</span> <span class="toc-text">5.1、检查 JDK</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2、解压"><span class="toc-number">1.0.5.2.</span> <span class="toc-text">5.2、解压</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3、设置环境变量-MAVEN-HOME"><span class="toc-number">1.0.5.3.</span> <span class="toc-text">5.3、设置环境变量 MAVEN_HOME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-4、设置环境变量-Path"><span class="toc-number">1.0.5.4.</span> <span class="toc-text">5.4、设置环境变量 Path</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5、检验-Maven-是否安装成功"><span class="toc-number">1.0.5.5.</span> <span class="toc-text">5.5、检验 Maven 是否安装成功</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#操作系统"><span class="toc-number">1.</span> <span class="toc-text">操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#进程、线程、协程"><span class="toc-number">1.0.1.</span> <span class="toc-text">进程、线程、协程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、进程"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">1、进程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、线程"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">2、线程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、协程"><span class="toc-number">1.0.1.3.</span> <span class="toc-text">3、协程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、区别"><span class="toc-number">1.0.1.4.</span> <span class="toc-text">4、区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进程状态的切换"><span class="toc-number">1.0.2.</span> <span class="toc-text">进程状态的切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引入多线程的原因"><span class="toc-number">1.0.3.</span> <span class="toc-text">引入多线程的原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多线程原理"><span class="toc-number">1.0.4.</span> <span class="toc-text">多线程原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多线程的优缺点"><span class="toc-number">1.0.5.</span> <span class="toc-text">多线程的优缺点</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -433,7 +432,7 @@
   
 
   
-  <div id="SOHUCS" sid="Maven安装配置" ></div> 
+  <div id="SOHUCS" sid="多线程" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
